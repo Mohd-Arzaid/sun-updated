@@ -123,10 +123,13 @@ const AuditsMarquee = () => {
                 <div className="aspect-[4/3]">
                   <img
                     src={item.image}
+                    srcSet={`${item.image} 600w`}
+                    sizes="(max-width: 640px) 300px, (max-width: 768px) 350px, 400px"
                     alt={item.description}
                     title={item.description}
                     width={400}
                     height={300}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110"
                   />
                 </div>
