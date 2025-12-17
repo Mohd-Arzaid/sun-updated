@@ -9,7 +9,7 @@ export const Home = () => {
       <section aria-label="Hero Section">
         <Hero />
       </section>
-      <section aria-label="Partner Logos -Top">
+      {/* <section aria-label="Partner Logos -Top">
         <LogoTicker />
       </section>
       <section aria-label="Our Services">
@@ -17,7 +17,7 @@ export const Home = () => {
       </section>
       <section aria-label="Audits Marquee">
         <AuditMarquee />
-      </section>
+      </section> */}
     </main>
-  );
+  );   
 };
