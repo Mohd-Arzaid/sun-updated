@@ -15,9 +15,9 @@ export const Home = () => {
       <section aria-label="Our Services">
         <OurServices />
       </section>
-      {/* <section aria-label="Audits Marquee">
+      <section aria-label="Audits Marquee">
         <AuditMarquee />
-      </section> */}
+      </section>
     </main>
   );
 };
