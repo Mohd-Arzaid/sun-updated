@@ -16,6 +16,7 @@ const BlurIn = ({ word, className, variant, duration = 1 }) => {
       transition={{ duration }}
       variants={combinedVariants}
       className={cn(" text-center text-md font-bold drop-shadow-sm", className)}
+      style={{ willChange: "filter, opacity", transform: "translateZ(0)" }}
     >
       {word}
     </motion.div>
