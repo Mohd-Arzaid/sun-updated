@@ -230,14 +230,14 @@ const ServicesCarouselDesktop = () => {
 
 const OurServices = () => {
   return (
-    <div className="bg-white py-12">
-      <div className="max-w-[84rem] mx-auto px-12">
+    <div className="bg-white py-8 sm:py-10 md:py-12">
+      <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
         {/* Heading */}
-        <div className="text-center mb-8">
-          <h2 className="font-playfair text-5xl font-bold text-neutral-800 drop-shadow-lg mb-3">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg mb-2 sm:mb-3">
             Our Services
           </h2>
-          <p className="text-base sm:text-lg md:text-xl font-inter text-neutral-600 max-w-xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-inter text-neutral-600 max-w-xl mx-auto px-2 sm:px-0">
             We offer end-to-end solutions for all your certification needs to
             enter and thrive in the Indian market.
           </p>
