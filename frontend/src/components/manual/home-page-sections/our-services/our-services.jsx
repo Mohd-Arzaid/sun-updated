@@ -147,8 +147,6 @@ const ServicesCarouselDesktop = () => {
                 <div className="flex items-center justify-center bg-white/80 w-24 h-24 rounded-2xl shadow-lg">
                   <img
                     src={service.image}
-                    srcSet={`${service.image} 1x, ${service.image} 2x`}
-                    sizes="80px"
                     alt={service.imageAlt}
                     title={service.imageTitle}
                     width="80"
@@ -190,8 +188,6 @@ const ServicesCarouselDesktop = () => {
                 <div className="bg-white/90 rounded-2xl p-8 shadow-xl border border-[#1A8781]/20 relative z-10 h-[350px] flex items-center justify-center">
                   <img
                     src={service.image}
-                    srcSet={`${service.image} 1x, ${service.image} 2x`}
-                    sizes="192px"
                     alt={service.imageAlt}
                     title={service.imageTitle}
                     width="192"
