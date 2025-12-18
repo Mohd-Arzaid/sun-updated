@@ -72,7 +72,7 @@ const MobileHero = () => {
     <div className="flex flex-col gap-5 w-full">
       <div
         style={{
-          background: "radial-gradient(circle, #EBF3F5 7%, #C5E2F0 100%)",
+          background: "radial-gradient(circle, #F5F9FA 7%, #E8F4F8 100%)",
         }}
         className=" w-full flex flex-col justify-center p-4"
       >
@@ -83,10 +83,10 @@ const MobileHero = () => {
               className="text-4xl text-black font-geist font-bold text-left max-w-3xl break-words"
             />
 
-            <div className="max-w-2xl">
+            <div className="max-w-2xl mb-2">
               <FadeText
                 text="Sun Certifications was founded in 2013, and for more than a decade, we have been assisting companies to comply with various kinds of Indian certifications like BIS certificate for Indian manufacturers, BIS certification for foreign/global manufacturers, BIS Scheme X certification, LMPC certificate, EPR certificate, WPC certificate, etc."
-                className="font-geist text-gray-600"
+                className="font-inter text-base text-gray-600"
                 direction="left"
               />
             </div>
