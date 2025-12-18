@@ -104,25 +104,22 @@ const AuditsMarquee = () => {
   const duplicated = [...galleryImages, ...galleryImages];
 
   return (
-    <div className="bg-white pt-12 pb-16 border-2 border-neutral-100">
-      <div className="max-w-[84rem] mx-auto px-12">
-        <h2 className="text-5xl font-bold drop-shadow-lg font-playfair text-center mb-12 text-[#1e1e1e] tracking-tight">
+    <div className="bg-white pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16 border-2 border-neutral-100">
+      <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
+        <h2 className="text-3xl sm:text-4xl tracking-tight md:text-5xl font-bold drop-shadow-lg font-playfair text-center mb-10 md:mb-12 text-[#1e1e1e]">
           International Audit Glimpse
         </h2>
         {/* Infinite scroll for audit images */}
-        <div className="marquee-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] relative">
-          <div className="marquee-track flex flex-nowrap items-center gap-6">
+        <div className="marquee-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="marquee-track flex-nowrap items-center gap-3 sm:gap-4 md:gap-6">
             {duplicated.map((item, i) => (
               <div
                 key={`audit-${i}`}
-                className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl bg-white shrink-0"
-                style={{ minWidth: "300px", maxWidth: "400px" }}
+                className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl bg-white shrink-0 w-[350px] sm:w-[375px] md:w-[400px]"
               >
                 <div className="aspect-[4/3]">
                   <img
                     src={item.image}
-                    srcSet={`${item.image} 600w`}
-                    sizes="400px"
                     alt={item.description}
                     title={item.description}
                     width={600}
@@ -131,8 +128,8 @@ const AuditsMarquee = () => {
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-white text-3xl font-playfair font-bold transform transition-all duration-500 group-hover:scale-105">
+                  <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-6">
+                    <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-playfair font-bold transition-all duration-500 group-hover:scale-105">
                       {item.title}
                     </h3>
                   </div>
