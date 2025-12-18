@@ -283,7 +283,7 @@ const ServicesGrid = () => {
 
 const OurServices = () => {
   return (
-    <div className="bg-white pt-8 py-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16">
+    <div className="bg-white pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16">
       <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
         {/* Heading */}
         <div className="text-center mb-6 sm:mb-8">

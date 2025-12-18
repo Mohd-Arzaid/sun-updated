@@ -40,12 +40,12 @@ const DesktopHero = () => {
             <div className="absolute inset-0 flex items-center justify-center transform translate-x-[575px]">
               <div className="py-6 px-8 bg-white/80 backdrop-blur-md w-[650px] h-[380px] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px]">
                 <div className="relative max-w-[600px]">
-                  <h1 className="text-5xl font-bold font-playfair text-left text-black leading-[52px]">
+                  <h1 className="text-5xl font-bold font-playfair text-left text-neutral-800 leading-[52px]">
                     Sun Certifications India
                   </h1>
                 </div>
 
-                <p className="mt-5 text-sm sm:text-xl text-zinc-500 tracking-wide mb-7 font-geist text-left max-w-2xl">
+                <p className="mt-5 text-sm sm:text-xl text-neutral-500 tracking-wide mb-7 font-geist text-left max-w-2xl">
                   Sun Certifications was founded in 2013, and for more than a
                   decade, we have been assisting companies to comply with
                   various kinds of Indian certifications like BIS certificate
@@ -80,13 +80,13 @@ const MobileHero = () => {
           <div className="flex flex-col gap-8 mt-10 mb-16">
             <WordPullUp
               words="Sun Certifications India"
-              className="text-4xl text-black font-geist font-bold text-left max-w-3xl break-words"
+              className="text-4xl text-neutral-800 font-geist font-bold text-left max-w-3xl break-words"
             />
 
             <div className="max-w-2xl mb-2">
               <FadeText
                 text="Sun Certifications was founded in 2013, and for more than a decade, we have been assisting companies to comply with various kinds of Indian certifications like BIS certificate for Indian manufacturers, BIS certification for foreign/global manufacturers, BIS Scheme X certification, LMPC certificate, EPR certificate, WPC certificate, etc."
-                className="font-geist text-base text-gray-600"
+                className="font-geist text-base text-neutral-600"
                 direction="left"
               />
             </div>
