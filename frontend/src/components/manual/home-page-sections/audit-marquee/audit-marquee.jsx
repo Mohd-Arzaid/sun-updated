@@ -104,19 +104,17 @@ const AuditsMarquee = () => {
   const duplicated = [...galleryImages, ...galleryImages];
 
   return (
-    <div className="bg-white pt-8">
-      <div className="max-w-[88rem] mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-bold drop-shadow-lg font-playfair text-center mb-10 text-[#1e1e1e] tracking-tight">
+    <div className="bg-white pt-12 pb-16 border-2 border-neutral-100">
+      <div className="max-w-[84rem] mx-auto px-12">
+        <h2 className="text-5xl font-bold drop-shadow-lg font-playfair text-center mb-12 text-[#1e1e1e] tracking-tight">
           International Audit Glimpse
         </h2>
         {/* Infinite scroll for audit images */}
-        <div className="marquee-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] relative py-4 pb-8">
+        <div className="marquee-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] relative">
           <div className="marquee-track flex flex-nowrap items-center gap-6">
             {duplicated.map((item, i) => (
               <div
-                key={`audit-${item.id}-copy-${Math.floor(
-                  i / galleryImages.length
-                )}`}
+                key={`audit-${i}`}
                 className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 hover:shadow-xl bg-white shrink-0"
                 style={{ minWidth: "300px", maxWidth: "400px" }}
               >
@@ -124,18 +122,17 @@ const AuditsMarquee = () => {
                   <img
                     src={item.image}
                     srcSet={`${item.image} 600w`}
-                    sizes="(max-width: 640px) 300px, (max-width: 768px) 350px, 400px"
+                    sizes="400px"
                     alt={item.description}
                     title={item.description}
                     width={400}
                     height={300}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-white text-2xl md:text-3xl font-playfair font-bold transform transition-all duration-500 group-hover:scale-105">
+                    <h3 className="text-white text-3xl font-playfair font-bold transform transition-all duration-500 group-hover:scale-105">
                       {item.title}
                     </h3>
                   </div>
