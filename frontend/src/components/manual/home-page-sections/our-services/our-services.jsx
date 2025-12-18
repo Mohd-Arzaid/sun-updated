@@ -149,6 +149,8 @@ const ServicesCarouselDesktop = () => {
                     src={service.image}
                     alt={service.imageAlt}
                     title={service.imageTitle}
+                    width="80"
+                    height="80"
                     className={`object-contain size-20 ${
                       service.id === 1
                         ? "scale-150"
@@ -188,6 +190,8 @@ const ServicesCarouselDesktop = () => {
                     src={service.image}
                     alt={service.imageAlt}
                     title={service.imageTitle}
+                    width="192"
+                    height="192"
                     className={`w-48 h-48 object-contain ${
                       service.id === 1
                         ? "scale-150"
