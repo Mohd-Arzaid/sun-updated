@@ -113,7 +113,7 @@ const ServicesCarouselDesktop = () => {
   };
 
   return (
-    <div className="relative hidden md:block">
+    <div className="relative hidden lg:block">
       {/* Left Arrow */}
       <button
         onClick={prevSlide}
@@ -132,7 +132,7 @@ const ServicesCarouselDesktop = () => {
         <ChevronRight className="w-7 h-7 text-[#1A8781]" />
       </button>
 
-      <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[500px] bg-gradient-to-br from-[#1A8781]/5 to-[#1A8781]/20 border border-[#1A8781]/30">
+      <div className="relative rounded-3xl overflow-hidden shadow-xl h-[500px] bg-gradient-to-br from-[#1A8781]/5 to-[#1A8781]/20 border border-[#1A8781]/30">
         <div
           className="flex h-full transition-transform duration-500 ease-in-out"
           style={slideTransform}
@@ -162,9 +162,9 @@ const ServicesCarouselDesktop = () => {
                   />
                 </div>
 
-                <div className="font-playfair text-4xl font-bold text-neutral-800">
+                <h3 className="font-playfair text-4xl font-bold text-neutral-800">
                   {service.title}
-                </div>
+                </h3>
                 <p className="font-inter text-xl text-neutral-600 max-w-lg">
                   {service.description}
                 </p>
@@ -228,6 +228,56 @@ const ServicesCarouselDesktop = () => {
   );
 };
 
+const ServicesGrid = () => {
+  const navigate = useNavigate();
+
+  const handleServiceClick = (path) => {
+    navigate(path);
+  };
+
+  return (
+    <div className="mt-6 md:mt-8 lg:mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+      {SERVICES_DATA.map((service) => (
+        <div
+          key={service.id}
+          onClick={() => handleServiceClick(service.path)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              handleServiceClick(service.path);
+            }
+          }}
+          role="button"
+          tabIndex={0}
+          aria-label={`Navigate to ${service.title} page`}
+          className="rounded-xl p-3 sm:p-4 border border-neutral-200 cursor-pointer hover:bg-[#1A8781]/10 hover:border-[#1A8781]/40 active:bg-[#1A8781]/15 focus:outline-none focus:ring-2 focus:ring-[#1A8781]/50 transition-all duration-300"
+        >
+          <div className="flex flex-col gap-2 sm:gap-3 items-center justify-center text-center">
+            <img
+              src={service.image}
+              alt={service.imageAlt}
+              title={service.imageTitle}
+              width="48"
+              height="48"
+              loading="lazy"
+              className={`object-contain size-9 sm:size-14 ${
+                service.id === 1
+                  ? "scale-150"
+                  : service.id === 7
+                  ? "scale-125"
+                  : "scale-100"
+              }`}
+            />
+            <h3 className="font-inter font-medium text-xs sm:text-base text-neutral-800 leading-tight">
+              {service.title}
+            </h3>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const OurServices = () => {
   return (
     <div className="bg-white py-8 sm:py-10 md:py-12">
@@ -245,6 +295,9 @@ const OurServices = () => {
 
         {/* Services Carousel - Hidden on Mobile , Displayed on Desktop */}
         <ServicesCarouselDesktop />
+
+        {/* Services Grid - Displayed on both Desktop and Mobile */}
+        <ServicesGrid />
       </div>
     </div>
   );
