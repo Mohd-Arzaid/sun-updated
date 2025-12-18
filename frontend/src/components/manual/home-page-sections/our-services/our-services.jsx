@@ -151,6 +151,7 @@ const ServicesCarouselDesktop = () => {
                     title={service.imageTitle}
                     width="80"
                     height="80"
+                    loading="lazy"
                     className={`object-contain size-20 ${
                       service.id === 1
                         ? "scale-150"
@@ -192,6 +193,7 @@ const ServicesCarouselDesktop = () => {
                     title={service.imageTitle}
                     width="192"
                     height="192"
+                    loading="lazy"
                     className={`w-48 h-48 object-contain ${
                       service.id === 1
                         ? "scale-150"
