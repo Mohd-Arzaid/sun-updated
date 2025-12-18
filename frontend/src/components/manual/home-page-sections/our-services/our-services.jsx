@@ -2,63 +2,14 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const BISImage64 = "/services-images/bis-logo-64.webp";
-const BISImage192 = "/services-images/bis-logo-192.webp";
-const BISImage = BISImage192;
-
-const BISCRSImage64 = "/services-images/bis-crs-logo-64.webp";
-const BISCRSImage192 = "/services-images/bis-crs-logo-192.webp";
-const BISCRSImage = BISCRSImage192;
-
-const CDSCOImage64 = "/services-images/cdsco-logo-64.webp";
-const CDSCOImage192 = "/services-images/cdsco-logo-192.webp";
-const CDSCOImage = CDSCOImage192;
-
-const ISIMARKImage64 = "/services-images/isi-mark-logo-64.webp";
-const ISIMARKImage192 = "/services-images/isi-mark-logo-192.webp";
-const ISIMARKImage = ISIMARKImage192;
-
-const EPRCertificateImage64 = "/services-images/epr-certificate-logo-64.webp";
-const EPRCertificateImage192 = "/services-images/epr-certificate-logo-192.webp";
-const EPRCertificateImage = EPRCertificateImage192;
-
-const LMPCImage64 = "/services-images/lmpc-logo-64.webp";
-const LMPCImage192 = "/services-images/lmpc-logo-192.webp";
-const LMPCImage = LMPCImage192;
-
-const PlasticWasteManagementImage64 =
-  "/services-images/plastic-waste-management-logo-64.webp";
-const PlasticWasteManagementImage192 =
-  "/services-images/plastic-waste-management-logo-192.webp";
-const PlasticWasteManagementImage = PlasticWasteManagementImage192;
-
-// Helper function to get responsive image sources
-const getImageSources = (imagePath) => {
-  const imageMap = {
-    [BISImage]: { small: BISImage64, large: BISImage192 },
-    [BISCRSImage]: { small: BISCRSImage64, large: BISCRSImage192 },
-    [CDSCOImage]: { small: CDSCOImage64, large: CDSCOImage192 },
-    [ISIMARKImage]: { small: ISIMARKImage64, large: ISIMARKImage192 },
-    [EPRCertificateImage]: {
-      small: EPRCertificateImage64,
-      large: EPRCertificateImage192,
-    },
-    [LMPCImage]: { small: LMPCImage64, large: LMPCImage192 },
-    [PlasticWasteManagementImage]: {
-      small: PlasticWasteManagementImage64,
-      large: PlasticWasteManagementImage192,
-    },
-  };
-
-  const sources = imageMap[imagePath];
-  if (sources) {
-    return {
-      srcSet: `${sources.small} 64w, ${sources.large} 192w`,
-      src: sources.large, // Fallback to largest image for quality
-    };
-  }
-  return { srcSet: undefined, src: imagePath };
-};
+const BISImage = "/services-images/bis-logo.webp";
+const CDSCOImage = "/services-images/cdsco-logo.png";
+const BISCRSImage = "/services-images/bis-crs-logo.webp";
+const PlasticWasteManagementImage =
+  "/services-images/plastic-waste-management-logo.webp";
+const EPRCertificateImage = "/services-images/epr-certificate-logo.webp";
+const LMPCImage = "/services-images/lmpc-logo.webp";
+const ISIMarkImage = "/services-images/isi-mark-logo.webp";
 
 const services = [
   {
@@ -67,7 +18,8 @@ const services = [
     description:
       "Comprehensive ISI licensing solution for foreign manufacturers looking to enter the Indian market with quality-certified products.",
     image: BISImage,
-    logoName: "BIS Logo",
+    imageAlt: "BIS Logo",
+    imageTitle: "BIS Logo",
     path: "/a-guide-to-bis-certification-for-foreign-manufacturers-indian-bis",
   },
   {
@@ -76,7 +28,8 @@ const services = [
     description:
       "Specialized certification program for specific product categories requiring compliance with advanced quality and safety standards.",
     image: BISCRSImage,
-    logoName: "Scheme X Logo",
+    imageAlt: "BIS CRS Logo",
+    imageTitle: "BIS CRS Logo",
     path: "/indian-bis-certification-under-scheme-x",
   },
   {
@@ -84,8 +37,9 @@ const services = [
     title: "ISI Mark BIS for Indian Manufacturers",
     description:
       "Domestic certification for Indian manufacturers ensuring products meet Bureau of Indian Standards quality and safety requirements.",
-    image: ISIMARKImage,
-    logoName: "ISI Mark Logo",
+    image: ISIMarkImage,
+    imageAlt: "ISI Mark Logo",
+    imageTitle: "ISI Mark Logo",
     path: "/a-guide-to-bis-certification-indian-bis",
   },
   {
@@ -94,7 +48,8 @@ const services = [
     description:
       "Compulsory Registration Scheme certification for electronic and IT products ensuring safety and quality compliance.",
     image: BISCRSImage,
-    logoName: "BIS CRS Logo",
+    imageAlt: "BIS CRS Logo",
+    imageTitle: "BIS CRS Logo",
     path: "/what-is-crs-bis-or-crs-registration",
   },
   {
@@ -103,7 +58,8 @@ const services = [
     description:
       "Central Drugs Standard Control Organization approval for medical devices and pharmaceuticals in India.",
     image: CDSCOImage,
-    logoName: "CDSCO Logo",
+    imageAlt: "CDSCO Logo",
+    imageTitle: "CDSCO Logo",
     path: "/cdsco-registration-certification",
   },
   {
@@ -112,7 +68,8 @@ const services = [
     description:
       "Comprehensive solutions for plastic waste management compliance, helping businesses meet environmental regulations.",
     image: PlasticWasteManagementImage,
-    logoName: "Plastic Waste Management Logo",
+    imageAlt: "Plastic Waste Management Logo",
+    imageTitle: "Plastic Waste Management Logo",
     path: "/epr-certificate-for-plastic-waste-management-pwm",
   },
   {
@@ -121,7 +78,8 @@ const services = [
     description:
       "Extended Producer Responsibility certification for sustainable waste management and environmental compliance.",
     image: EPRCertificateImage,
-    logoName: "EPR Certificate Logo",
+    imageAlt: "EPR Certificate Logo",
+    imageTitle: "EPR Certificate Logo",
     path: "/a-guide-on-how-to-obtain-epr-certificate",
   },
   {
@@ -130,7 +88,8 @@ const services = [
     description:
       "Legal Metrology Packaged Commodities certification ensuring accurate measurement and proper labeling of packaged goods.",
     image: LMPCImage,
-    logoName: "LMPC Logo",
+    imageAlt: "LMPC Logo",
+    imageTitle: "LMPC Logo",
     path: "/a-guide-on-how-to-obtain-lmpc-certificate",
   },
 ];
@@ -144,11 +103,9 @@ const ServiceCard = ({ service, onNavigate }) => {
         <div className="flex flex-col gap-6 order-2 md:order-1">
           <div className="flex items-center justify-center bg-white/80 backdrop-blur-sm w-24 h-24 rounded-2xl shadow-lg">
             <img
-              srcSet={getImageSources(service.image).srcSet}
-              sizes="80px"
-              src={getImageSources(service.image).src}
-              alt={service.logoName}
-              title={service.logoName}
+              src={service.image}
+              alt={service.imageAlt}
+              title={service.imageTitle}
               className="w-20 h-20 object-contain"
               width="80"
               height="80"
@@ -160,7 +117,7 @@ const ServiceCard = ({ service, onNavigate }) => {
             {service.title}
           </h3>
 
-          <p className="font-inter text-xl text-neutral-600 max-w-lg">
+          <p className="font-geist text-xl text-neutral-600 max-w-lg">
             {service.description}
           </p>
 
@@ -168,7 +125,7 @@ const ServiceCard = ({ service, onNavigate }) => {
             onClick={() => onNavigate(service.path)}
             className="flex items-center gap-3 bg-[#1A8781] text-white py-3 px-6 rounded-full shadow-lg hover:bg-[#125E5A] transition-all duration-300 w-fit mt-2 group"
           >
-            <span className="font-medium font-inter text-base">Learn More</span>
+            <span className="font-medium text-base">Learn More</span>
             <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30">
               <div className="w-2 h-2 border-t-2 border-r-2 border-white rotate-45"></div>
             </div>
@@ -182,11 +139,9 @@ const ServiceCard = ({ service, onNavigate }) => {
 
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[#1A8781]/20 relative z-10 h-[350px] flex items-center justify-center">
             <img
-              srcSet={getImageSources(service.image).srcSet}
-              sizes="192px"
-              src={getImageSources(service.image).src}
-              alt={service.logoName}
-              title={service.logoName}
+              src={service.image}
+              alt={service.imageAlt}
+              title={service.imageTitle}
               className="w-48 h-48 object-contain"
               width="192"
               height="192"
@@ -218,21 +173,19 @@ const ServiceThumbnail = ({ service, index, isActive, onThumbnailClick }) => {
           : "bg-white border-gray-200 hover:border-[#1A8781]/40 hover:bg-[#1A8781]/10"
       }`}
     >
-      <div className="flex flex-col items-center text-center gap-1">
+      <div className="flex flex-col items-center text-center gap-1 md:gap-2">
         <div className="mb-0.5 md:mb-1">
           <img
-            srcSet={getImageSources(service.image).srcSet}
-            sizes="(max-width: 768px) 32px, 48px"
-            src={getImageSources(service.image).src}
-            alt={service.logoName}
-            title={service.logoName}
+            src={service.image}
+            alt={service.imageAlt}
+            title={service.imageTitle}
             className="w-8 h-8 md:w-12 md:h-12 object-contain mx-auto"
             width="48"
             height="48"
             loading="lazy"
           />
         </div>
-        <h3 className="font-inter font-medium text-xs md:text-base leading-tight">
+        <h3 className="font-geist font-medium text-xs md:text-base leading-tight">
           {service.title}
         </h3>
       </div>
@@ -276,14 +229,14 @@ const OurServices = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-[#F9F7F2] to-white py-8  sm:pt-12 md:pt-16 ">
+    <div className="bg-gradient-to-b from-[#F9F7F2] to-white pt-8 pb-8  sm:pt-12 md:pt-16 ">
       <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
         {/* Heading */}
         <div className="text-center mb-4 sm:mb-8">
-          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800  mb-2 sm:mb-3">
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg mb-2 sm:mb-3">
             Our Services
           </h2>
-          <p className="text-base sm:text-lg md:text-xl font-inter text-neutral-600 max-w-xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl font-geist text-neutral-600 max-w-xl mx-auto">
             We offer end-to-end solutions for all your certification needs to
             enter and thrive in the Indian market.
           </p>
