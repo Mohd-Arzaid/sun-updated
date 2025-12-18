@@ -125,8 +125,8 @@ const AuditsMarquee = () => {
                     sizes="400px"
                     alt={item.description}
                     title={item.description}
-                    width={400}
-                    height={300}
+                    width={600}
+                    height={450}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
