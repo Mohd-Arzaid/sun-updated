@@ -45,7 +45,7 @@ const DesktopHero = () => {
                   </h1>
                 </div>
 
-                <p className="mt-5 text-sm sm:text-xl text-zinc-500 tracking-wide mb-7 font-inter text-left max-w-2xl">
+                <p className="mt-5 text-sm sm:text-xl text-zinc-500 tracking-wide mb-7 font-geist text-left max-w-2xl">
                   Sun Certifications was founded in 2013, and for more than a
                   decade, we have been assisting companies to comply with
                   various kinds of Indian certifications like BIS certificate
@@ -86,7 +86,7 @@ const MobileHero = () => {
             <div className="max-w-2xl mb-2">
               <FadeText
                 text="Sun Certifications was founded in 2013, and for more than a decade, we have been assisting companies to comply with various kinds of Indian certifications like BIS certificate for Indian manufacturers, BIS certification for foreign/global manufacturers, BIS Scheme X certification, LMPC certificate, EPR certificate, WPC certificate, etc."
-                className="font-inter text-base text-gray-600"
+                className="font-geist text-base text-gray-600"
                 direction="left"
               />
             </div>
@@ -98,8 +98,8 @@ const MobileHero = () => {
                     word={text}
                     className={
                       primary
-                        ? "bg-black text-white text-sm font-inter py-3 rounded-md flex gap-2 justify-center items-center px-8"
-                        : "border font-inter text-sm bg-white text-black flex justify-center gap-4 items-center py-3 rounded-md px-8"
+                        ? "bg-black text-white text-sm font-geist py-3 rounded-md flex gap-2 justify-center items-center px-8"
+                        : "border font-geist text-sm bg-white text-black flex justify-center gap-4 items-center py-3 rounded-md px-8"
                     }
                   />
                 </Link>

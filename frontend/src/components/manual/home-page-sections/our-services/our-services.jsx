@@ -165,14 +165,14 @@ const ServicesCarouselDesktop = () => {
                 <h3 className="font-playfair text-4xl font-bold text-neutral-800">
                   {service.title}
                 </h3>
-                <p className="font-inter text-xl text-neutral-600 max-w-lg">
+                <p className="font-geist text-xl text-neutral-600 max-w-lg">
                   {service.description}
                 </p>
                 <button
                   onClick={() => handleServiceNavigation(service.path)}
                   className="flex items-center gap-3 bg-[#0D5A55]/80 text-white py-3 px-6 rounded-full shadow-lg hover:bg-[#0A4A45] transition-all duration-300 w-fit mt-2 group"
                 >
-                  <span className="font-medium font-inter text-base">
+                  <span className="font-medium font-geist text-base">
                     Learn More
                   </span>
                   <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30">
@@ -250,7 +250,7 @@ const ServicesGrid = () => {
           role="button"
           tabIndex={0}
           aria-label={`Navigate to ${service.title} page`}
-          className="rounded-xl p-3 sm:p-4 border border-neutral-200 cursor-pointer hover:bg-[#1A8781]/10 hover:border-[#1A8781]/40 active:bg-[#1A8781]/15 focus:outline-none focus:ring-2 focus:ring-[#1A8781]/50 transition-all duration-300"
+          className="rounded-xl p-3 sm:p-4 border border-neutral-200 cursor-pogeist hover:bg-[#1A8781]/10 hover:border-[#1A8781]/40 active:bg-[#1A8781]/15 focus:outline-none focus:ring-2 focus:ring-[#1A8781]/50 transition-all duration-300"
         >
           <div className="flex flex-col gap-2 sm:gap-3 items-center justify-center text-center">
             <img
@@ -271,7 +271,7 @@ const ServicesGrid = () => {
                   : "scale-100"
               }`}
             />
-            <h3 className="font-inter font-medium text-xs sm:text-base text-neutral-800 leading-tight">
+            <h3 className="font-geist font-medium text-xs sm:text-base text-neutral-800 leading-tight">
               {service.title}
             </h3>
           </div>
@@ -290,7 +290,7 @@ const OurServices = () => {
           <h2 className="font-playfair tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg mb-2 sm:mb-3">
             Our Services
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-inter text-neutral-600 max-w-xl mx-auto px-2 sm:px-0">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-geist text-neutral-600 max-w-xl mx-auto px-2 sm:px-0">
             We offer end-to-end solutions for all your certification needs to
             enter and thrive in the Indian market.
           </p>
