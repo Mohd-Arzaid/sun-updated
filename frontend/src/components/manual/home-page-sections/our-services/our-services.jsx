@@ -170,7 +170,7 @@ const ServicesCarouselDesktop = () => {
                 </p>
                 <button
                   onClick={() => handleServiceNavigation(service.path)}
-                  className="flex items-center gap-3 bg-[#1A8781] text-white py-3 px-6 rounded-full shadow-lg hover:bg-[#125E5A] transition-all duration-300 w-fit mt-2 group"
+                  className="flex items-center gap-3 bg-[#0D5A55]/80 text-white py-3 px-6 rounded-full shadow-lg hover:bg-[#0A4A45] transition-all duration-300 w-fit mt-2 group"
                 >
                   <span className="font-medium font-inter text-base">
                     Learn More
