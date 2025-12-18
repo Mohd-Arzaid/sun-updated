@@ -80,13 +80,13 @@ const MobileHero = () => {
           <div className="flex flex-col gap-8 mt-10 mb-16">
             <WordPullUp
               words="Sun Certifications India"
-              className="text-4xl text-black font-inter font-bold text-left max-w-3xl break-words"
+              className="text-4xl text-black font-geist font-bold text-left max-w-3xl break-words"
             />
 
             <div className="max-w-2xl">
               <FadeText
                 text="Sun Certifications was founded in 2013, and for more than a decade, we have been assisting companies to comply with various kinds of Indian certifications like BIS certificate for Indian manufacturers, BIS certification for foreign/global manufacturers, BIS Scheme X certification, LMPC certificate, EPR certificate, WPC certificate, etc."
-                className="font-inter text-gray-600"
+                className="font-geist text-gray-600"
                 direction="left"
               />
             </div>
