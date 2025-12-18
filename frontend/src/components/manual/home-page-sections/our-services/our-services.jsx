@@ -254,7 +254,10 @@ const ServicesGrid = () => {
         >
           <div className="flex flex-col gap-2 sm:gap-3 items-center justify-center text-center">
             <img
-              src={service.image}
+              src={service.image.replace(
+                "/services-images/",
+                "/grid-services-images/"
+              )}
               alt={service.imageAlt}
               title={service.imageTitle}
               width="48"
