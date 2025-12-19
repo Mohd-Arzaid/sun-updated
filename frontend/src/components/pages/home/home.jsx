@@ -1,6 +1,7 @@
 import AuditMarquee from "@/components/manual/home-page-sections/audit-marquee/audit-marquee";
 import ContactUsForm from "@/components/manual/home-page-sections/contact-us-form/contact-us-form";
 import Hero from "@/components/manual/home-page-sections/hero/hero";
+import LatestNewsMarquee from "@/components/manual/home-page-sections/latest-news-marquee/latest-news-marquee";
 import LogoTicker from "@/components/manual/home-page-sections/logo-ticker/logo-ticker";
 import OurServices from "@/components/manual/home-page-sections/our-services/our-services";
 import WebinarMarquee from "@/components/manual/home-page-sections/webinar-marquee/webinar-marquee";
@@ -25,6 +26,9 @@ export const Home = () => {
       </section>
       <section aria-label="Webinar Marquee">
         <WebinarMarquee />
+      </section>
+      <section aria-label="Partner Logos -Bottom">
+        <LatestNewsMarquee />
       </section>
     </main>
   );   
