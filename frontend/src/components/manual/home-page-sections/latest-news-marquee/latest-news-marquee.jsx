@@ -26,7 +26,7 @@ const latestNews = [
 
 const LatestNewsMarquee = () => {
   return (
-    <div className="bg-neutral-50 w-full py-3 md:py-5 border-2 border-neutral-100">
+    <div className="bg-white w-full py-3 md:py-5 border-2 border-neutral-100">
       <div className="max-w-[84rem] mx-auto px-4 md:px-4">
         <div className="flex flex-row items-center gap-4 sm:gap-4 md:gap-6">
           {/* Heading on Left */}
