@@ -3,6 +3,7 @@ import ContactUsForm from "@/components/manual/home-page-sections/contact-us-for
 import Hero from "@/components/manual/home-page-sections/hero/hero";
 import LogoTicker from "@/components/manual/home-page-sections/logo-ticker/logo-ticker";
 import OurServices from "@/components/manual/home-page-sections/our-services/our-services";
+import WebinarMarquee from "@/components/manual/home-page-sections/webinar-marquee/webinar-marquee";
 
 export const Home = () => {
   return (
@@ -21,6 +22,9 @@ export const Home = () => {
       </section>
       <section aria-label="Contact Form">
         <ContactUsForm />
+      </section>
+      <section aria-label="Webinar Marquee">
+        <WebinarMarquee />
       </section>
     </main>
   );   
