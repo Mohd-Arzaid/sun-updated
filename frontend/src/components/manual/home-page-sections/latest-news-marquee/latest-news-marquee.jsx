@@ -27,33 +27,25 @@ const latestNews = [
 const LatestNewsMarquee = () => {
   return (
     <div className="bg-white w-full py-3 md:py-5">
-      <div className="max-w-[84rem] mx-auto px-4 md:px-4">
-        <div className="flex flex-row items-center gap-4 sm:gap-4 md:gap-6">
+      <div className="max-w-[84rem] mx-auto px-4">
+        <div className="flex flex-row items-center gap-4 md:gap-6">
           {/* Heading on Left */}
           <div className="shrink-0 hidden md:block">
             <Link to="/bis-qco-updates">
-              <h2 className="font-playfair tracking-tight text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-800 drop-shadow-lg ">
+              <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-800">
                 Latest{" "}
                 <span className="bg-gradient-to-r from-blue-900 to-purple-900 bg-clip-text text-transparent">
                   Updates
                 </span>
                 <svg
                   version="1.1"
-                  id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
                   viewBox="0 0 511.995 511.995"
                   xmlSpace="preserve"
-                  fill="#000000"
                   className="hidden md:inline-block w-12 h-12 md:w-16 md:h-16 ml-1 md:ml-2"
                 >
-                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
+                  <g>
                     <path
                       className="fill-[#522087]"
                       d="M386.05,181.439c11.98,10.72,21.281,25.537,26.167,37.832c9.616,24.118,11.507,51.862,2.523,76.768 c-5.833,16.079-10.877,24.591-23.487,39.566l15.606,15.133c32-29.32,40.197-78.976,33.103-116.493 c-1.419-7.093-3.94-15.921-7.093-23.33c-7.409-17.183-15.764-30.424-31.369-45.399l-15.29,15.921h-0.158V181.439z M321.734,227.31 c20.019,20.177,18.443,51.862,2.049,66.05l15.764,15.448c25.064-22.542,26.325-70.779-2.838-97.576l-14.818,16.079h-0.157V227.31z M353.892,204.453c31.212,29.478,32.946,76.138,3.468,110.345l15.606,15.133c17.813-14.187,28.216-48.709,27.429-71.566 c-0.946-23.33-11.35-54.069-31.685-69.99L353.892,204.453z"
