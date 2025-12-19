@@ -5,52 +5,52 @@ const ContactUsForm = () => {
     <div className="bg-white pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16">
       <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
         {/* Heading Section */}
-        <div className="text-center mb-8 sm:mb-10">
+        <div className="text-center mb-6 md:mb-10">
           <h2 className="font-playfair tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg mb-2 sm:mb-3">
             Contact Us
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-geist text-neutral-600 max-w-xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-geist text-neutral-600 max-w-xs sm:max-w-md md:max-w-xl mx-auto px-4 sm:px-2 md:px-0">
             Want to contact our team and book a call?{" "}
             <span className="text-neutral-900 font-medium">Try it now</span>
           </p>
         </div>
 
         {/* Form and Map Section */}
-        <div className="flex items-stretch justify-between gap-14">
+        <div className="flex flex-col lg:flex-row items-stretch justify-between gap-6 lg:gap-14">
           {/* Left Side - Form */}
           <div className="flex-1 flex">
-            <form className="flex flex-col gap-4 w-full">
+            <form className="flex flex-col gap-3 sm:gap-4 w-full">
               <input
                 required
                 type="text"
                 name="fullName"
-                className="w-full h-16 rounded-xl border-2 border-neutral-300 focus-visible:ring-1 focus-visible:ring-neutral-500 focus-visible:ring-offset-0 text-neutral-800 text-lg font-geist font-medium placeholder:text-neutral-500 placeholder:text-lg placeholder:font-geist placeholder:font-medium px-6 py-8 transition-all duration-300 hover:border-neutral-400 focus:outline-none"
+                className="w-full h-14 md:h-16 rounded-xl border-2 border-neutral-300 focus-visible:ring-1 focus-visible:ring-neutral-500 focus-visible:ring-offset-0 text-neutral-800 text-base md:text-lg font-geist font-medium placeholder:text-neutral-500 placeholder:text-base md:placeholder:text-lg placeholder:font-geist placeholder:font-medium px-4 md:px-6 py-3 md:py-8 transition-all duration-300 hover:border-neutral-400 focus:outline-none"
                 placeholder="Full Name *"
               />
               <input
                 required
                 type="text"
                 name="email"
-                className="w-full h-16 rounded-xl border-2 border-neutral-300 focus-visible:ring-1 focus-visible:ring-neutral-500 focus-visible:ring-offset-0 text-neutral-800 text-lg font-geist font-medium placeholder:text-neutral-500 placeholder:text-lg placeholder:font-geist placeholder:font-medium px-6 py-8 transition-all duration-300 hover:border-neutral-400 focus:outline-none"
+                className="w-full h-14 md:h-16 rounded-xl border-2 border-neutral-300 focus-visible:ring-1 focus-visible:ring-neutral-500 focus-visible:ring-offset-0 text-neutral-800 text-base md:text-lg font-geist font-medium placeholder:text-neutral-500 placeholder:text-base md:placeholder:text-lg placeholder:font-geist placeholder:font-medium px-4 md:px-6 py-3 md:py-8 transition-all duration-300 hover:border-neutral-400 focus:outline-none"
                 placeholder="Email Address *"
               />
               <input
                 required
                 type="text"
                 name="phoneNumber"
-                className="w-full h-16 rounded-xl border-2 border-neutral-300 focus-visible:ring-1 focus-visible:ring-neutral-500 focus-visible:ring-offset-0 text-neutral-800 text-lg font-geist font-medium placeholder:text-neutral-500 placeholder:text-lg placeholder:font-geist placeholder:font-medium px-6 py-8 transition-all duration-300 hover:border-neutral-400 focus:outline-none"
+                className="w-full h-14 md:h-16 rounded-xl border-2 border-neutral-300 focus-visible:ring-1 focus-visible:ring-neutral-500 focus-visible:ring-offset-0 text-neutral-800 text-base md:text-lg font-geist font-medium placeholder:text-neutral-500 placeholder:text-base md:placeholder:text-lg placeholder:font-geist placeholder:font-medium px-4 md:px-6 py-3 md:py-8 transition-all duration-300 hover:border-neutral-400 focus:outline-none"
                 placeholder="Phone Number *"
               />
               <input
                 required
                 type="text"
                 name="message"
-                className="w-full h-16 rounded-xl border-2 border-neutral-300 focus-visible:ring-1 focus-visible:ring-neutral-500 focus-visible:ring-offset-0 text-neutral-800 text-lg font-geist font-medium placeholder:text-neutral-500 placeholder:text-lg placeholder:font-geist placeholder:font-medium px-6 py-8 transition-all duration-300 hover:border-neutral-400 focus:outline-none"
+                className="w-full h-14 md:h-16 rounded-xl border-2 border-neutral-300 focus-visible:ring-1 focus-visible:ring-neutral-500 focus-visible:ring-offset-0 text-neutral-800 text-base md:text-lg font-geist font-medium placeholder:text-neutral-500 placeholder:text-base md:placeholder:text-lg placeholder:font-geist placeholder:font-medium px-4 md:px-6 py-3 md:py-8 transition-all duration-300 hover:border-neutral-400 focus:outline-none"
                 placeholder="Which Certification is required ? *"
               />
               <button
                 type="submit"
-                className="w-full mt-2 h-16 rounded-xl bg-[#0A4A45]/90 hover:bg-[#0A4A45] text-white text-xl font-geist font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#1A8781]/50 focus:ring-offset-0 shadow-lg hover:shadow-xl"
+                className="w-full mt-2 h-14 md:h-16 rounded-xl bg-[#0A4A45]/90 hover:bg-[#0A4A45] text-white text-base md:text-lg font-geist font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#1A8781]/50 focus:ring-offset-0 shadow-lg hover:shadow-xl"
               >
                 Submit
               </button>
@@ -58,7 +58,7 @@ const ContactUsForm = () => {
           </div>
 
           {/* Right Side - Map */}
-          <div className="flex-1 flex items-stretch justify-center">
+          <div className="hidden lg:flex flex-1 items-stretch justify-center">
             <div className="w-full bg-neutral-50 p-10 rounded-2xl overflow-hidden flex flex-col">
               <div className="font-geist text-base text-neutral-600 tracking-wide mb-8 text-center antialiased">
                 We respond to all inquiries within 24 hours. Our team is here to
