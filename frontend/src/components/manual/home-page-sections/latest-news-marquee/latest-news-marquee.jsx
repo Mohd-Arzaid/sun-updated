@@ -26,13 +26,13 @@ const latestNews = [
 
 const LatestNewsMarquee = () => {
   return (
-    <div className="bg-white w-full py-3 md:py-5">
+    <div className="bg-neutral-50 w-full py-3 md:py-5 border-2 border-neutral-100">
       <div className="max-w-[84rem] mx-auto px-4 md:px-4">
         <div className="flex flex-row items-center gap-4 sm:gap-4 md:gap-6">
           {/* Heading on Left */}
-          <div className="shrink-0">
+          <div className="shrink-0 hidden md:block">
             <Link to="/bis-qco-updates">
-              <h2 className="font-playfair text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-800">
+              <h2 className="font-playfair tracking-tight text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-800 drop-shadow-lg ">
                 Latest{" "}
                 <span className="bg-gradient-to-r from-blue-900 to-purple-900 bg-clip-text text-transparent">
                   Updates
@@ -103,7 +103,7 @@ const LatestNewsMarquee = () => {
                     key={`news-${i}`}
                     className="flex items-center justify-center px-3 md:px-6 py-2 md:py-4 shrink-0"
                   >
-                    <p className="text-base md:text-xl font-geist font-medium text-neutral-800 whitespace-nowrap">
+                    <p className="text-lg md:text-xl font-geist font-medium text-neutral-800 whitespace-nowrap">
                       {item.title}
                     </p>
                   </div>

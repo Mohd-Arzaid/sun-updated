@@ -1,5 +1,6 @@
 import AuditMarquee from "@/components/manual/home-page-sections/audit-marquee/audit-marquee";
 import ContactUsForm from "@/components/manual/home-page-sections/contact-us-form/contact-us-form";
+import Countries from "@/components/manual/home-page-sections/countries/countries";
 import Hero from "@/components/manual/home-page-sections/hero/hero";
 import LatestNewsMarquee from "@/components/manual/home-page-sections/latest-news-marquee/latest-news-marquee";
 import LogoTicker from "@/components/manual/home-page-sections/logo-ticker/logo-ticker";
@@ -30,6 +31,9 @@ export const Home = () => {
       <section aria-label="Partner Logos -Bottom">
         <LatestNewsMarquee />
       </section>
+      <section aria-label="Countries We Serv">
+        <Countries />
+      </section>
     </main>
-  );   
+  );
 };
