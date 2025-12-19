@@ -16,10 +16,10 @@ const ContactUsForm = () => {
         </div>
 
         {/* Form and Map Section */}
-        <div className="flex items-start justify-between gap-14">
+        <div className="flex items-stretch justify-between gap-14">
           {/* Left Side - Form */}
-          <div className="flex-1">
-            <form className="flex flex-col gap-4">
+          <div className="flex-1 flex">
+            <form className="flex flex-col gap-4 w-full">
               <input
                 required
                 type="text"
@@ -58,9 +58,9 @@ const ContactUsForm = () => {
           </div>
 
           {/* Right Side - Map */}
-          <div className="flex-1 flex items-center justify-center">
-            <div className="w-full bg-neutral-50 p-10 rounded-2xl overflow-hidden">
-              <div className="font-geist text-base text-neutral-500 tracking-wide mb-8 text-center antialiased">
+          <div className="flex-1 flex items-stretch justify-center">
+            <div className="w-full bg-neutral-50 p-10 rounded-2xl overflow-hidden flex flex-col">
+              <div className="font-geist text-base text-neutral-600 tracking-wide mb-8 text-center antialiased">
                 We respond to all inquiries within 24 hours. Our team is here to
                 guide you through every step. No more waiting around - we're
                 serious about making your vision a reality.
@@ -70,11 +70,11 @@ const ContactUsForm = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   baseProfile="tiny"
-                  fill="#ececec"
+                  fill="oklch(92.2% 0 0)"
                   stroke="black"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth=".2"
+                  strokeWidth=".3"
                   version="1.2"
                   viewBox="0 0 2000 857"
                   className="w-full h-auto opacity-90"
