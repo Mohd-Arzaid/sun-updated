@@ -80,7 +80,7 @@ const Countries = () => {
         </div>
 
         <div className="relative overflow-hidden">
-          <div className="flex gap-4 overflow-x-auto scrollbar-hide [mask-image:linear-gradient(to_right,black_90%,transparent)] md:[mask-image:none]">
+          <div className="flex gap-4 overflow-x-auto scrollbar-hide [mask-image:linear-gradient(to_right,black_90%,transparent)] lg:[mask-image:none]">
             {currentCountries.map((country, index) => (
               <div
                 key={`${country.name}-${index}`}
