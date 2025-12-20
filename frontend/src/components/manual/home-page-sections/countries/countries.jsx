@@ -59,7 +59,7 @@ const Countries = () => {
           </p>
         </div>
 
-        <div className="flex gap-4 mb-4 md:mb-8 items-center justify-center">
+        <div className="flex gap-4 mb-6 md:mb-8 items-center justify-center">
           <button
             onClick={handlePrev}
             aria-label="Previous countries"
@@ -79,7 +79,45 @@ const Countries = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-4 gap-4">
+        {/* Mobile: Horizontal scroll with partial cards */}
+        <div className="md:hidden relative overflow-hidden">
+          <div className="flex gap-4 overflow-x-auto scrollbar-hide  [mask-image:linear-gradient(to_right,black_90%,transparent)] ">
+            {currentCountries.map((country, index) => (
+              <div
+                key={`${country.name}-${index}`}
+                className="flex-shrink-0 w-[280px] h-[280px] bg-neutral-100 rounded-xl overflow-hidden flex flex-col snap-center"
+              >
+                {/* Image Container - Fixed Height */}
+                <div className="h-[220px] w-full flex items-center justify-center px-4 py-2">
+                  <img
+                    src={country.img}
+                    alt={country.name}
+                    width="240"
+                    height="240"
+                    className="max-w-full max-h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Country Name - Fixed at Bottom */}
+                <div className="h-[60px] w-full flex items-center px-4 border-t border-neutral-200 bg-neutral-100">
+                  <span className="flex items-center justify-center font-bold gap-2">
+                    <Star
+                      className="fill-current text-neutral-800 flex-shrink-0"
+                      size={20}
+                    />
+                    <div className="text-base font-geist text-neutral-800 tracking-wide uppercase">
+                      {country.name}
+                    </div>
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: Grid with 4 full cards */}
+        <div className="hidden md:grid md:grid-cols-4 gap-4">
           {currentCountries.map((country, index) => (
             <div
               key={`${country.name}-${index}`}
