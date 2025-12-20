@@ -1,31 +1,31 @@
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Countries = () => {
   // All countries data - 22 countries
   const countries = [
-    { name: "India", img: "/countries-images/India.webp" },
-    { name: "Austria", img: "/countries-images/Austria.webp" },
-    { name: "Bahrain", img: "/countries-images/Bahrain.webp" },
+    { name: "Thailand", img: "/countries-images/Thailand.webp" },
+    { name: "Vietnam", img: "/countries-images/Vietnam.webp" },
     { name: "Canada", img: "/countries-images/Canada.webp" },
     { name: "China", img: "/countries-images/China.webp" },
+    { name: "Italy", img: "/countries-images/Italy.webp" },
     { name: "Colombia", img: "/countries-images/Colombia.webp" },
-    { name: "Denmark", img: "/countries-images/Denmark.webp" },
+    { name: "Qatar", img: "/countries-images/Qatar.webp" },
+    { name: "India", img: "/countries-images/India.webp" },
+    { name: "Indonesia", img: "/countries-images/Indonesia.webp" },
+    { name: "Malaysia", img: "/countries-images/Malaysia.webp" },
+    { name: "Russia", img: "/countries-images/Russia.webp" },
+    { name: "Bahrain", img: "/countries-images/Bahrain.webp" },
+    { name: "UAE", img: "/countries-images/UAE.webp" },
+    { name: "Nepal", img: "/countries-images/Nepal.webp" },
+    { name: "Sri Lanka", img: "/countries-images/SriLanka.webp" },
     { name: "France", img: "/countries-images/France.webp" },
     { name: "Germany", img: "/countries-images/Germany.webp" },
-    { name: "Indonesia", img: "/countries-images/Indonesia.webp" },
-    { name: "Italy", img: "/countries-images/Italy.webp" },
-    { name: "Malaysia", img: "/countries-images/Malaysia.webp" },
-    { name: "Nepal", img: "/countries-images/Nepal.webp" },
-    { name: "Qatar", img: "/countries-images/Qatar.webp" },
-    { name: "Russia", img: "/countries-images/Russia.webp" },
-    { name: "Slovenia", img: "/countries-images/Slovenia.webp" },
-    { name: "Sri Lanka", img: "/countries-images/SriLanka.webp" },
     { name: "Sweden", img: "/countries-images/Sweden.webp" },
-    { name: "Thailand", img: "/countries-images/Thailand.webp" },
-    { name: "UAE", img: "/countries-images/UAE.webp" },
+    { name: "Slovenia", img: "/countries-images/Slovenia.webp" },
+    { name: "Austria", img: "/countries-images/Austria.webp" },
     { name: "USA", img: "/countries-images/USA.webp" },
-    { name: "Vietnam", img: "/countries-images/Vietnam.webp" },
+    { name: "Denmark", img: "/countries-images/Denmark.webp" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,7 +49,7 @@ const Countries = () => {
   }
 
   return (
-    <div className="bg-white pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16 border-2 border-neutral-100">
+    <div className="bg-white pt-8 pb-10 sm:pt-10 sm:pb-12 md:pt-12 md:pb-14 border-2 border-neutral-100">
       <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12 flex flex-col">
         {/* Heading */}
         <div className="text-center mb-3 md:mb-6">
