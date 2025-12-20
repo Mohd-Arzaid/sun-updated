@@ -79,16 +79,15 @@ const Countries = () => {
           </button>
         </div>
 
-        {/* Mobile: Horizontal scroll with partial cards */}
-        <div className="md:hidden relative overflow-hidden">
-          <div className="flex gap-4 overflow-x-auto scrollbar-hide  [mask-image:linear-gradient(to_right,black_90%,transparent)] ">
+        <div className="relative overflow-hidden">
+          <div className="flex gap-4 overflow-x-auto scrollbar-hide [mask-image:linear-gradient(to_right,black_90%,transparent)] md:[mask-image:none]">
             {currentCountries.map((country, index) => (
               <div
                 key={`${country.name}-${index}`}
-                className="flex-shrink-0 w-[280px] h-[280px] bg-neutral-100 rounded-xl overflow-hidden flex flex-col snap-center"
+                className="flex-shrink-0 w-[280px] h-[280px] md:w-[300px] md:h-[300px] bg-neutral-100 rounded-xl overflow-hidden flex flex-col"
               >
                 {/* Image Container - Fixed Height */}
-                <div className="h-[220px] w-full flex items-center justify-center px-4 py-2">
+                <div className="h-[220px] md:h-[240px] w-full flex items-center justify-center px-4 md:px-6 py-2">
                   <img
                     src={country.img}
                     alt={country.name}
@@ -100,13 +99,13 @@ const Countries = () => {
                 </div>
 
                 {/* Country Name - Fixed at Bottom */}
-                <div className="h-[60px] w-full flex items-center px-4 border-t border-neutral-200 bg-neutral-100">
+                <div className="h-[60px] w-full flex items-center px-4 md:px-6 border-t border-neutral-200 bg-neutral-100">
                   <span className="flex items-center justify-center font-bold gap-2">
                     <Star
                       className="fill-current text-neutral-800 flex-shrink-0"
                       size={20}
                     />
-                    <div className="text-base font-geist text-neutral-800 tracking-wide uppercase">
+                    <div className="text-base md:text-lg font-geist text-neutral-800 tracking-wide uppercase">
                       {country.name}
                     </div>
                   </span>
@@ -114,41 +113,6 @@ const Countries = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Desktop: Grid with 4 full cards */}
-        <div className="hidden md:grid md:grid-cols-4 gap-4">
-          {currentCountries.map((country, index) => (
-            <div
-              key={`${country.name}-${index}`}
-              className="w-full h-[300px] bg-neutral-100 rounded-xl overflow-hidden flex flex-col"
-            >
-              {/* Image Container - Fixed Height */}
-              <div className="h-[240px] w-full flex items-center justify-center px-6 py-2">
-                <img
-                  src={country.img}
-                  alt={country.name}
-                  width="240"
-                  height="240"
-                  className="max-w-full max-h-full object-contain"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Country Name - Fixed at Bottom */}
-              <div className="h-[60px] w-full flex items-center px-6 border-t border-neutral-200 bg-neutral-100">
-                <span className="flex items-center justify-center font-bold gap-2">
-                  <Star
-                    className="fill-current text-neutral-800 flex-shrink-0"
-                    size={20}
-                  />
-                  <div className="text-lg font-geist text-neutral-800 tracking-wide uppercase">
-                    {country.name}
-                  </div>
-                </span>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </div>
