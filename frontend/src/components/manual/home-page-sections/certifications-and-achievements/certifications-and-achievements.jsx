@@ -7,8 +7,8 @@ const CertificationAndAchievements = () => {
         <h2 className="font-playfair tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg text-center mb-6 md:mb-12 text-neutral-800">
           Certification and Achievements
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-4">
-          <div className="col-span-1 w-auto h-[260px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 sm:gap-4">
+          <div className="col-span-1 w-auto h-[260px] sm:h-[280px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
             <img
               src="/home-page-certificate-img/Sun-Certifications-India-ISO-9001-page-0001.jpg"
               alt=""
@@ -19,7 +19,7 @@ const CertificationAndAchievements = () => {
               decoding="async"
             />
           </div>
-          <div className="col-span-1 w-auto h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
+          <div className="col-span-1 w-auto h-[260px] sm:h-[280px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
             <img
               src="/home-page-certificate-img/Sun-Certifications-India-ISO-27001-page-0001.jpg"
               alt="ISO 27001 Certification"
@@ -30,7 +30,7 @@ const CertificationAndAchievements = () => {
               decoding="async"
             />
           </div>
-          <div className="col-span-1 w-auto h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
+          <div className="col-span-1 w-auto h-[260px] sm:h-[280px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
             <img
               src="/home-page-certificate-img/Sun-Certifications-India-ISO-20000-page-0001.jpg"
               alt="ISO 20000 Certification"
@@ -41,7 +41,7 @@ const CertificationAndAchievements = () => {
               decoding="async"
             />
           </div>
-          <div className="col-span-1 w-auto h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
+          <div className="col-span-1 w-auto h-[260px] sm:h-[280px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
             <img
               src="/home-page-certificate-img/Sun-Certifications-India-ISO-10002-page-0001.jpg"
               alt="ISO 10002 Certification"
