@@ -4,11 +4,11 @@ const CertificationAndAchievements = () => {
   return (
     <div className="bg-white pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16 border-2 border-neutral-100">
       <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
-        <h2 className="font-playfair tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg text-center mb-10 md:mb-12 text-neutral-800">
+        <h2 className="font-playfair tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg text-center mb-6 md:mb-12 text-neutral-800">
           Certification and Achievements
         </h2>
-        <div className="grid grid-cols-4 gap-4">
-          <div className="col-span-1 w-auto h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-4">
+          <div className="col-span-1 w-auto h-[260px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
             <img
               src="/home-page-certificate-img/Sun-Certifications-India-ISO-9001-page-0001.jpg"
               alt=""
