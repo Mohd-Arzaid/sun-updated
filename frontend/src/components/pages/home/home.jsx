@@ -1,4 +1,5 @@
 import AuditMarquee from "@/components/manual/home-page-sections/audit-marquee/audit-marquee";
+import CertificationAndAchievements from "@/components/manual/home-page-sections/certifications-and-achievements/certifications-and-achievements";
 import ContactUsForm from "@/components/manual/home-page-sections/contact-us-form/contact-us-form";
 import Countries from "@/components/manual/home-page-sections/countries/countries";
 import Hero from "@/components/manual/home-page-sections/hero/hero";
@@ -13,7 +14,7 @@ export const Home = () => {
       <section aria-label="Hero Section">
         <Hero />
       </section>
-      <section aria-label="Partner Logos -Top">
+      <section aria-label="Partner Logos - Top">
         <LogoTicker />
       </section>
       <section aria-label="Our Services">
@@ -28,11 +29,14 @@ export const Home = () => {
       <section aria-label="Webinar Marquee">
         <WebinarMarquee />
       </section>
-      <section aria-label="Partner Logos -Bottom">
+      <section aria-label="Partner Logos - Bottom">
         <LatestNewsMarquee />
       </section>
-      <section aria-label="Countries We Serv">
+      <section aria-label="Countries We Serve">
         <Countries />
+      </section>
+      <section aria-label="Certification and Achievements">
+        <CertificationAndAchievements />
       </section>
     </main>
   );

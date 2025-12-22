@@ -58,8 +58,8 @@ const ContactUsForm = () => {
           </div>
 
           {/* Right Side - Map */}
-          <div className="hidden lg:flex flex-1 items-stretch justify-center">
-            <div className="w-full bg-neutral-50 p-10 rounded-2xl overflow-hidden flex flex-col">
+          <div className="hidden lg:flex flex-1 items-stretch justify-center ">
+            <div className="w-full shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-neutral-50 p-10 rounded-2xl overflow-hidden flex flex-col">
               <div className="font-geist text-base text-neutral-600 tracking-wide mb-8 text-center antialiased">
                 We respond to all inquiries within 24 hours. Our team is here to
                 guide you through every step. No more waiting around - we're

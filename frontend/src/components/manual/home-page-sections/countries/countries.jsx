@@ -87,7 +87,7 @@ const Countries = () => {
                 className="flex-shrink-0 w-[280px] h-[280px] md:w-[300px] md:h-[300px] bg-neutral-100 rounded-xl overflow-hidden flex flex-col"
               >
                 {/* Image Container - Fixed Height */}
-                <div className="h-[220px] md:h-[240px] w-full flex items-center justify-center px-4 md:px-6 py-2">
+                <div className="h-[220px]  md:h-[240px] w-full flex items-center justify-center px-4 md:px-6 py-2">
                   <img
                     src={country.img}
                     alt={country.name}
