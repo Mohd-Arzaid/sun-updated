@@ -7,6 +7,7 @@ import LatestNewsMarquee from "@/components/manual/home-page-sections/latest-new
 import LogoTicker from "@/components/manual/home-page-sections/logo-ticker/logo-ticker";
 import OurServices from "@/components/manual/home-page-sections/our-services/our-services";
 import WebinarMarquee from "@/components/manual/home-page-sections/webinar-marquee/webinar-marquee";
+import WhatsOurCustomersSay from "@/components/manual/home-page-sections/whats-our-customers-say/whats-our-customers-say";
 
 export const Home = () => {
   return (
@@ -37,6 +38,9 @@ export const Home = () => {
       </section>
       <section aria-label="Certification and Achievements">
         <CertificationAndAchievements />
+      </section>
+      <section aria-label="What Our Customers Say">
+        <WhatsOurCustomersSay />
       </section>
     </main>
   );

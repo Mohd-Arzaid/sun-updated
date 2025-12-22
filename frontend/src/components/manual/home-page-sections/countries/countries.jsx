@@ -55,7 +55,7 @@ const Countries = () => {
         <div className="text-center mb-3 md:mb-6">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl font-geist text-neutral-600 max-w-xs sm:max-w-md md:max-w-xl mx-auto px-4 sm:px-2 md:px-0">
             Glimpse of the Countries we have Served In, Delivering excellence
-            everywhere.
+            everywhere
           </p>
         </div>
 

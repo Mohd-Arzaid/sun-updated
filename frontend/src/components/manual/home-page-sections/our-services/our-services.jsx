@@ -292,7 +292,7 @@ const OurServices = () => {
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl font-geist text-neutral-600 max-w-xs sm:max-w-md md:max-w-xl mx-auto px-4 sm:px-2 md:px-0">
             We offer end-to-end solutions for all your certification needs to
-            enter and thrive in the Indian market.
+            enter and thrive in the Indian market
           </p>
         </div>
 
