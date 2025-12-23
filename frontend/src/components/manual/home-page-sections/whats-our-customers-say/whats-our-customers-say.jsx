@@ -126,7 +126,7 @@ const WhatsOurCustomersSay = () => {
   const duplicated = [...testimonials, ...testimonials];
 
   return (
-    <div className="bg-white pt-8 pb-10 sm:pt-10 sm:pb-12 md:pt-12 md:pb-14 border-2 border-neutral-100">
+    <div className="bg-white pt-8 pb-10 sm:pt-10 sm:pb-12 md:pt-12 md:pb-14 border-2 border-b-0 border-neutral-100">
       <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-10">
