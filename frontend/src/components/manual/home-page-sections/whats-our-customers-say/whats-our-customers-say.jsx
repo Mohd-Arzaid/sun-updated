@@ -139,7 +139,7 @@ const WhatsOurCustomersSay = () => {
         </div>
 
         <div className="marquee-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-          <div className="marquee-track flex flex-nowrap items-center gap-6">
+          <div className="testimonials-marquee-track flex flex-nowrap items-center gap-6">
             {duplicated.map((testimonial, i) => (
               <div
                 key={`testimonial-${testimonial.id}-${i}`}

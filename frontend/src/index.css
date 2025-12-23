@@ -130,13 +130,22 @@
   backface-visibility: hidden;
 }
 
-/* Fast marquee for LogoTicker only */
+/* Fast marquee for LogoTicker */
 .logo-ticker-track {
   animation: marquee 20s linear infinite;
 }
 
+/* Slow marquee for Testimonials */
+.testimonials-marquee-track {
+  animation: marquee 15s linear infinite;
+}
+
 /* Pause on hover */
 .marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-container:hover .testimonials-marquee-track {
   animation-play-state: paused;
 }
 
