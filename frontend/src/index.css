@@ -139,7 +139,7 @@
 .testimonials-marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee 150s linear infinite;
+  animation: marquee 140s linear infinite;
   will-change: transform;
   backface-visibility: hidden;
 }
