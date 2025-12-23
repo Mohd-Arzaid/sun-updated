@@ -137,7 +137,11 @@
 
 /* Slow marquee for Testimonials */
 .testimonials-marquee-track {
-  animation: marquee 10s linear infinite;
+  display: flex;
+  width: max-content;
+  animation: marquee 150s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 /* Pause on hover */
