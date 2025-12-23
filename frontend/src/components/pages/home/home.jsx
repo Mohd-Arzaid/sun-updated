@@ -42,6 +42,9 @@ export const Home = () => {
       <section aria-label="What Our Customers Say">
         <WhatsOurCustomersSay />
       </section>
+      <section aria-label="Partner Logos - Bottom">
+        <LogoTicker />
+      </section>
     </main>
   );
 };
