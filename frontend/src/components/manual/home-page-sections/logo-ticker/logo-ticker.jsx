@@ -56,9 +56,9 @@ const LogoTicker = () => {
     <div className="bg-white w-full py-3 md:py-5 border-2 border-neutral-100">
       <div className="max-w-[84rem] mx-auto px-2 md:px-4">
         <div className="marquee-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
-          <ul className="marquee-track logo-ticker-track flex w-max min-w-full shrink-0 flex-nowrap gap-1 md:gap-6">
+          <div className="marquee-track logo-ticker-track flex w-max min-w-full shrink-0 flex-nowrap gap-1 md:gap-6">
             {duplicated.map((logo, i) => (
-              <li
+              <div
                 key={`${logo.name}-${i}`}
                 className="flex items-center justify-center px-3 md:px-6 py-2 md:py-4 shrink-0"
                 style={{
@@ -79,9 +79,9 @@ const LogoTicker = () => {
                     height: `${logo.height}px`,
                   }}
                 />
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </div>
