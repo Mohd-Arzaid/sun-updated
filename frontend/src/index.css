@@ -137,7 +137,7 @@
 
 /* Slow marquee for Testimonials */
 .testimonials-marquee-track {
-  animation: marquee 15s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 
 /* Pause on hover */
