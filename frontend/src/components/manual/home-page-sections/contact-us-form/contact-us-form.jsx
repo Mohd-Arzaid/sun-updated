@@ -10,7 +10,7 @@ const ContactUsForm = () => {
             Contact Us
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl font-geist text-neutral-600 max-w-xs sm:max-w-md md:max-w-xl mx-auto px-4 sm:px-2 md:px-0">
-            Want to contact our team and book a call?{" "}
+            Want to connect with India's most trusted certification partner?{" "}
             <span className="text-neutral-900 font-medium">Try it now</span>
           </p>
         </div>
