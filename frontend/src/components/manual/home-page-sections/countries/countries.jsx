@@ -34,34 +34,6 @@ const Countries = () => {
   ];
 
   const [api, setApi] = React.useState(null);
-  const [canScrollPrev, setCanScrollPrev] = React.useState(true);
-  const [canScrollNext, setCanScrollNext] = React.useState(true);
-
-  React.useEffect(() => {
-    if (!api) return;
-
-    const updateScrollState = () => {
-      // In loop mode, buttons are always enabled
-      setCanScrollPrev(true);
-      setCanScrollNext(true);
-    };
-
-    updateScrollState();
-    api.on("select", updateScrollState);
-    api.on("reInit", updateScrollState);
-
-    return () => {
-      api.off("select", updateScrollState);
-    };
-  }, [api]);
-
-  const scrollPrev = () => {
-    api?.scrollPrev();
-  };
-
-  const scrollNext = () => {
-    api?.scrollNext();
-  };
 
   return (
     <div className="bg-white pt-8 pb-10 sm:pt-10 sm:pb-12 md:pt-12 md:pb-14 border-2 border-neutral-100">
@@ -76,20 +48,18 @@ const Countries = () => {
 
         <div className="flex gap-4 mb-6 md:mb-8 items-center justify-center">
           <button
-            onClick={scrollPrev}
-            disabled={!canScrollPrev}
+            onClick={() => api?.scrollPrev()}
             aria-label="Previous countries"
-            className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors"
           >
             <ChevronLeft className="hidden md:block text-neutral-600" />
             <ChevronLeft className="block md:hidden size-4 md:size-5 text-neutral-600" />
           </button>
 
           <button
-            onClick={scrollNext}
-            disabled={!canScrollNext}
+            onClick={() => api?.scrollNext()}
             aria-label="Next countries"
-            className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors"
           >
             <ChevronRight className="hidden md:block text-neutral-600" />
             <ChevronRight className="block md:hidden size-4 md:size-5 text-neutral-600" />

@@ -6,17 +6,12 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-// Helper function to get YouTube thumbnail URL
-const getThumbnailUrl = (videoId) => {
-  return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-};
+const getThumbnailUrl = (videoId) =>
+  `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
 const VideoSection = () => {
   const [api, setApi] = React.useState(null);
-  const [canScrollPrev, setCanScrollPrev] = React.useState(true);
-  const [canScrollNext, setCanScrollNext] = React.useState(true);
   const [loadedVideos, setLoadedVideos] = React.useState(new Set());
-  const videoRefs = React.useRef({});
   const observerRef = React.useRef(null);
 
   const videos = [
@@ -59,80 +54,34 @@ const VideoSection = () => {
     },
   ];
 
-  // Initialize Intersection Observer once
+  // Lazy load videos when they enter viewport
   React.useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: "50px", // Start loading 50px before video enters viewport
-      threshold: 0.1,
-    };
-
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const videoId = entry.target.dataset.videoId;
-          if (videoId) {
-            setLoadedVideos((prev) => {
-              if (!prev.has(videoId)) {
-                return new Set([...prev, videoId]);
-              }
-              return prev;
-            });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const videoId = entry.target.dataset.videoId;
+            if (videoId) {
+              setLoadedVideos((prev) => new Set([...prev, videoId]));
+            }
           }
-        }
-      });
-    };
-
-    observerRef.current = new IntersectionObserver(
-      observerCallback,
-      observerOptions
+        });
+      },
+      { rootMargin: "50px", threshold: 0.1 }
     );
 
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
+    observerRef.current = observer;
+    return () => observer.disconnect();
   }, []);
 
-  // Observe refs as they're added
   const observeVideoRef = React.useCallback((el, videoId) => {
-    if (el && observerRef.current && videoId) {
-      videoRefs.current[videoId] = el;
+    if (el && observerRef.current) {
       observerRef.current.observe(el);
     }
   }, []);
 
-  React.useEffect(() => {
-    if (!api) return;
-
-    const updateScrollState = () => {
-      // In loop mode, buttons are always enabled
-      setCanScrollPrev(true);
-      setCanScrollNext(true);
-    };
-
-    updateScrollState();
-    api.on("select", updateScrollState);
-    api.on("reInit", updateScrollState);
-
-    return () => {
-      api.off("select", updateScrollState);
-    };
-  }, [api]);
-
   const handleVideoClick = (videoId) => {
-    if (!loadedVideos.has(videoId)) {
-      setLoadedVideos((prev) => new Set([...prev, videoId]));
-    }
-  };
-
-  const scrollPrev = () => {
-    api?.scrollPrev();
-  };
-
-  const scrollNext = () => {
-    api?.scrollNext();
+    setLoadedVideos((prev) => new Set([...prev, videoId]));
   };
 
   return (
@@ -148,10 +97,9 @@ const VideoSection = () => {
 
         <div className="flex gap-4 mb-6 md:mb-8 items-center justify-center">
           <button
-            onClick={scrollPrev}
-            disabled={!canScrollPrev}
+            onClick={() => api?.scrollPrev()}
             aria-label="Previous video"
-            className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors"
           >
             <ChevronLeft
               className="hidden md:block text-neutral-600"
@@ -164,10 +112,9 @@ const VideoSection = () => {
           </button>
 
           <button
-            onClick={scrollNext}
-            disabled={!canScrollNext}
+            onClick={() => api?.scrollNext()}
             aria-label="Next video"
-            className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors"
           >
             <ChevronRight
               className="hidden md:block text-neutral-600"
