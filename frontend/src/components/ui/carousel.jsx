@@ -62,10 +62,9 @@ const Carousel = React.forwardRef(
       <CarouselContext.Provider
         value={{
           carouselRef,
-          api: api,
+          api,
           opts,
-          orientation:
-            orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
+          orientation: opts?.axis === "y" ? "vertical" : orientation,
         }}
       >
         <div
