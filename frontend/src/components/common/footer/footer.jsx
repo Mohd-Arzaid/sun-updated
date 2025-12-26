@@ -1,3 +1,4 @@
+import { ArrowRight, ChevronRight, Mail, MapPin, Phone } from "lucide-react";
 import React from "react";
 
 const Footer = () => {
@@ -77,6 +78,156 @@ const Footer = () => {
                 </svg>
                 <span className="sr-only">LinkedIn</span>
               </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-neutral-50 border-t border-neutral-200">
+        {/* Stay Connected Section */}
+        <div className="border-b border-neutral-200">
+          <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
+            <div className="py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl font-semibold font-geist mb-2 text-neutral-800">
+                  Stay Connected
+                </h3>
+                <p className="text-neutral-600 font-geist">
+                  Get all the latest notifications and updates from Sun
+                  Certifications India.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <div className="relative">
+                  <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    className="bg-neutral-100 border border-neutral-300 rounded-md px-4 py-3 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-800 focus:border-neutral-800 w-full sm:w-80 font-geist text-neutral-800 placeholder-neutral-500"
+                  />
+                  <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 hover:bg-neutral-200 rounded transition-colors">
+                    <ArrowRight className="w-4 h-4 text-neutral-800" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="py-10 bg-gradient-to-b from-neutral-50 to-white">
+          <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+              {/* Company Info */}
+              <div className="lg:col-span-2 space-y-6">
+                <div>
+                  <h2 className="text-2xl font-bold font-geist mb-4 text-neutral-800">
+                    PrintHub
+                  </h2>
+                  <p className="text-neutral-600 font-geist leading-relaxed mb-6">
+                    Your trusted partner for all printing needs. From home
+                    office solutions to enterprise printing systems, we deliver
+                    quality, reliability, and exceptional service.
+                  </p>
+                </div>
+
+                <div className="flex items-center space-x-4 group hover:bg-white  rounded-lg p-3 -m-3 transition-all duration-300 cursor-pogeist">
+                  <div className="w-11 h-11 bg-white border border-neutral-300 rounded-full flex items-center justify-center group-hover:border-neutral-800 group-hover:bg-neutral-800/5 transition-all duration-300">
+                    <MapPin className="w-5 h-5  text-neutral-800 group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-neutral-600 font-geist group-hover:text-neutral-800 transition-colors">
+                      Visit us
+                    </p>
+                    <p className="text-neutral-800 font-geist font-medium group-hover:font-semibold transition-all max-w-xs">
+                      ITL Twin Tower, Netaji Subhash Place, Pitampura Delhi -
+                      110034
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quick Links */}
+              <div className="space-y-6">
+                <h3 className="text-lg font-semibold font-geist text-neutral-800">
+                  Our Services
+                </h3>
+                <ul className="space-y-3">
+                  {[
+                    { name: "TEC", href: "#" },
+                    { name: "ISI MARK", href: "#" },
+                    { name: "CE CERTIFICATION", href: "#" },
+                    { name: "EPR", href: "#" },
+                    { name: "ROHS", href: "#" },
+                    { name: "WPC", href: "#" },
+                  ].map((service) => (
+                    <li key={service.name}>
+                      <a
+                        href={service.href}
+                        className="text-neutral-600 hover:text-neutral-800 transition-colors font-geist text-sm flex items-center group"
+                      >
+                        <ChevronRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <span className="group-hover:translate-x-1 transition-transform">
+                          {service.name}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Categories */}
+              <div className="space-y-6">
+                <h3 className="text-lg font-semibold font-geist text-neutral-800">
+                  Company
+                </h3>
+                <ul className="space-y-3">
+                  {[
+                    { name: "About", href: "#" },
+                    { name: "Contact Us", href: "#" },
+                    { name: "FAQ's", href: "#" },
+                    { name: "Sitemap", href: "#" },
+                  ].map((link) => (
+                    <li key={link.name}>
+                      <a
+                        href={link.href}
+                        className="text-neutral-600 hover:text-neutral-800 transition-colors font-geist text-sm flex items-center group"
+                      >
+                        <ChevronRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <span className="group-hover:translate-x-1 transition-transform">
+                          {link.name}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* News & Notifications */}
+              <div className="space-y-6">
+                <h3 className="text-lg font-semibold font-geist text-neutral-800">
+                  News & Notifications
+                </h3>
+                <ul className="space-y-3">
+                  {[
+                    { name: "Blogs", href: "#" },
+                    { name: "Latest Updates", href: "#" },
+                    { name: "Ministry Updates", href: "#" },
+                    { name: "Webinar Updates", href: "#" },
+                    { name: "Gallery", href: "#" },
+                  ].map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className="text-neutral-600 hover:text-neutral-800 transition-colors font-geist text-sm flex items-center group"
+                      >
+                        <ChevronRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <span className="group-hover:translate-x-1 transition-transform">
+                          {item.name}
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
