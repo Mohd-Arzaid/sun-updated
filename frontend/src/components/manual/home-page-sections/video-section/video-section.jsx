@@ -195,7 +195,7 @@ const VideoSection = () => {
                       {shouldLoad ? (
                         <iframe
                           className="absolute inset-0 w-full h-full"
-                          src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1`}
+                          src={`https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1`}
                           title="YouTube video player"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           allowFullScreen
