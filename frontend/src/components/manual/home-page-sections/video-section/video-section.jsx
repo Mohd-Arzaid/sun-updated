@@ -150,19 +150,33 @@ const VideoSection = () => {
           <button
             onClick={scrollPrev}
             disabled={!canScrollPrev}
+            aria-label="Previous video"
             className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <ChevronLeft className="hidden md:block text-neutral-600" />
-            <ChevronLeft className="block md:hidden size-4 md:size-5 text-neutral-600" />
+            <ChevronLeft
+              className="hidden md:block text-neutral-600"
+              aria-hidden="true"
+            />
+            <ChevronLeft
+              className="block md:hidden size-4 md:size-5 text-neutral-600"
+              aria-hidden="true"
+            />
           </button>
 
           <button
             onClick={scrollNext}
             disabled={!canScrollNext}
+            aria-label="Next video"
             className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <ChevronRight className="hidden md:block text-neutral-600" />
-            <ChevronRight className="block md:hidden size-4 md:size-5 text-neutral-600" />
+            <ChevronRight
+              className="hidden md:block text-neutral-600"
+              aria-hidden="true"
+            />
+            <ChevronRight
+              className="block md:hidden size-4 md:size-5 text-neutral-600"
+              aria-hidden="true"
+            />
           </button>
         </div>
 
