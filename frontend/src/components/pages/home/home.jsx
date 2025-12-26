@@ -46,9 +46,9 @@ const Home = () => {
       <section aria-label="Partner Logos - Bottom">
         <LogoTicker />
       </section>
-      {/* <section aria-label="Video Section">
+      <section aria-label="Video Section">
         <VideoSection/>
-      </section> */}
+      </section>
     </main>
   );
 };
