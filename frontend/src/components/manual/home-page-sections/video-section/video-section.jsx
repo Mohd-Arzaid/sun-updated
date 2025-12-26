@@ -8,8 +8,8 @@ import {
 
 const VideoSection = () => {
   const [api, setApi] = React.useState(null);
-  const [canScrollPrev, setCanScrollPrev] = React.useState(false);
-  const [canScrollNext, setCanScrollNext] = React.useState(false);
+  const [canScrollPrev, setCanScrollPrev] = React.useState(true);
+  const [canScrollNext, setCanScrollNext] = React.useState(true);
 
   const videos = [
     {
@@ -55,8 +55,9 @@ const VideoSection = () => {
     if (!api) return;
 
     const updateScrollState = () => {
-      setCanScrollPrev(api.canScrollPrev());
-      setCanScrollNext(api.canScrollNext());
+      // In loop mode, buttons are always enabled
+      setCanScrollPrev(true);
+      setCanScrollNext(true);
     };
 
     updateScrollState();
@@ -82,8 +83,8 @@ const VideoSection = () => {
         {/* Heading */}
         <div className="text-center mb-3 md:mb-6">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl font-geist text-neutral-600 max-w-xs sm:max-w-md md:max-w-xl mx-auto px-4 sm:px-2 md:px-0">
-            Explore our in-depth certification guides 
-            through engaging video showcase
+            Explore our in-depth certification guides through engaging video
+            showcase
           </p>
         </div>
 
@@ -111,7 +112,7 @@ const VideoSection = () => {
           setApi={setApi}
           opts={{
             align: "start",
-            loop: false,
+            loop: true,
             dragFree: true,
           }}
           className="w-full"

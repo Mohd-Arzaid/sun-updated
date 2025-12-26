@@ -1,5 +1,10 @@
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import { useState } from "react";
+import React from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 
 const Countries = () => {
   // All countries data - 22 countries
@@ -28,25 +33,35 @@ const Countries = () => {
     { name: "Denmark", img: "/countries-images/Denmark.webp" },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const cardsPerView = 4;
+  const [api, setApi] = React.useState(null);
+  const [canScrollPrev, setCanScrollPrev] = React.useState(true);
+  const [canScrollNext, setCanScrollNext] = React.useState(true);
 
-  // Handle previous button
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? countries.length - 1 : prev - 1));
+  React.useEffect(() => {
+    if (!api) return;
+
+    const updateScrollState = () => {
+      // In loop mode, buttons are always enabled
+      setCanScrollPrev(true);
+      setCanScrollNext(true);
+    };
+
+    updateScrollState();
+    api.on("select", updateScrollState);
+    api.on("reInit", updateScrollState);
+
+    return () => {
+      api.off("select", updateScrollState);
+    };
+  }, [api]);
+
+  const scrollPrev = () => {
+    api?.scrollPrev();
   };
 
-  // Handle next button
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === countries.length - 1 ? 0 : prev + 1));
+  const scrollNext = () => {
+    api?.scrollNext();
   };
-
-  // Get current 4 countries to display with circular logic
-  const currentCountries = [];
-  for (let i = 0; i < cardsPerView; i++) {
-    const index = (currentIndex + i) % countries.length;
-    currentCountries.push(countries[index]);
-  }
 
   return (
     <div className="bg-white pt-8 pb-10 sm:pt-10 sm:pb-12 md:pt-12 md:pb-14 border-2 border-neutral-100">
@@ -61,59 +76,71 @@ const Countries = () => {
 
         <div className="flex gap-4 mb-6 md:mb-8 items-center justify-center">
           <button
-            onClick={handlePrev}
+            onClick={scrollPrev}
+            disabled={!canScrollPrev}
             aria-label="Previous countries"
-            className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors"
+            className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <ChevronLeft className="hidden md:block text-neutral-600" />
             <ChevronLeft className="block md:hidden size-4 md:size-5 text-neutral-600" />
           </button>
 
           <button
-            onClick={handleNext}
+            onClick={scrollNext}
+            disabled={!canScrollNext}
             aria-label="Next countries"
-            className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors"
+            className="rounded-full w-[35px] h-[35px] md:w-[45px] md:h-[45px] flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <ChevronRight className="hidden md:block text-neutral-600" />
             <ChevronRight className="block md:hidden size-4 md:size-5 text-neutral-600" />
           </button>
         </div>
 
-        <div className="relative overflow-hidden">
-          <div className="flex gap-4 overflow-x-auto scrollbar-hide [mask-image:linear-gradient(to_right,black_90%,transparent)] lg:[mask-image:none]">
-            {currentCountries.map((country, index) => (
-              <div
-                key={`${country.name}-${index}`}
-                className="flex-shrink-0 w-[280px] h-[280px] md:w-[300px] md:h-[300px] bg-neutral-100 rounded-xl overflow-hidden flex flex-col"
+        <Carousel
+          setApi={setApi}
+          opts={{
+            align: "start",
+            loop: true,
+            dragFree: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-2 sm:-ml-4">
+            {countries.map((country) => (
+              <CarouselItem
+                key={country.name}
+                className="pl-2 sm:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
               >
-                {/* Image Container - Fixed Height */}
-                <div className="h-[220px]  md:h-[240px] w-full flex items-center justify-center px-4 md:px-6 py-2">
-                  <img
-                    src={country.img}
-                    alt={country.name}
-                    width="240"
-                    height="240"
-                    className="max-w-full max-h-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
-
-                {/* Country Name - Fixed at Bottom */}
-                <div className="h-[60px] w-full flex items-center px-4 md:px-6 border-t border-neutral-200 bg-neutral-100">
-                  <span className="flex items-center justify-center font-bold gap-2">
-                    <Star
-                      className="fill-current text-neutral-800 flex-shrink-0"
-                      size={20}
+                <div className="w-full max-w-[280px] sm:max-w-[300px] h-[280px] md:h-[300px] bg-neutral-100 rounded-xl overflow-hidden flex flex-col mx-auto">
+                  {/* Image Container - Fixed Height */}
+                  <div className="h-[220px]  md:h-[240px] w-full flex items-center justify-center px-4 md:px-6 py-2">
+                    <img
+                      src={country.img}
+                      alt={country.name}
+                      width="240"
+                      height="240"
+                      className="max-w-full max-h-full object-contain"
+                      loading="lazy"
                     />
-                    <div className="text-base md:text-lg font-geist text-neutral-800 tracking-wide uppercase">
-                      {country.name}
-                    </div>
-                  </span>
+                  </div>
+
+                  {/* Country Name - Fixed at Bottom */}
+                  <div className="h-[60px] w-full flex items-center px-4 md:px-6 border-t border-neutral-200 bg-neutral-100">
+                    <span className="flex items-center justify-center font-bold gap-2">
+                      <Star
+                        className="fill-current text-neutral-800 flex-shrink-0"
+                        size={20}
+                      />
+                      <div className="text-base md:text-lg font-geist text-neutral-800 tracking-wide uppercase">
+                        {country.name}
+                      </div>
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </CarouselItem>
             ))}
-          </div>
-        </div>
+          </CarouselContent>
+        </Carousel>
       </div>
     </div>
   );
