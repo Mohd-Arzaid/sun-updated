@@ -10,7 +10,7 @@ import VideoSection from "@/components/manual/home-page-sections/video-section/v
 import WebinarMarquee from "@/components/manual/home-page-sections/webinar-marquee/webinar-marquee";
 import WhatsOurCustomersSay from "@/components/manual/home-page-sections/whats-our-customers-say/whats-our-customers-say";
 
-export const Home = () => {
+const Home = () => {
   return (
     <main>
       <section aria-label="Hero Section">
@@ -46,9 +46,11 @@ export const Home = () => {
       <section aria-label="Partner Logos - Bottom">
         <LogoTicker />
       </section>
-      <section aria-label="Video Section">
+      {/* <section aria-label="Video Section">
         <VideoSection/>
-      </section>
+      </section> */}
     </main>
   );
 };
+
+export default Home;

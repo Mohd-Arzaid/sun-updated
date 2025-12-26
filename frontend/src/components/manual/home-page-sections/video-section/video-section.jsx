@@ -7,6 +7,8 @@ const VideoSection = () => {
         <h2 className="font-playfair tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg text-center mb-10 md:mb-12 text-neutral-800">
           Video Showcase
         </h2>
+
+    
       </div>
     </div>
   );
