@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <div className="bg-white py-10 sm:py-12 md:py-12">
+      <div className="bg-white py-10 sm:py-12 md:py-12 border-2 border-neutral-100">
         <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
           {/* Heading Section */}
           <div className="text-center">
