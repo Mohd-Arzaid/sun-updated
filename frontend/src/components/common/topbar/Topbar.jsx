@@ -3,7 +3,7 @@ import { Mail, Phone } from "lucide-react";
 
 const Topbar = () => {
   return (
-    <div className="bg-[#0A4394] text-white py-2.5 sticky top-0 z-50 hidden md:block">
+    <div className="bg-[#0A4394] text-white py-2.5 sticky top-0 z-50 hidden lg:block">
       <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-8 relative flex items-center justify-center gap-8">
         <a
           href="mailto:admin@bis-certifications.com"
