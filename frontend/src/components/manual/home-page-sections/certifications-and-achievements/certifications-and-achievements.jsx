@@ -8,7 +8,7 @@ const CertificationAndAchievements = () => {
           Certifications and Achievements
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 sm:gap-4">
-          <div className="col-span-1 w-auto h-[260px] sm:h-[280px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
+          <div className="col-span-1 w-full max-w-[280px] sm:max-w-[300px] h-[280px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2 mx-auto">
             <img
               src="/home-page-certificate-img/Sun-Certifications-India-ISO-9001-page-0001.jpg"
               alt=""
@@ -19,7 +19,7 @@ const CertificationAndAchievements = () => {
               decoding="async"
             />
           </div>
-          <div className="col-span-1 w-auto h-[260px] sm:h-[280px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
+          <div className="col-span-1 w-full max-w-[280px] sm:max-w-[300px] h-[280px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2 mx-auto">
             <img
               src="/home-page-certificate-img/Sun-Certifications-India-ISO-27001-page-0001.jpg"
               alt="ISO 27001 Certification"
@@ -30,7 +30,7 @@ const CertificationAndAchievements = () => {
               decoding="async"
             />
           </div>
-          <div className="col-span-1 w-auto h-[260px] sm:h-[280px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
+          <div className="col-span-1 w-full max-w-[280px] sm:max-w-[300px] h-[280px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2 mx-auto">
             <img
               src="/home-page-certificate-img/Sun-Certifications-India-ISO-20000-page-0001.jpg"
               alt="ISO 20000 Certification"
@@ -41,7 +41,7 @@ const CertificationAndAchievements = () => {
               decoding="async"
             />
           </div>
-          <div className="col-span-1 w-auto h-[260px] sm:h-[280px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2">
+          <div className="col-span-1 w-full max-w-[280px] sm:max-w-[300px] h-[280px] md:h-[300px] rounded-3xl border border-neutral-200 bg-neutral-100 p-2 mx-auto">
             <img
               src="/home-page-certificate-img/Sun-Certifications-India-ISO-10002-page-0001.jpg"
               alt="ISO 10002 Certification"
