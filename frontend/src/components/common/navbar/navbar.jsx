@@ -259,13 +259,13 @@ const Navbar = () => {
             src="/company-logo/company-logo.webp"
             alt="Sun Certifications India logo"
             title="Sun Certifications India logo"
-            className="w-10 h-10 md:w-12 md:h-12 object-contain flex-shrink-0"
+            className="w-9 h-9 md:w-12 md:h-12 object-contain flex-shrink-0"
           />
           <div className="text-center mt-0.5">
             <div className="font-geist text-neutral-900 font-semibold text-sm md:text-xl uppercase">
               Sun Certifications India
             </div>
-            <div className="font-geist text-neutral-600 font-medium -mt-0.5 tracking-tight text-xs md:text-sm uppercase">
+            <div className="font-geist text-neutral-600 font-medium -mt-0.5 tracking-tight text-[10px] md:text-sm uppercase">
               Simplifying Certifications
             </div>
           </div>
