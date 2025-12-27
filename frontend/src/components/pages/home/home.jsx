@@ -47,7 +47,7 @@ const Home = () => {
         <LogoTicker />
       </section>
       <section aria-label="Video Section">
-        <VideoSection/>
+        <VideoSection />
       </section>
     </main>
   );
