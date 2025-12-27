@@ -272,7 +272,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center justify-end">
+        <div className="hidden lg:flex items-center justify-end">
           {/* Home, About & Services */}
           <NavigationMenu>
             <NavigationMenuList>
@@ -361,7 +361,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-neutral-800 hover:text-neutral-900 focus:outline-none transition-colors"
+          className="lg:hidden text-neutral-800 hover:text-neutral-900 focus:outline-none transition-colors"
           onClick={() => (isOpen ? closeMobileMenu() : setIsOpen(true))}
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >

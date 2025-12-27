@@ -127,12 +127,12 @@ const Hero = () => {
   return (
     <>
       {/* Desktop Hero - Hidden on mobile */}
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <DesktopHero />
       </div>
 
       {/* Mobile Hero - Hidden on desktop */}
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <MobileHero />
       </div>
     </>
