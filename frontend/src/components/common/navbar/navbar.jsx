@@ -252,20 +252,20 @@ const Navbar = () => {
 
   return (
     <nav className="z-50 sticky lg:top-[44px] top-0 w-full bg-white/70 backdrop-blur-lg border-b border-neutral-200">
-      <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-between h-20">
+      <div className="max-w-[84rem] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
         {/* Company Logo & Name */}
         <Link to="/" className="flex items-center gap-2.5">
           <img
             src="/company-logo/company-logo.webp"
             alt="Sun Certifications India logo"
             title="Sun Certifications India logo"
-            className="w-10 h-10 md:w-12 md:h-12 object-contain flex-shrink-0"
+            className="w-10 h-10 lg:w-12 lg:h-12 object-contain flex-shrink-0"
           />
           <div className="text-center mt-0.5">
-            <div className="font-geist text-neutral-900 font-semibold text-base md:text-xl uppercase">
+            <div className="font-geist text-neutral-900 font-semibold text-base lg:text-xl uppercase">
               Sun Certifications India
             </div>
-            <div className="font-geist text-neutral-600 font-medium -mt-0.5 tracking-tight text-xs md:text-sm uppercase">
+            <div className="font-geist text-neutral-600 font-medium -mt-0.5 tracking-tight text-xs lg:text-sm uppercase">
               Simplifying Certifications
             </div>
           </div>
@@ -373,7 +373,7 @@ const Navbar = () => {
       {isOpen && (
         <div
           ref={mobileMenuRef}
-          className="md:hidden absolute top-full left-0 w-full bg-white border-t border-b border-neutral-200 shadow-lg z-40 max-h-[80vh] overflow-y-auto scrollbar-hide"
+          className="lg:hidden absolute top-full left-0 w-full bg-white border-t border-b border-neutral-200 shadow-lg z-40 max-h-[80vh] overflow-y-auto scrollbar-hide"
         >
           <div className="px-4 py-4 space-y-1">
             {/* Home */}

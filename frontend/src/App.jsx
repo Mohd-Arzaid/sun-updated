@@ -4,6 +4,7 @@ import Home from "./components/pages/home/home";
 import Footer from "./components/common/footer/footer";
 import Navbar from "./components/common/navbar/navbar";
 import Topbar from "./components/common/topbar/Topbar";
+import BISFMPagesRoutes from "./routes/bisfm-pages-routes";
 
 const App = () => {
   return (
@@ -12,8 +13,9 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        {BISFMPagesRoutes()}
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
