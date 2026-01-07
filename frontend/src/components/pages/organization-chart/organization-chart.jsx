@@ -162,6 +162,73 @@ const OrganizationChart = () => {
                           <span>General Service Manager</span>
                         </div>
                       </div>
+
+                      {/* Vertical Connector below General Service Manager */}
+                      <div className="w-[2px] h-28 bg-neutral-200" />
+
+                      {/* Sub-level under General Service Manager */}
+                      <div className="relative w-full min-w-[850px]">
+                        {/* Horizontal bar connecting sub-services */}
+                        <div className="absolute top-0 left-[12.5%] right-[12.5%] h-[2px] bg-neutral-200" />
+
+                        <div className="flex justify-between w-full pt-8">
+                          {/* LMPC (2) */}
+                          <div className="flex flex-col items-center w-1/4 relative">
+                            <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
+                            <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                              <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
+                                <Settings
+                                  className="w-4 h-4 text-neutral-700"
+                                  aria-hidden="true"
+                                />
+                                <span>LMPC (2)</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* EPR (2) */}
+                          <div className="flex flex-col items-center w-1/4 relative">
+                            <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
+                            <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                              <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
+                                <Settings
+                                  className="w-4 h-4 text-neutral-700"
+                                  aria-hidden="true"
+                                />
+                                <span>EPR (2)</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* PESO (4) */}
+                          <div className="flex flex-col items-center w-1/4 relative">
+                            <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
+                            <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                              <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
+                                <Settings
+                                  className="w-4 h-4 text-neutral-700"
+                                  aria-hidden="true"
+                                />
+                                <span>PESO (4)</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Other Services (2) */}
+                          <div className="flex flex-col items-center w-1/4 relative">
+                            <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
+                            <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                              <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
+                                <Settings
+                                  className="w-4 h-4 text-neutral-700"
+                                  aria-hidden="true"
+                                />
+                                <span>Other Services (2)</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
