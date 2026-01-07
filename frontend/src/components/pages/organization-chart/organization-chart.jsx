@@ -80,7 +80,7 @@ const OrganizationChart = () => {
                 </div>
 
                 {/* Vertical Connector below Head Operations */}
-                <div className="w-[2px] h-8 bg-neutral-200" />
+                <div className="w-[2px] h-28 bg-neutral-200" />
 
                 {/* Sub-level under Head Operations */}
                 <div className="relative w-full min-w-[800px]">
@@ -143,6 +143,28 @@ const OrganizationChart = () => {
                       aria-hidden="true"
                     />
                     <span>Account Manager</span>
+                  </div>
+                </div>
+
+                {/* Vertical Connector below Account Manager */}
+                <div className="w-[2px] bg-neutral-200" />
+
+                {/* Sub-level under Account Manager */}
+                <div className="relative w-full min-w-[200px]">
+                  <div className="flex justify-center w-full pt-8">
+                    {/* Sub-branch: Accounts Dept (2) */}
+                    <div className="flex flex-col items-center relative">
+                      <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
+                      <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                        <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                          <Calculator
+                            className="w-4 h-4 text-neutral-700"
+                            aria-hidden="true"
+                          />
+                          <span>Accounts Dept (2)</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
