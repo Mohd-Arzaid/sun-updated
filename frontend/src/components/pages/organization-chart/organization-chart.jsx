@@ -17,7 +17,7 @@ const OrganizationChart = () => {
           {/* Root: DIRECTOR */}
           <div className="relative flex flex-col items-center">
             <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center">
-              <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+              <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
                 <Crown
                   className="w-4 h-4 text-neutral-700"
                   aria-hidden="true"
@@ -33,7 +33,7 @@ const OrganizationChart = () => {
           {/* Level 2: CEO */}
           <div className="relative flex flex-col items-center">
             <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center">
-              <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+              <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
                 <Briefcase
                   className="w-4 h-4 text-neutral-700"
                   aria-hidden="true"
@@ -56,7 +56,7 @@ const OrganizationChart = () => {
               <div className="flex flex-col items-center w-1/4 relative">
                 <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
                 <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
-                  <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                  <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
                     <Users
                       className="w-4 h-4 text-neutral-700"
                       aria-hidden="true"
@@ -70,7 +70,7 @@ const OrganizationChart = () => {
               <div className="flex flex-col items-center w-1/4 relative">
                 <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
                 <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
-                  <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                  <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
                     <Settings
                       className="w-4 h-4 text-neutral-700"
                       aria-hidden="true"
@@ -92,7 +92,7 @@ const OrganizationChart = () => {
                     <div className="flex flex-col items-center w-1/3 relative">
                       <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
                       <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
-                        <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                        <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
                           <Briefcase
                             className="w-4 h-4 text-neutral-700"
                             aria-hidden="true"
@@ -108,7 +108,7 @@ const OrganizationChart = () => {
                       <div className="flex flex-col items-center relative">
                         <div className="absolute top-[-16px] w-[2px] h-4 bg-neutral-200" />
                         <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
-                          <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                          <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
                             <Users
                               className="w-4 h-4 text-neutral-700"
                               aria-hidden="true"
@@ -123,7 +123,7 @@ const OrganizationChart = () => {
                     <div className="flex flex-col items-center w-1/3 relative">
                       <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
                       <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
-                        <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                        <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
                           <Briefcase
                             className="w-4 h-4 text-neutral-700"
                             aria-hidden="true"
@@ -139,7 +139,7 @@ const OrganizationChart = () => {
                       <div className="flex flex-col items-center relative">
                         <div className="absolute top-[-16px] w-[2px] h-4 bg-neutral-200" />
                         <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
-                          <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                          <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
                             <Users
                               className="w-4 h-4 text-neutral-700"
                               aria-hidden="true"
@@ -154,7 +154,7 @@ const OrganizationChart = () => {
                     <div className="flex flex-col items-center w-1/3 relative">
                       <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
                       <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
-                        <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                        <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
                           <Settings
                             className="w-4 h-4 text-neutral-700"
                             aria-hidden="true"
@@ -171,7 +171,7 @@ const OrganizationChart = () => {
               <div className="flex flex-col items-center w-1/4 relative">
                 <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
                 <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
-                  <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                  <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
                     <Calculator
                       className="w-4 h-4 text-neutral-700"
                       aria-hidden="true"
@@ -190,7 +190,7 @@ const OrganizationChart = () => {
                     <div className="flex flex-col items-center relative">
                       <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
                       <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
-                        <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                        <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
                           <Calculator
                             className="w-4 h-4 text-neutral-700"
                             aria-hidden="true"
@@ -207,7 +207,7 @@ const OrganizationChart = () => {
               <div className="flex flex-col items-center w-1/4 relative">
                 <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
                 <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
-                  <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                  <div className="flex items-center gap-2 text-center font-geist text-sm uppercase text-neutral-800 font-medium">
                     <Code
                       className="w-4 h-4 text-neutral-700"
                       aria-hidden="true"
