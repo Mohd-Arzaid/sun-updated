@@ -6,6 +6,7 @@ import {
   Settings,
   Calculator,
   Code,
+  GraduationCap,
 } from "lucide-react";
 
 const OrganizationChart = () => {
@@ -46,7 +47,7 @@ const OrganizationChart = () => {
           </div>
 
           {/* Level 3 branches */}
-          <div className="relative w-full max-w-4xl">
+          <div className="relative w-full max-w-5xl">
             {/* Horizontal bar connecting branches */}
             <div className="absolute top-0 left-[12.5%] right-[12.5%] h-[2px] bg-neutral-200" />
 
@@ -78,7 +79,58 @@ const OrganizationChart = () => {
                   </div>
                 </div>
 
+                {/* Vertical Connector below Head Operations */}
+                <div className="w-[2px] h-8 bg-neutral-200" />
+
                 {/* Sub-level under Head Operations */}
+                <div className="relative w-full min-w-[800px]">
+                  {/* Horizontal bar connecting sub-branches */}
+                  <div className="absolute top-0 left-[16.67%] right-[16.67%] h-[2px] bg-neutral-200" />
+
+                  <div className="flex justify-evenly w-full pt-8">
+                    {/* Sub-branch 1: FMCS Manager */}
+                    <div className="flex flex-col items-center w-1/3 relative">
+                      <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
+                      <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                        <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                          <Briefcase
+                            className="w-4 h-4 text-neutral-700"
+                            aria-hidden="true"
+                          />
+                          <span>FMCS Manager</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Sub-branch 2: Indian BIS Manager */}
+                    <div className="flex flex-col items-center w-1/3 relative">
+                      <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
+                      <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                        <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                          <Briefcase
+                            className="w-4 h-4 text-neutral-700"
+                            aria-hidden="true"
+                          />
+                          <span>Indian BIS Manager</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Sub-branch 3: General Service Manager */}
+                    <div className="flex flex-col items-center w-1/3 relative">
+                      <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
+                      <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                        <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                          <Settings
+                            className="w-4 h-4 text-neutral-700"
+                            aria-hidden="true"
+                          />
+                          <span>General Service Manager</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Branch 3: ACCOUNT MANAGER */}
