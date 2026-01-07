@@ -1,0 +1,119 @@
+import React from "react";
+import {
+  Crown,
+  Briefcase,
+  Users,
+  Settings,
+  Calculator,
+  Code,
+} from "lucide-react";
+
+const OrganizationChart = () => {
+  return (
+    <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12 py-8">
+      <div className="overflow-x-auto org-chart-scrollbar">
+        <div className="flex flex-col items-center w-full min-w-[800px]">
+          {/* Root: DIRECTOR */}
+          <div className="relative flex flex-col items-center">
+            <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center">
+              <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                <Crown
+                  className="w-4 h-4 text-neutral-700"
+                  aria-hidden="true"
+                />
+                <span>Director</span>
+              </div>
+            </div>
+
+            {/* Connector: Director to CEO */}
+            <div className="w-[2px] h-8 bg-neutral-200" />
+          </div>
+
+          {/* Level 2: CEO */}
+          <div className="relative flex flex-col items-center">
+            <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center">
+              <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                <Briefcase
+                  className="w-4 h-4 text-neutral-700"
+                  aria-hidden="true"
+                />
+                <span>CEO</span>
+              </div>
+            </div>
+
+            {/* Vertical Connector below CEO */}
+            <div className="w-[2px] h-8 bg-neutral-200" />
+          </div>
+
+          {/* Level 3 branches */}
+          <div className="relative w-full max-w-4xl">
+            {/* Horizontal bar connecting branches */}
+            <div className="absolute top-0 left-[12.5%] right-[12.5%] h-[2px] bg-neutral-200" />
+
+            <div className="flex justify-between w-full pt-8">
+              {/* Branch 1: HR. DEPT. (2) */}
+              <div className="flex flex-col items-center w-1/4 relative">
+                <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
+                <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                  <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                    <Users
+                      className="w-4 h-4 text-neutral-700"
+                      aria-hidden="true"
+                    />
+                    <span>HR. DEPT. (2)</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Branch 2: HEAD OPERATIONS */}
+              <div className="flex flex-col items-center w-1/4 relative">
+                <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
+                <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                  <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                    <Settings
+                      className="w-4 h-4 text-neutral-700"
+                      aria-hidden="true"
+                    />
+                    <span>Head Operations</span>
+                  </div>
+                </div>
+
+                {/* Sub-level under Head Operations */}
+              </div>
+
+              {/* Branch 3: ACCOUNT MANAGER */}
+              <div className="flex flex-col items-center w-1/4 relative">
+                <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
+                <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                  <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                    <Calculator
+                      className="w-4 h-4 text-neutral-700"
+                      aria-hidden="true"
+                    />
+                    <span>Account Manager</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Branch 4: CTO */}
+              <div className="flex flex-col items-center w-1/4 relative">
+                <div className="absolute top-[-32px] w-[2px] h-8 bg-neutral-200" />
+                <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                  <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                    <Code
+                      className="w-4 h-4 text-neutral-700"
+                      aria-hidden="true"
+                    />
+                    <span>CTO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OrganizationChart;
