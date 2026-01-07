@@ -100,6 +100,23 @@ const OrganizationChart = () => {
                           <span>FMCS Manager</span>
                         </div>
                       </div>
+
+                      {/* Vertical Connector below FMCS Manager */}
+                      <div className="w-[2px] h-10 bg-neutral-200" />
+
+                      {/* Sub-level under FMCS Manager */}
+                      <div className="flex flex-col items-center relative">
+                        <div className="absolute top-[-16px] w-[2px] h-4 bg-neutral-200" />
+                        <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                          <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                            <Users
+                              className="w-4 h-4 text-neutral-700"
+                              aria-hidden="true"
+                            />
+                            <span>FMCS Team (10)</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     {/* Sub-branch 2: Indian BIS Manager */}
@@ -112,6 +129,23 @@ const OrganizationChart = () => {
                             aria-hidden="true"
                           />
                           <span>Indian BIS Manager</span>
+                        </div>
+                      </div>
+
+                      {/* Vertical Connector below Indian BIS Manager */}
+                      <div className="w-[2px] h-10 bg-neutral-200" />
+
+                      {/* Sub-level under Indian BIS Manager */}
+                      <div className="flex flex-col items-center relative">
+                        <div className="absolute top-[-16px] w-[2px] h-4 bg-neutral-200" />
+                        <div className="px-4 py-2 bg-neutral-100 border-2 border-neutral-200 rounded-lg flex items-center justify-center whitespace-nowrap">
+                          <div className="flex items-center gap-2 text-center font-geist text-xs uppercase text-neutral-800 font-medium">
+                            <Users
+                              className="w-4 h-4 text-neutral-700"
+                              aria-hidden="true"
+                            />
+                            <span>Indian BIS Team (4)</span>
+                          </div>
                         </div>
                       </div>
                     </div>
