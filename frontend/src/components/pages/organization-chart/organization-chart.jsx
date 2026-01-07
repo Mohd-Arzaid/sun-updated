@@ -167,7 +167,7 @@ const OrganizationChart = () => {
                       <div className="w-[2px] h-28 bg-neutral-200" />
 
                       {/* Sub-level under General Service Manager */}
-                      <div className="relative w-full min-w-[850px]">
+                      <div className="relative w-full min-w-[800px]">
                         {/* Horizontal bar connecting sub-services */}
                         <div className="absolute top-0 left-[12.5%] right-[12.5%] h-[2px] bg-neutral-200" />
 
