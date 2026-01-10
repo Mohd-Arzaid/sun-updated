@@ -1,5 +1,8 @@
 import { ArrowRight, ChevronRight, Mail, MapPin, Phone } from "lucide-react";
 import React from "react";
+import { Link } from "react-router-dom";
+import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { MailPlus } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -13,7 +16,7 @@ const Footer = () => {
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-geist text-neutral-600 max-w-xs sm:max-w-md md:max-w-xl mx-auto px-4 sm:px-2 md:px-0">
               Email us at{" "}
-              <span className="text-neutral-900 font-medium underline underline-offset-4">
+              <span className="text-neutral-800 font-medium underline underline-offset-4">
                 admin@bis-certifications.com
               </span>{" "}
               or use one of the options below. We usually get back within 24
@@ -38,7 +41,7 @@ const Footer = () => {
                 <svg
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  className="size-7 text-neutral-800 hover:text-neutral-900 transition-colors"
+                  className="size-7 text-neutral-800 hover:text-neutral-800 transition-colors"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
@@ -54,7 +57,7 @@ const Footer = () => {
                 <svg
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  className="size-8 text-neutral-800 hover:text-neutral-900 transition-colors"
+                  className="size-8 text-neutral-800 hover:text-neutral-800 transition-colors"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM19 12h2c0-4.9-4-8.9-9-8.9v2c3.9 0 7 3.1 7 6.9zm-4 0h2c0-2.8-2.2-5-5-5v2c1.7 0 3 1.3 3 3z"></path>
@@ -71,7 +74,7 @@ const Footer = () => {
                 <svg
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  className="size-7 text-neutral-800 hover:text-neutral-900 transition-colors"
+                  className="size-7 text-neutral-800 hover:text-neutral-800 transition-colors"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
@@ -79,6 +82,237 @@ const Footer = () => {
                 <span className="sr-only">LinkedIn</span>
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Newsletter Section */}
+      <div className="border-b bg-neutral-50 border-neutral-200">
+        <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
+          <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left">
+              <p className="text-neutral-800 text-xl font-geist">
+                Subscribe to our newsletter
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+              <div className="relative">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="bg-neutral-100 border border-neutral-300 rounded-md px-4 py-3 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-neutral-800 focus:border-neutral-800 w-full sm:w-80 font-geist text-neutral-800 placeholder-neutral-500"
+                />
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-neutral-200 rounded transition-colors">
+                  <ArrowRight className="w-4 h-4 text-neutral-800" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className=" bg-gradient-to-b from-neutral-50 to-white border-t border-neutral-50 py-10 sm:py-12 md:py-12">
+        <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12 pb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
+            {/* Company Logo and Name */}
+            <div className="col-span-2">
+              <Link to="/" className="flex items-center gap-2.5">
+                <img
+                  src="/company-logo/company-logo.webp"
+                  alt="Sun Certifications India logo"
+                  title="Sun Certifications India logo"
+                  className="w-10 h-10 lg:w-12 lg:h-12 object-contain flex-shrink-0"
+                />
+                <div className="text-center mt-0.5">
+                  <div className="font-geist text-neutral-800 font-semibold text-base lg:text-xl uppercase">
+                    Sun Certifications India
+                  </div>
+                  <div className="font-geist text-neutral-600 font-medium -mt-0.5 tracking-tight text-xs lg:text-sm uppercase">
+                    Simplifying Certifications
+                  </div>
+                </div>
+              </Link>
+
+              {/* Address Info */}
+              <div className="my-8 text-neutral-600 max-w-sm font-geist">
+                ITL Twin Tower, Netaji Subhash Place , Pitampura Delhi - 110034{" "}
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="text-lg font-semibold font-geist text-neutral-800">
+                Our Services
+              </div>
+              <ul className="space-y-3">
+                {[
+                  {
+                    name: "TEC",
+                    href: "/information-about-tec-certificate-mtcte",
+                  },
+                  {
+                    name: "ISI MARK",
+                    href: "/a-guide-to-bis-certification-indian-bis",
+                  },
+                  { name: "CE CERTIFICATION", href: "/ce-certification" },
+                  {
+                    name: "EPR",
+                    href: "/a-guide-on-how-to-obtain-epr-certificate",
+                  },
+                  {
+                    name: "ROHS",
+                    href: "/restriction-of-hazardous-substance-rohs-certificate",
+                  },
+                  {
+                    name: "WPC",
+                    href: "/information-about-wpc-certificate-eta-approval",
+                  },
+                ].map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className="text-neutral-600 hover:text-neutral-800 transition-colors font-geist text-sm uppercase flex items-center group"
+                    >
+                      <ChevronRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <span className="group-hover:translate-x-1 transition-transform">
+                        {link.name}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-6">
+              <div className="text-lg font-semibold font-geist text-neutral-800">
+                Company
+              </div>
+              <ul className="space-y-3">
+                {[
+                  { name: "About Us", href: "#" },
+                  { name: "Contact Us", href: "#" },
+                  { name: "FAQ's", href: "#" },
+                  { name: "Sitemap", href: "#" },
+                ].map((category) => (
+                  <li key={category.name}>
+                    <a
+                      href={category.href}
+                      className="text-neutral-600 hover:text-neutral-800 transition-colors font-geist text-sm flex items-center group"
+                    >
+                      <ChevronRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <span className="group-hover:translate-x-1 transition-transform">
+                        {category.name}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-6">
+              <div className="text-lg font-semibold font-geist text-neutral-800">
+                News & Notifications
+              </div>
+              <ul className="space-y-3">
+                {[
+                  {
+                    name: "Blogs",
+                    href: "/Blogs",
+                  },
+                  { name: "Latest Updates", href: "/latest-updates" },
+                  { name: "Ministry Updates", href: "/ministry-updates" },
+                  { name: "Webinar Updates", href: "/webinar-updates" },
+                  { name: "Gallery", href: "/gallery" },
+                ].map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className="text-neutral-600 hover:text-neutral-800 transition-colors font-geist text-sm flex items-center group"
+                    >
+                      <ChevronRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <span className="group-hover:translate-x-1 transition-transform">
+                        {link.name}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-neutral-50 py-4 border-t border-neutral-200">
+        <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
+          <div className="flex flex-col md:flex-row  items-center mt-6 md:mt-4 mb-4 gap-4 md:gap-0 md:justify-between">
+            <div className="flex gap-3 flex-wrap items-center justify-center">
+              <a
+                href="https://www.linkedin.com/company/sun-certifications-india/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our GitHub profile"
+              >
+                <LinkedInLogoIcon className="h-5 w-6 md:h-6 md:w-8 text-neutral-600 hover:text-neutral-800 duration-200 hover:-translate-y-2 cursor-pointer" />
+                <span className="sr-only">linkedin</span>
+              </a>
+
+              <a
+                href="mailto:admin@bis-certifications.com?body=Hello"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Send us an email"
+              >
+                <MailPlus className="h-5 w-6 md:h-6 md:w-8 text-neutral-600 hover:text-neutral-800 duration-200 hover:-translate-y-2 cursor-pointer" />
+                <span className="sr-only">Email</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/suncertificationsindia"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Instagram"
+              >
+                <InstagramLogoIcon className="h-5 w-6 md:h-6 md:w-8 text-neutral-600 hover:text-neutral-800 duration-200 hover:-translate-y-2 cursor-pointer" />
+                <span className="sr-only">Instagram</span>
+              </a>
+            </div>
+
+            <span className="text-neutral-600 font-geist text-[13px] md:text-base text-center">
+              Copyright © 2025 Sun Certifications India. All Rights Reserved.
+            </span>
+
+            <div className="md:hidden flex items-center gap-2">
+              <Link
+                to="/privacy-policy"
+                className="text-neutral-600 hover:text-neutral-800 font-geist text-[13px] md:text-base hover:underline"
+              >
+                Privacy Policy
+              </Link>
+              <div className="size-1.5 md:size-2 shrink-0 rounded-full bg-neutral-400"></div>
+              <Link
+                to="/terms-and-conditions"
+                className="text-neutral-600 hover:text-neutral-800 font-geist text-[13px] md:text-base hover:underline"
+              >
+                Terms of Service
+              </Link>
+            </div>
+
+            <div className="hidden md:block size-2 shrink-0 rounded-full bg-neutral-400"></div>
+
+            <Link
+              to="/privacy-policy"
+              className="hidden md:block text-neutral-600 hover:text-neutral-800 font-geist hover:underline"
+            >
+              Privacy Policy
+            </Link>
+
+            <div className="hidden md:block size-2 shrink-0 rounded-full bg-neutral-400"></div>
+
+            <Link
+              to="/terms-and-conditions"
+              className="hidden md:block text-neutral-600 hover:text-neutral-800 font-geist hover:underline"
+            >
+              Terms of Service
+            </Link>
           </div>
         </div>
       </div>

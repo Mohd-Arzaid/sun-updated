@@ -17,7 +17,7 @@ const App = () => {
         {BISFMPagesRoutes()}
         <Route path="/organization-chart" element={<OrganizationChart />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
