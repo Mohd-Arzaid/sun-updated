@@ -254,6 +254,26 @@ export const NAVIGATION_DATA = {
     //   icon: Award,
     // },
   ],
+  about: [
+    {
+      id: 1,
+      name: "About Us",
+      link: "/about",
+      icon: Building,
+    },
+    {
+      id: 2,
+      name: "Grant Letter",
+      link: "/BIS-certification-grant-letter",
+      icon: Award,
+    },
+    {
+      id: 3,
+      name: "Awards",
+      link: "/awards-and-recognition",
+      icon: Award,
+    },
+  ],
   faqs: [
     {
       id: 1,
