@@ -1,3 +1,6 @@
+import React from "react";
+import Container from "@/components/common/container/container";
+
 const COMPANY_LOGOS = [
   {
     name: "Honeywell",
@@ -54,7 +57,7 @@ const LogoTicker = () => {
 
   return (
     <div className="bg-white w-full py-3 md:py-5 border-2 border-neutral-100">
-      <div className="max-w-[84rem] mx-auto px-2 md:px-4">
+      <Container>
         <div className="marquee-container overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
           <div className="marquee-track logo-ticker-track flex w-max min-w-full shrink-0 flex-nowrap gap-1 md:gap-6">
             {duplicated.map((logo, i) => (
@@ -83,7 +86,7 @@ const LogoTicker = () => {
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

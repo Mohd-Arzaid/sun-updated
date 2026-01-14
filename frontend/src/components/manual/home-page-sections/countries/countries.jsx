@@ -5,6 +5,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import Container from "@/components/common/container/container";
 
 const Countries = () => {
   // All countries data - 22 countries
@@ -37,7 +38,7 @@ const Countries = () => {
 
   return (
     <div className="bg-white pt-8 pb-10 sm:pt-10 sm:pb-12 md:pt-12 md:pb-14 border-2 border-neutral-100">
-      <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12 flex flex-col">
+      <Container className="flex flex-col">
         {/* Heading */}
         <div className="text-center mb-3 md:mb-6">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl font-geist text-neutral-600 max-w-xs sm:max-w-md md:max-w-xl mx-auto px-4 sm:px-2 md:px-0">
@@ -111,7 +112,7 @@ const Countries = () => {
             ))}
           </CarouselContent>
         </Carousel>
-      </div>
+      </Container>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Container from "@/components/common/container/container";
 
 const latestNews = [
   {
@@ -29,9 +30,9 @@ const LatestNewsMarquee = () => {
 
   return (
     <div className="bg-white pt-8 pb-10 sm:pt-10 sm:pb-14 md:pt-12 md:pb-14">
-      <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
+      <Container>
         <div className="text-center mb-6 sm:mb-9">
-          <h2 className="font-playfair tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg text-center text-neutral-800">
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg text-center text-neutral-800">
             Latest Updates
           </h2>
         </div>
@@ -51,7 +52,7 @@ const LatestNewsMarquee = () => {
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

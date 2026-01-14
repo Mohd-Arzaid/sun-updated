@@ -1,0 +1,293 @@
+import React from "react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import {
+  SlashIcon,
+  Users,
+  FileCheck,
+  Package,
+  Globe,
+  Briefcase,
+  Star,
+  MapPin,
+  Handshake,
+  MailPlus,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import Container from "@/components/common/container/container";
+import { Separator } from "@/components/ui/separator";
+
+const AdvisoryNetworkPage = () => {
+  return (
+    <div className="relative">
+      <BreadcrumbContent />
+      <HeroSection />
+      <AdvisoryCardsSection />
+    </div>
+  );
+};
+
+export default AdvisoryNetworkPage;
+
+const BreadcrumbContent = () => {
+  return (
+    <div className="absolute top-3 md:top-5 left-0 w-full z-30">
+      <Container>
+        <div className="w-full overflow-x-auto scrollbar-hide">
+          <Breadcrumb>
+            <BreadcrumbList className="flex-nowrap font-geist">
+              <BreadcrumbItem className="flex-shrink-0">
+                <BreadcrumbLink asChild>
+                  <Link to="/">Home</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator className="flex-shrink-0">
+                <SlashIcon />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem className="flex-shrink-0">
+                <BreadcrumbPage className="whitespace-nowrap">
+                  Advisory Network Page
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </Container>
+    </div>
+  );
+};
+
+const HeroSection = () => {
+  return (
+    <div className="pb-16 border-b border-neutral-200">
+      <Container>
+        <div className="py-14">
+          <h1 className="font-playfair mb-4 md:mb-6 text-center text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg">
+            Advisory Network Page
+          </h1>
+          <p className="font-geist text-sm sm:text-base md:text-lg max-w-xl sm:max-w-2xl md:max-w-4xl text-center mx-auto text-neutral-600">
+            We collaborate with a vetted network of independent former BIS
+            professionals who provide technical guidance on audits,
+            documentation, inspections, and corrective actions. These advisors
+            are not employees of Sun Certifications India and do not represent
+            BIS.
+          </p>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-4 border bg-neutral-50 border-neutral-200">
+          <div className="px-6 py-8 border-b border-neutral-200 md:border-b-0 md:border-r">
+            <div class="flex items-center justify-center gap-3">
+              <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-neutral-100 border border-neutral-200 p-1">
+                <div class="flex h-full w-full items-center justify-center rounded-lg shadow-input bg-neutral-50">
+                  <Users className="text-black" size={24} />
+                </div>
+              </div>
+              <p class="text-3xl font-geist font-bold text-neutral-800">25+</p>
+            </div>
+
+            <p class="font-geist mt-4 text-base text-neutral-600">
+              Independent former BIS advisors
+            </p>
+          </div>
+          <div className="px-6 py-8 border-b border-neutral-200 md:border-b-0 md:border-r">
+            <div class="flex items-center justify-center gap-3">
+              <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-neutral-100 border border-neutral-200 p-1">
+                <div class="flex h-full w-full items-center justify-center rounded-lg shadow-input bg-neutral-50">
+                  <FileCheck className="text-black" size={24} />
+                </div>
+              </div>
+              <p class="text-3xl font-geist font-bold text-neutral-800">300+</p>
+            </div>
+
+            <p class="font-geist mt-4 text-base text-neutral-600">
+              Audits supported across Industries
+            </p>
+          </div>
+          <div className="px-6 py-8 border-b border-neutral-200 md:border-b-0 md:border-r">
+            <div class="flex items-center justify-center gap-3">
+              <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-neutral-100 border border-neutral-200 p-1">
+                <div class="flex h-full w-full items-center justify-center rounded-lg shadow-input bg-neutral-50">
+                  <Package className="text-black" size={24} />
+                </div>
+              </div>
+              <p class="text-3xl font-geist font-bold text-neutral-800">100+</p>
+            </div>
+
+            <p class="font-geist mt-4 text-base text-neutral-600">
+              Product Categories Covered
+            </p>
+          </div>
+          <div className="px-6 py-8 border-b border-neutral-200 md:border-b-0">
+            <div class="flex items-center justify-center gap-3">
+              <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-neutral-100 border border-neutral-200 p-1">
+                <div class="flex h-full w-full items-center justify-center rounded-lg shadow-input bg-neutral-50">
+                  <Globe className="text-black" size={24} />
+                </div>
+              </div>
+              <p class="text-3xl font-geist font-bold text-neutral-800">20+</p>
+            </div>
+
+            <p class="font-geist mt-4 text-base text-neutral-600">
+              Countries Served (Global Support)
+            </p>
+          </div>
+        </div>
+      </Container>
+    </div>
+  );
+};
+
+const AdvisoryCardsSection = () => {
+  const advisorsData = [
+    {
+      id: 1,
+      formerRole: "Former BIS Scientist B (2011–2020)",
+      specialties: "FMCS, Electrical Products, Toys",
+      region: "North Zone / PAN-India",
+      clientSupport:
+        "Pre-audit gap analysis, sampling plan, lab coordination, corrective action advice",
+    },
+    {
+      id: 2,
+      formerRole: "Former BIS Lab Officer (2010–2018)",
+      specialties: "Cables & Wires, Transformers, Safety Standards",
+      region: "Western & Southern India",
+      clientSupport:
+        "Lab test alignment, specification interpretation, document review",
+    },
+    {
+      id: 3,
+      formerRole: "Former BIS Audit Lead (2012–2019)",
+      specialties: "Quality system audits, non-conformity prioritization",
+      region: "PAN-India + Export markets",
+      clientSupport: "Audit readiness roadmaps, NC closure guidance",
+    },
+    {
+      id: 4,
+      formerRole: "Former BIS Scientist B (2011–2020)",
+      specialties: "FMCS, Electrical Products, Household Appliances",
+      region: "North Zone / PAN-India",
+      clientSupport:
+        "Pre-audit gap analysis, audit readiness checklist, corrective action planning",
+    },
+    {
+      id: 5,
+      formerRole: "Former BIS Laboratory Officer (2010–2018)",
+      specialties: "Cables & Wires, Transformers, Safety Testing",
+      region: "West & South India",
+      clientSupport:
+        "Lab coordination, test sample planning, test report interpretation",
+    },
+    {
+      id: 6,
+      formerRole: "Former BIS Certification Officer (2012–2019)",
+      specialties: "ISI Mark Scheme, Factory Inspection Readiness",
+      region: "PAN-India",
+      clientSupport:
+        "Factory audit preparation, documentation verification, NC closure guidance",
+    },
+    {
+      id: 7,
+      formerRole: "Former BIS Scientist C (2009–2017)",
+      specialties: "Toys, Furniture, Consumer Products",
+      region: "North & Central India",
+      clientSupport:
+        "Product standard interpretation, compliance gap identification, audit preparation",
+    },
+    {
+      id: 8,
+      formerRole: "Former BIS FMCS Auditor (2013–2021)",
+      specialties: "Foreign Manufacturers Certification Scheme (FMCS)",
+      region: "Global / Export Markets",
+      clientSupport:
+        "FMCS documentation support, audit simulation, inspection preparedness",
+    },
+    {
+      id: 9,
+      formerRole: "Former BIS Lab & Inspection Officer (2011–2019)",
+      specialties: "Steel Products, Pipes & Tubes, Industrial Materials",
+      region: "East & North India",
+      clientSupport:
+        "Sampling methodology, test coordination, specification clarification",
+    },
+  ];
+
+  return (
+    <div className="pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16">
+      <Container>
+        <h1 className="font-playfair mb-4 md:mb-6 text-center text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg">
+          Our Advisor Micro-Profiles
+        </h1>
+        <p className="font-geist text-sm sm:text-base md:text-lg max-w-xl sm:max-w-2xl md:max-w-3xl text-center mx-auto text-neutral-600">
+          Below are representative examples of the types of specialists in our
+          network. Actual advisors are engaged per assignment and verified prior
+          to engagement.
+        </p>
+
+        <div className="grid grid-cols-3 gap-5 mt-12">
+          {advisorsData.map((advisor) => (
+            <div
+              key={advisor.id}
+              className="rounded-3xl border border-neutral-200 bg-neutral-50 p-2"
+            >
+              <div className="rounded-2xl py-8 shadow-input bg-white px-8 h-full">
+                <div className="flex items-center gap-2">
+                  <Briefcase className="text-neutral-800" size={18} />
+                  <h3 className="font-geist text-lg font-semibold text-neutral-800">
+                    Former Role
+                  </h3>
+                </div>
+                <p className="font-geist text-base text-neutral-600">
+                  {advisor.formerRole}
+                </p>
+
+                <Separator className="my-5 border border-neutral-200 " />
+
+                <div className="flex items-center gap-2">
+                  <Star className="text-neutral-800" size={18} />
+                  <h3 className="font-geist text-lg font-semibold text-neutral-800">
+                    Specialties
+                  </h3>
+                </div>
+                <p className="font-geist text-base text-neutral-600">
+                  {advisor.specialties}
+                </p>
+
+                <Separator className="my-5 border border-neutral-200 " />
+
+                <div className="flex items-center gap-2">
+                  <MapPin className="text-neutral-800" size={18} />
+                  <h3 className="font-geist text-lg font-semibold text-neutral-800">
+                    Region
+                  </h3>
+                </div>
+                <p className="font-geist text-base text-neutral-600">
+                  {advisor.region}
+                </p>
+
+                <Separator className="my-5 border border-neutral-200 " />
+
+                <div className="flex items-center gap-2">
+                  <MailPlus className="text-neutral-800" size={18} />
+                  <h3 className="font-geist text-lg font-semibold text-neutral-800">
+                    Client Support
+                  </h3>
+                </div>
+                <p className="font-geist text-base text-neutral-600">
+                  {advisor.clientSupport}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </div>
+  );
+};

@@ -6,6 +6,7 @@ import Navbar from "./components/common/navbar/navbar";
 import Topbar from "./components/common/topbar/topbar";
 import BISFMPagesRoutes from "./routes/bisfm-pages-routes";
 import OrganizationChart from "./components/pages/organization-chart/organization-chart";
+import AdvisoryNetworkPage from "./components/pages/advisory-network-page/advisory-network-page";
 
 const App = () => {
   return (
@@ -16,6 +17,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         {BISFMPagesRoutes()}
         <Route path="/organization-chart" element={<OrganizationChart />} />
+        <Route
+          path="/expert-bis-certification-panel-sun-certifications-india"
+          element={<AdvisoryNetworkPage />}
+        />
       </Routes>
       <Footer />
     </>

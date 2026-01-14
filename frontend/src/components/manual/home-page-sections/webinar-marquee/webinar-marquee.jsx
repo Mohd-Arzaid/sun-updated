@@ -1,4 +1,5 @@
 import React from "react";
+import Container from "@/components/common/container/container";
 
 const WebinarMarquee = () => {
   // Gallery images
@@ -116,8 +117,8 @@ const WebinarMarquee = () => {
 
   return (
     <div className="bg-white pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16 border-2 border-neutral-100">
-      <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
-        <h2 className="font-playfair tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg text-center mb-10 md:mb-12 text-neutral-800">
+      <Container>
+        <h2 className="font-playfair  text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg text-center mb-10 md:mb-12 text-neutral-800">
           Seminars/Exhibitions
         </h2>
         {/* Infinite scroll for audit images */}
@@ -143,7 +144,7 @@ const WebinarMarquee = () => {
             ))}
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

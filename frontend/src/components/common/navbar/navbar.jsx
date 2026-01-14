@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { NAVIGATION_DATA } from "@/data/navbar-data/navbar-data";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
+import Container from "@/components/common/container/container";
 
 const STYLES = {
   button:
@@ -256,7 +257,7 @@ const Navbar = () => {
 
   return (
     <nav className="z-50 sticky lg:top-[44px] top-0 w-full bg-white/70 backdrop-blur-lg border-b border-neutral-200">
-      <div className="max-w-[84rem] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      <Container className="lg:px-8 flex items-center justify-between h-20">
         {/* Company Logo & Name */}
         <Link to="/" className="flex items-center gap-2.5">
           <img
@@ -372,7 +373,7 @@ const Navbar = () => {
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
-      </div>
+      </Container>
 
       {/* Mobile Navbar Menu */}
       {isOpen && (

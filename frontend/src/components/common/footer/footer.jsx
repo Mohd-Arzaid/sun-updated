@@ -3,15 +3,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { MailPlus } from "lucide-react";
+import Container from "@/components/common/container/container";
 
 const Footer = () => {
   return (
     <>
       <div className="bg-white py-10 sm:py-12 md:py-12 border-2 border-neutral-100">
-        <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
+        <Container>
           {/* Heading Section */}
           <div className="text-center">
-            <h2 className="font-playfair tracking-tight text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg mb-2 sm:mb-3">
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg mb-2 sm:mb-3">
               Want to know more?
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-geist text-neutral-600 max-w-xs sm:max-w-md md:max-w-xl mx-auto px-4 sm:px-2 md:px-0">
@@ -83,12 +84,12 @@ const Footer = () => {
               </a>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
 
       {/* Newsletter Section */}
       <div className="border-b bg-neutral-50 border-neutral-200">
-        <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
+        <Container>
           <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
               <p className="text-neutral-800 text-xl font-geist">
@@ -108,11 +109,11 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
 
       <div className=" bg-gradient-to-b from-neutral-50 to-white border-t border-neutral-50 py-10 sm:py-12 md:py-12">
-        <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12 pb-12">
+        <Container className="pb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
             {/* Company Logo and Name */}
             <div className="col-span-2">
@@ -238,11 +239,11 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
 
       <div className="bg-neutral-50 py-4 border-t border-neutral-200">
-        <div className="max-w-[84rem] mx-auto px-4 sm:px-6 md:px-12">
+        <Container>
           <div className="flex flex-col md:flex-row  items-center mt-6 md:mt-4 mb-4 gap-4 md:gap-0 md:justify-between">
             <div className="flex gap-3 flex-wrap items-center justify-center">
               <a
@@ -314,7 +315,7 @@ const Footer = () => {
               Terms of Service
             </Link>
           </div>
-        </div>
+        </Container>
       </div>
     </>
   );
