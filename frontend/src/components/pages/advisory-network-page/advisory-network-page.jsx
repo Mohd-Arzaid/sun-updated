@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -22,18 +23,61 @@ import {
 import { Link } from "react-router-dom";
 import Container from "@/components/common/container/container";
 import { Separator } from "@/components/ui/separator";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const AdvisoryNetworkPage = () => {
   return (
     <div className="relative">
+      <MetaTags />
       <BreadcrumbContent />
       <HeroSection />
       <AdvisoryCardsSection />
+      <FaqsSection />
     </div>
   );
 };
 
 export default AdvisoryNetworkPage;
+
+const MetaTags = () => {
+  const title =
+    "Advisory Network | Independent Former BIS Experts | Sun Certifications India";
+  const description =
+    "Meet our vetted network of independent former BIS specialists who guide BIS audits, documentation, inspections, and corrective action support — no government affiliation, no employees.";
+  const ogTitle =
+    "Advisory Network of Independent Former BIS Experts | Sun Certifications India";
+  const twitterTitle =
+    "Independent Former BIS Experts Advisory Network | Sun Certifications India";
+  const ogDescription =
+    "Discover Sun Certifications India' vetted advisory network of independent former BIS specialists supporting audits, documentation, inspections, and compliance guidance—no employees, no government affiliation.";
+  const twitterDescription =
+    "A vetted network of independent former BIS professionals supporting BIS audits, documentation, and compliance.";
+  const keywords =
+    "Advisory Network BIS, Independent Former BIS Experts, BIS Documentation Guidance, BIS Certification Expert Support";
+
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+
+      {/* Open Graph Tags */}
+      <meta property="og:title" content={ogTitle} />
+      <meta property="og:description" content={ogDescription} />
+      <meta property="og:type" content="website" />
+
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={twitterTitle} />
+      <meta name="twitter:description" content={twitterDescription} />
+    </Helmet>
+  );
+};
 
 const BreadcrumbContent = () => {
   return (
@@ -286,6 +330,73 @@ const AdvisoryCardsSection = () => {
               </div>
             </div>
           ))}
+        </div>
+      </Container>
+    </div>
+  );
+};
+
+const FaqsSection = () => {
+  const faqs = [
+    {
+      question: "Are these BIS officers employees of Sun Consultants?",
+      answer:
+        "No. They are independent consultants engaged on an assignment basis. They are not our employees and do not represent BIS.",
+    },
+    {
+      question: "How are advisors verified?",
+      answer:
+        "Advisors undergo credential checks, conflict checks, NDA signing, and quality reviews before engagement.",
+    },
+    {
+      question: "Will they speak on behalf of BIS?",
+      answer:
+        "No. Advisors provide guidance only; they cannot represent or speak for BIS or any government body.",
+    },
+    {
+      question: "Are your advisors currently associated with BIS?",
+      answer:
+        "No. All advisors are former BIS professionals and have no current affiliation with BIS or any government authority.",
+    },
+    {
+      question:
+        "Do advisors directly interact with BIS officials on behalf of clients?",
+      answer:
+        "No. Advisors provide technical guidance only. All formal communication, applications, and submissions are handled by the applicant or through official BIS portals, as per regulations.",
+    },
+  ];
+  return (
+    <div className="pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16 border-t border-neutral-200">
+      <Container>
+        <h1 className="font-playfair mb-4 md:mb-3 text-center text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg">
+          Frequently Asked Questions
+        </h1>
+        <p className="font-geist text-sm sm:text-base md:text-xl max-w-xl sm:max-w-2xl md:max-w-3xl text-center mx-auto text-neutral-600">
+          Can&apos;t find the answer you are looking for?{" "}
+          <a
+            href="/contact"
+            className="text-neutral-800 underline underline-offset-4 font-medium hover:text-neutral-900 transition-colors"
+          >
+            Reach out to us!
+          </a>
+        </p>
+
+        <div className="max-w-5xl mt-6 md:mt-8 mx-auto">
+          <Accordion type="single" collapsible>
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index + 1}`}>
+                <AccordionTrigger className="font-geist text-base md:text-lg text-neutral-800">
+                  <div className="flex-1 text-left">
+                    <span className="mr-2">{index + 1}.</span>
+                    {faq.question}
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="font-geist text-base md:text-lg text-neutral-600">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </Container>
     </div>
