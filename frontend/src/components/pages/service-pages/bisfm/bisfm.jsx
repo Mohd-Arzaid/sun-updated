@@ -14,11 +14,12 @@ import {
   Accordion, AccordionItem, AccordionTrigger, AccordionContent
 } from "@/components/ui/accordion";
 import Services from "@/components/common/services/services";
+import { useEffect, useRef, useState } from "react";
 
 
 const BISFM = () => {
   return (
-    <div className="relative">
+    <>
       <BreadcrumbContent />
       <HeroSection />
       <IndexSection />
@@ -26,7 +27,7 @@ const BISFM = () => {
       <FaqSection />
       <LanguageSelector />
       <Services />
-    </div>
+    </>
   );
 };
 
@@ -34,58 +35,60 @@ export default BISFM;
 
 const BreadcrumbContent = () => {
   return (
-    <div className="absolute top-3 md:top-5 left-0 w-full z-30">
-      <Container>
-        <div className="w-full overflow-x-auto scrollbar-hide">
-          <Breadcrumb>
-            <BreadcrumbList className="flex-nowrap font-geist">
-              <BreadcrumbItem className="flex-shrink-0">
-                <BreadcrumbLink asChild>
-                  <Link to="/">Home</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="flex-shrink-0">
-                <SlashIcon />
-              </BreadcrumbSeparator>
-              <BreadcrumbItem className="flex-shrink-0">
-                <BreadcrumbPage className="whitespace-nowrap">
-                  BIS Mark (ISI License) for Foreign Manufacturers
-                </BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
-      </Container>
+    <div className="relative">
+      <div className="absolute top-3 md:top-5 left-0 w-full z-30">
+        <Container>
+          <div className="w-full overflow-x-auto scrollbar-hide">
+            <Breadcrumb>
+              <BreadcrumbList className="flex-nowrap font-geist">
+                <BreadcrumbItem className="flex-shrink-0">
+                  <BreadcrumbLink asChild>
+                    <Link to="/">Home</Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="flex-shrink-0">
+                  <SlashIcon />
+                </BreadcrumbSeparator>
+                <BreadcrumbItem className="flex-shrink-0">
+                  <BreadcrumbPage className="whitespace-nowrap">
+                    BIS Mark (ISI License) for Foreign Manufacturers
+                  </BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </Container>
+      </div>
     </div>
   );
 };
 
 const HeroSection = () => {
   return (
-    <Container className="relative flex items-center justify-center gap-14 py-24">
+    <Container className="relative flex flex-col md:flex-row items-center justify-center gap-10 md:gap-14 py-16 md:py-24">
       {/* Left Side */}
-      <div className="flex flex-col gap-8 max-w-xl w-full">
-        <div className="flex items-center gap-4 w-fit">
-          <Separator className="h-0.5 w-14 bg-neutral-600" />
-          <div className="text-neutral-600 font-geist text-sm font-medium tracking-wider uppercase">
+      <div className="flex flex-col gap-6 md:gap-8 w-full md:max-w-xl">
+        <div className="flex items-center gap-3 md:gap-4 w-fit">
+          <Separator className="h-0.5 w-12 md:w-14 bg-neutral-600" />
+          <div className="text-neutral-600 font-geist text-xs md:text-sm font-medium tracking-wider uppercase">
             Certified Expertise
           </div>
         </div>
 
-        <div className="font-playfair text-5xl font-bold text-neutral-800">
+        <div className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800">
           Indian BIS Certification for Foreign Manufactures
         </div>
 
-        <p className="max-w-lg text-neutral-600 font-geist text-lg">
+        <p className="max-w-lg text-neutral-600 font-geist text-base md:text-lg">
           Foreign manufacturers need ISI mark for exports to India. Covers 600+
           mandatory products and 20,000+ voluntary products.
         </p>
 
         <div className="flex items-center gap-3 cursor-pointer group">
-          <div className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-neutral-300 group-hover:border-neutral-600 transition-all duration-300">
-            <div className="w-3 h-3 border-t-2 border-r-2 border-neutral-600 rotate-45 translate-x-[-1px]"></div>
+          <div className="size-10 md:size-12 flex items-center justify-center rounded-full border-2 border-neutral-300 group-hover:border-neutral-600 transition-all duration-300">
+            <div className="size-2.5 md:size-3 border-t-2 border-r-2 border-neutral-600 rotate-45 translate-x-[-1px]"></div>
           </div>
-          <div className="font-geist text-neutral-600 text-lg group-hover:text-neutral-800 group-hover:translate-x-1 transition-all duration-300">
+          <div className="font-geist text-neutral-600 text-base md:text-lg group-hover:text-neutral-800 group-hover:translate-x-1 transition-all duration-300">
             View Services
           </div>
         </div>
@@ -99,64 +102,64 @@ const HeroSection = () => {
 
 const ContactUsForm = () => {
   return (
-    <div className="max-w-xl w-full flex flex-col gap-8">
+    <div className="w-full md:max-w-xl flex flex-col gap-6 md:gap-8">
       <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-4 w-fit">
-          <div className="text-neutral-600 font-geist text-sm font-medium tracking-wider uppercase">
+        <div className="flex items-center gap-3 md:gap-4 w-fit">
+          <div className="text-neutral-600 font-geist text-xs md:text-sm font-medium tracking-wider uppercase">
             Contact Us
           </div>
-          <Separator className="h-0.5 w-14 bg-neutral-600" />
+          <Separator className="h-0.5 w-12 md:w-14 bg-neutral-600" />
         </div>
 
-        <div className="font-geist text-5xl font-bold text-neutral-800">
+        <div className="font-geist text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800">
           Book an Appointment
         </div>
 
-        <p className="text-neutral-600 font-geist text-lg">
+        <p className="text-neutral-600 font-geist text-base md:text-lg">
           Want to contact our team and schedule a call?{" "}
           <span className="text-neutral-900 font-medium">Try Now</span>
         </p>
       </div>
 
-      <form className="flex flex-col gap-5">
-        <div className="flex items-center justify-between gap-5">
+      <form className="flex flex-col gap-4 md:gap-5">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-5">
           <input
             type="text"
-            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-4 py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-3.5 md:px-4 py-3 md:py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
             placeholder="Full Name *"
           />
           <input
             type="text"
-            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-4 py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-3.5 md:px-4 py-3 md:py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
             placeholder="Email Address *"
           />
         </div>
-        <div className="flex items-center justify-between gap-5">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-5">
           <input
             type="text"
-            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-4 py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-3.5 md:px-4 py-3 md:py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
             placeholder="Contact Number *"
           />
           <input
             type="text"
-            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-4 py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-3.5 md:px-4 py-3 md:py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
             placeholder="Company Name *"
           />
         </div>
-        <div className="flex items-center justify-between gap-5">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-5">
           <input
             type="text"
-            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-4 py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-3.5 md:px-4 py-3 md:py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
             placeholder="Product Name *"
           />
           <input
             type="text"
-            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-4 py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-3.5 md:px-4 py-3 md:py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
             placeholder="Required Certification*"
           />
         </div>
       </form>
-      <button className="bg-neutral-800 border-2 border-neutral-800 mt-1.5 w-fit text-white font-geist font-medium px-8 py-3.5 rounded-lg">
+      <button className="bg-neutral-800 border-2 border-neutral-800 md:mt-1.5 w-fit text-white font-geist font-medium px-6 md:px-8 py-3 md:py-3.5 rounded-lg">
         Book Appointment
       </button>
     </div>
@@ -164,6 +167,26 @@ const ContactUsForm = () => {
 };
 
 const IndexSection = () => {
+  const [isSticky, setIsSticky] = useState(false);
+  const stickyRef = useRef(null);
+
+  // Sticky Detection 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (stickyRef.current) {
+        const rect = stickyRef.current.getBoundingClientRect();
+        setIsSticky(rect.top <= 44);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const SECTIONS = [
     "Overview",
     "Standardization",
@@ -174,8 +197,14 @@ const IndexSection = () => {
     "Surveillance",
     "Facilitator",
   ];
+
   return (
-    <div className="w-full py-7 border-2 border-neutral-200 bg-neutral-100">
+    <div
+      ref={stickyRef}
+      className={`
+        z-10 sticky top-0 md:top-[44px] w-full py-7 border-2 border-neutral-200
+        ${isSticky ? "bg-white/70 backdrop-blur-lg" : "bg-neutral-100"}
+        `}>
       <Container className="flex items-center justify-between gap-2">
         {SECTIONS.map((section) => (
           <div key={section} className="relative cursor-pointer group w-fit">
