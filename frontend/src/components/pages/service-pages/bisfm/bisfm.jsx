@@ -221,7 +221,9 @@ const IndexSection = () => {
         {SECTIONS.map((item) => (
           <div key={item} className="relative cursor-pointer group w-fit">
             <div
-              className={`text-base font-medium tracking-wider font-geist uppercase ${item === activeSection ? "text-neutral-800" : "text-neutral-700"
+              className={`text-base font-medium tracking-wider font-geist uppercase transition-colors duration-300 ${item === activeSection
+                ? "text-neutral-800"
+                : "text-neutral-700 group-hover:text-neutral-800"
                 }`}
             >
               {item}
