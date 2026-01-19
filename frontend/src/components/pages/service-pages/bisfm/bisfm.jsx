@@ -7,15 +7,26 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
-import { Check, Mail, MessageCircle, Phone, PhoneCall, SendHorizonal, SlashIcon, User } from "lucide-react";
+import {
+  Check,
+  Mail,
+  MessageCircle,
+  Phone,
+  PhoneCall,
+  SendHorizonal,
+  SlashIcon,
+  User,
+} from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import Container from "@/components/common/container/container";
 import {
-  Accordion, AccordionItem, AccordionTrigger, AccordionContent
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
 } from "@/components/ui/accordion";
 import Services from "@/components/common/services/services";
 import { useEffect, useRef, useState } from "react";
-
 
 const BISFM = () => {
   return (
@@ -36,7 +47,7 @@ export default BISFM;
 const BreadcrumbContent = () => {
   return (
     <div className="relative">
-      <div className="absolute top-3 md:top-5 left-0 w-full z-30">
+      <div className="absolute top-3 md:top-5 left-0 w-full">
         <Container>
           <div className="w-full overflow-x-auto scrollbar-hide">
             <Breadcrumb>
@@ -170,7 +181,9 @@ const IndexSection = () => {
   const [isSticky, setIsSticky] = useState(false);
   const stickyRef = useRef(null);
 
-  // Sticky Detection 
+  const [activeSection, setActiveSection] = useState("Overview");
+
+  // Sticky Detection
   useEffect(() => {
     const handleScroll = () => {
       if (stickyRef.current) {
@@ -201,19 +214,24 @@ const IndexSection = () => {
   return (
     <div
       ref={stickyRef}
-      className={`
-        z-10 sticky top-0 md:top-[44px] w-full py-7 border-2 border-neutral-200
-        ${isSticky ? "bg-white/70 backdrop-blur-lg" : "bg-neutral-100"}
-        `}>
+      className={`z-10 sticky top-[44px] w-full py-7 border-2 border-neutral-200 ${isSticky ? "bg-white/70 backdrop-blur-lg" : "bg-neutral-100"
+        }`}
+    >
       <Container className="flex items-center justify-between gap-2">
-        {SECTIONS.map((section) => (
-          <div key={section} className="relative cursor-pointer group w-fit">
-            <div className="text-base font-medium tracking-wider text-neutral-800 font-geist uppercase">
-              {section}
+        {SECTIONS.map((item) => (
+          <div key={item} className="relative cursor-pointer group w-fit">
+            <div
+              className={`text-base font-medium tracking-wider font-geist uppercase ${item === activeSection ? "text-neutral-800" : "text-neutral-700"
+                }`}
+            >
+              {item}
             </div>
-            {section === "Overview" && (
-              <div className="absolute bottom-0 left-0 w-full h-0.5 bg-neutral-800"></div>
-            )}
+            <div
+              className={`absolute bottom-0 left-0 w-full h-0.5 bg-neutral-800 transition-transform duration-300 origin-center ${item === activeSection
+                ? "scale-x-100"
+                : "scale-x-0 group-hover:scale-x-100"
+                }`}
+            ></div>
           </div>
         ))}
       </Container>
@@ -456,6 +474,7 @@ const FaqSection = () => {
         "Check the updated list on the official BIS website or consult with a BIS consultant to verify whether your product falls under mandatory certification.",
     },
   ];
+
   return (
     <div className="pt-12 pb-14 border-t border-neutral-200">
       <Container>
@@ -494,8 +513,8 @@ const FaqSection = () => {
         </div>
       </Container>
     </div>
-  )
-}
+  );
+};
 
 const LanguageSelector = () => {
   const location = useLocation();
@@ -649,13 +668,13 @@ const LanguageSelector = () => {
         </div>
       </div>
     </Container>
-  )
-}
+  );
+};
 
 const ServicesRightSideContentEng = () => {
   return (
     <div className="max-w-sm w-full sticky top-36 p-6 rounded-lg shadow-input bg-neutral-100">
-      <div className="flex gap-3  items-center">
+      <div className="flex gap-3 items-center">
         <PhoneCall className="text-neutral-800" />
         <div className="text-xl font-geist font-semibold text-neutral-800">
           Request a Free Callback
@@ -668,7 +687,6 @@ const ServicesRightSideContentEng = () => {
       </p>
 
       <form className="mt-5 flex flex-col gap-4">
-
         {/* Name field */}
         <div className="relative">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -677,7 +695,7 @@ const ServicesRightSideContentEng = () => {
           <input
             type="text"
             placeholder="Your Name*"
-            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist  border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
           />
         </div>
         {/* Phone Number field */}
@@ -688,7 +706,7 @@ const ServicesRightSideContentEng = () => {
           <input
             type="text"
             placeholder="Phone Number*"
-            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist  border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
           />
         </div>
         {/* Email field */}
@@ -699,7 +717,7 @@ const ServicesRightSideContentEng = () => {
           <input
             type="text"
             placeholder="Email Address*"
-            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist  border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
           />
         </div>
         {/* Message field */}
@@ -711,7 +729,7 @@ const ServicesRightSideContentEng = () => {
             type="message"
             placeholder="Required Certification*"
             rows="3"
-            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist  border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
           />
         </div>
 
@@ -722,11 +740,13 @@ const ServicesRightSideContentEng = () => {
         </button>
       </form>
 
-
       {/* Privacy Policy */}
       <p className="mt-3 text-sm text-center text-neutral-600 font-geist">
         By submitting this form, you agree to our{" "}
-        <Link to="/privacy-policy" className="text-neutral-900 font-medium hover:underline">
+        <Link
+          to="/privacy-policy"
+          className="text-neutral-900 font-medium hover:underline"
+        >
           Privacy Policy
         </Link>{" "}
         and consent to being contacted.
@@ -734,4 +754,3 @@ const ServicesRightSideContentEng = () => {
     </div>
   );
 };
-
