@@ -385,7 +385,7 @@ const FaqsSection = () => {
           <Accordion type="single" collapsible>
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index + 1}`}>
-                <AccordionTrigger className="font-geist text-base md:text-lg text-neutral-800">
+                <AccordionTrigger className="font-geist text-base md:text-lg text-neutral-600">
                   <div className="flex-1 text-left">
                     <span className="mr-2">{index + 1}.</span>
                     {faq.question}

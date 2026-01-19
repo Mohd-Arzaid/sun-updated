@@ -7,9 +7,12 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Separator } from "@/components/ui/separator";
-import { Check, PhoneCall, SlashIcon } from "lucide-react";
+import { Check, Mail, MessageCircle, Phone, PhoneCall, SendHorizonal, SlashIcon, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import Container from "@/components/common/container/container";
+import {
+  Accordion, AccordionItem, AccordionTrigger, AccordionContent
+} from "@/components/ui/accordion";
 
 const BISFM = () => {
   return (
@@ -18,6 +21,7 @@ const BISFM = () => {
       <HeroSection />
       <IndexSection />
       <MainContent />
+      <FaqSection />
     </div>
   );
 };
@@ -340,15 +344,205 @@ const PointsSection = ({ points }) => {
   );
 };
 
+const FaqSection = () => {
+  const faqs = [
+    {
+      question:
+        "What is BIS certification and why is it important for foreign manufacturers to obtain Indian BIS?",
+      answer:
+        "BIS certification is a regulatory process conducted by the Bureau of Indian Standards to ensure products meet Indian standards. It is essential for foreign manufacturers to gain market access, customs clearance, and consumer trust in India.",
+    },
+    {
+      question: "What does the ISI mark represent?",
+      answer:
+        "The ISI mark indicates conformity to a specific Indian Standard. It is mandatory for products under the BIS certification and must be printed on packaging and products.",
+    },
+    {
+      question: "Is BIS certification mandatory for all imports to India?",
+      answer:
+        "No. BIS certification is mandatory for products listed under the mandatory Indian BIS certification scheme. However, voluntary certification is available for other products.",
+    },
+    {
+      question: "Who can apply for BIS certification under FMCS?",
+      answer:
+        "Only actual foreign manufacturers (not importers or traders) can apply. An Authorized Indian Representative (AIR) is mandatory to represent them in India.",
+    },
+    {
+      question: "How long does it take to get a BIS certificate?",
+      answer:
+        "The average BIS certification process under FMCS takes 120 days, depending on document readiness, audit scheduling, and testing turnaround times.",
+    },
+    {
+      question: "What are the major costs involved in BIS certification?",
+      answer:
+        "Costs include application fees, audit charges, lab testing fees, license and marking fees, and a Performance Bank Guarantee (PBG) from an RBI-approved Indian bank.",
+    },
+    {
+      question: "Can the BIS license be renewed?",
+      answer:
+        "Yes. The BIS license is generally valid for 1–2 years and can be renewed upon meeting compliance and document update requirements.",
+    },
+    {
+      question: "What happens if the product fails during BIS lab testing?",
+      answer:
+        "If a product fails, BIS may allow corrective action and re-testing. Persistent failure can result in rejection of the application.",
+    },
+    {
+      question: "Is it necessary to hire a BIS certification consultant?",
+      answer:
+        "It's not mandatory but highly recommended. A consultant helps reduce delays, manage compliance, and improve approval chances by ensuring full alignment with BIS protocols.",
+    },
+    {
+      question: "Can a BIS license be suspended or cancelled?",
+      answer:
+        "Yes. BIS may suspend or cancel a license for non-compliance, product failure, misuse of the ISI logo, or audit discrepancies.",
+    },
+    {
+      question: "What documents are needed for the BIS certification process?",
+      answer:
+        "Documents include the FMCS application form, test reports, equipment lists, calibration certificates, factory layout, AIR appointment letter, and proof of fee payment.",
+    },
+    {
+      question: "Can one AIR represent multiple BIS applications?",
+      answer:
+        "Yes, provided they are authorized for each project and have the bandwidth to handle documentation, audits, and communication for each certification.",
+    },
+    {
+      question: "What is the role of a Performance Bank Guarantee?",
+      answer:
+        "A PBG assures BIS that the manufacturer will comply with Indian standards. It is refundable upon license cancellation and mandatory for all FMCS applications obtaining Indian BIS.",
+    },
+    {
+      question: "Is BIS certification recognized outside India?",
+      answer:
+        "While the BIS certificate is an Indian standard, it is respected in trade contexts in many regions that accept Indian compliance, especially in Asia and Africa.",
+    },
+    {
+      question: "How do I know if my product requires BIS certification?",
+      answer:
+        "Check the updated list on the official BIS website or consult with a BIS consultant to verify whether your product falls under mandatory certification.",
+    },
+  ];
+  return (
+    <div className="pt-12 pb-14 border-t border-neutral-200">
+      <Container>
+        {/* Heading */}
+        <div className="text-center mb-6">
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg mb-2 sm:mb-3">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-geist text-neutral-600 max-w-xs sm:max-w-md md:max-w-xl mx-auto px-4 sm:px-2 md:px-0">
+            Can&apos;t find the answer you are looking for?{" "}
+            <a
+              href="/contact"
+              className="text-neutral-800 underline underline-offset-4 font-medium hover:text-neutral-900"
+            >
+              Reach out to us!
+            </a>
+          </p>
+        </div>
+
+        <div className="max-w-5xl mx-auto">
+          <Accordion type="single" collapsible>
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index + 1}`}>
+                <AccordionTrigger className="font-geist text-base md:text-lg text-neutral-600">
+                  <div className="flex-1 text-left">
+                    <span className="mr-2">{index + 1}.</span>
+                    {faq.question}
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="font-geist text-base md:text-lg text-neutral-600">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </Container>
+    </div>
+  )
+}
+
 const ServicesRightSideContentEng = () => {
   return (
     <div className="max-w-sm w-full sticky top-36 p-6 rounded-lg shadow-input bg-neutral-100">
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-3  items-center">
         <PhoneCall className="text-neutral-800" />
         <div className="text-xl font-geist font-semibold text-neutral-800">
           Request a Free Callback
         </div>
       </div>
+
+      <p className="text-neutral-600 font-geist text-sm mt-3">
+        Leave your details below and our experts will call you back within 24
+        hours to discuss your regulatory compliance needs.
+      </p>
+
+      <form className="mt-5 flex flex-col gap-4">
+
+        {/* Name field */}
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <User className="h-5 w-5 text-neutral-500" />
+          </div>
+          <input
+            type="text"
+            placeholder="Your Name*"
+            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist  border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+          />
+        </div>
+        {/* Phone Number field */}
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <Phone className="h-5 w-5 text-neutral-500" />
+          </div>
+          <input
+            type="text"
+            placeholder="Phone Number*"
+            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist  border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+          />
+        </div>
+        {/* Email field */}
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <Mail className="h-5 w-5 text-neutral-500" />
+          </div>
+          <input
+            type="text"
+            placeholder="Email Address*"
+            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist  border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+          />
+        </div>
+        {/* Message field */}
+        <div className="relative">
+          <div className="absolute top-3 left-3 pointer-events-none">
+            <MessageCircle className="h-5 w-5 text-neutral-500" />
+          </div>
+          <textarea
+            type="message"
+            placeholder="Required Certification*"
+            rows="3"
+            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist  border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+          />
+        </div>
+
+        {/* Submit Button */}
+        <button className="w-full font-geist px-4 py-3 rounded-md bg-neutral-800 hover:bg-neutral-900 text-white flex items-center justify-center gap-3">
+          <span className="font-medium font-geist">Request Callback</span>
+          <SendHorizonal className="w-4 h-4" />
+        </button>
+      </form>
+
+
+      {/* Privacy Policy */}
+      <p className="mt-3 text-sm text-center text-neutral-600 font-geist">
+        By submitting this form, you agree to our{" "}
+        <Link to="/privacy-policy" className="text-neutral-900 font-medium hover:underline">
+          Privacy Policy
+        </Link>{" "}
+        and consent to being contacted.
+      </p>
     </div>
   );
 };
