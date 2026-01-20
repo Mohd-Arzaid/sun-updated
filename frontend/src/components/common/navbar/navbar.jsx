@@ -256,7 +256,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="z-10 sticky lg:top-[44px] top-0 w-full bg-white/70 backdrop-blur-lg border-b border-neutral-200">
+    <nav className="z-40 sticky lg:top-[44px] top-0 w-full bg-white/70 backdrop-blur-lg border-b border-neutral-200">
       <Container className="lg:px-8 flex items-center justify-between h-20">
         {/* Company Logo & Name */}
         <Link to="/" className="flex items-center gap-2.5">

@@ -25,7 +25,7 @@ const DesktopHero = () => {
       {/* Hero Content */}
       <div className="max-w-[84rem] w-full mx-auto">
         <div className="flex flex-col items-start">
-          <div className="relative px-8 z-20">
+          <div className="relative px-8 z-10">
             <img
               src={HeroImage}
               alt="Sun Certifications India - Professional Certification Services for BIS, LMPC, EPR, and WPC"

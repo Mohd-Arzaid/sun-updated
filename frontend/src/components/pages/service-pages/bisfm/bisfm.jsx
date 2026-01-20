@@ -214,7 +214,7 @@ const IndexSection = () => {
   return (
     <div
       ref={stickyRef}
-      className={`z-10 sticky top-[44px] w-full py-7 border-2 border-neutral-200 ${isSticky ? "bg-white/70 backdrop-blur-lg" : "bg-neutral-100"
+      className={`z-40 sticky top-[44px] w-full py-7 border-2 border-neutral-200 ${isSticky ? "bg-white/70 backdrop-blur-lg" : "bg-neutral-100"
         }`}
     >
       <Container className="flex items-center justify-between gap-2">
