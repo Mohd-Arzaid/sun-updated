@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Configuration files
+.cursorrules
+.prettierrc.json
