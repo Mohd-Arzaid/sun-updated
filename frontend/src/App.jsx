@@ -8,7 +8,6 @@ import BISFMPagesRoutes from "./routes/bisfm-pages-routes";
 import OrganizationChart from "./components/pages/organization-chart/organization-chart";
 import AdvisoryNetworkPage from "./components/pages/advisory-network-page/advisory-network-page";
 import AboutUs from "./components/pages/about-us/about-us";
-import Xyz from "./components/pages/xyz";
 
 const App = () => {
   return (
@@ -17,7 +16,6 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/xyz" element={<Xyz />} />
         <Route path="/" element={<Home />} />
         {BISFMPagesRoutes()}
         <Route path="/organization-chart" element={<OrganizationChart />} />

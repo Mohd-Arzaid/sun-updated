@@ -91,47 +91,47 @@ const HeroSection = () => {
       </div>
 
       <div className="relative grid grid-cols-2 border border-neutral-200 bg-neutral-50">
-        <PlusIcon className="lucide lucide-plus z-1 absolute left-[-11.5px] top-[-12.5px] size-6" />
-        <PlusIcon className="lucide lucide-plus z-1 absolute right-[-11.5px] top-[-12.5px] size-6" />
-        <PlusIcon className="lucide lucide-plus z-1 absolute bottom-[-12.5px] left-[-11.5px] size-6" />
-        <PlusIcon className="lucide lucide-plus z-1 absolute bottom-[-12.5px] right-[-11.5px] size-6" />
+        <PlusIcon className="absolute left-[-11.5px] top-[-12.5px] z-10 size-6" />
+        <PlusIcon className="absolute right-[-11.5px] top-[-12.5px] z-10 size-6" />
+        <PlusIcon className="absolute bottom-[-12.5px] left-[-11.5px] z-10 size-6" />
+        <PlusIcon className="absolute bottom-[-12.5px] right-[-11.5px] z-10 size-6" />
 
         <div className="pointer-events-none absolute -inset-y-12 left-0 -z-10 w-px border-l border-dashed border-neutral-300"></div>
         <div className="pointer-events-none absolute -inset-y-12 right-0 -z-10 w-px border-r border-dashed border-neutral-300"></div>
         <div className="pointer-events-none absolute -inset-x-12 top-0 -z-10 h-px border-t border-dashed border-neutral-300"></div>
         <div className="pointer-events-none absolute -inset-x-12 bottom-0 -z-10 h-px border-b border-dashed border-neutral-300"></div>
 
-        <div className="space-y-5 border-b border-neutral-200 p-8 md:border-b-0 md:border-r">
-          <div className="font-geist text-lg text-neutral-600">
+        <div className="space-y-5 border-b border-neutral-200 p-8 font-geist text-lg text-neutral-600 md:border-b-0 md:border-r">
+          <p>
             Sun Certification India is ISO 10002:2018, ISO 20000-1:2018 and ISO
             27001:2022 certified, which ensures that our company provides top
             notch information and services with high expertise in a systematized
             manner.
-          </div>
-          <div className="font-geist text-lg text-neutral-600">
+          </p>
+          <p>
             We have in-detail SOP's for each task that is done to ensure that
             the timelines are met and the clients get the best service possible.
             We have well segmented teams with a clear hierarchy which helps in
             clear communication and efficient and effective implementation of
             our SOP's.
-          </div>
+          </p>
         </div>
 
-        <div className="space-y-5 border-b border-neutral-200 p-8 md:border-b-0">
-          <div className="font-geist text-lg text-neutral-600">
+        <div className="space-y-5 border-b border-neutral-200 p-8 font-geist text-lg text-neutral-600 md:border-b-0">
+          <p>
             We are the first Indian company to be recognized by multiple
             bilateral chambers of commerce namely Indo-French, Indo-German,
             Indo-American, Indo-Vietnamese and Indo-Italian Chambers of
             Commerce, which serves as the benchmark or the credibility for
             international companies looking to find a reliable Indian partner
             for their certification work.
-          </div>
-          <div className="font-geist text-lg text-neutral-600">
+          </p>
+          <p>
             We have served more than 1,200 clients, for a total of more than
             4,900 certifications in various fields, which gives an assurance of
             our service capability and we are the world's leading consulting
             firm for any kind of certifications required for Indian market.
-          </div>
+          </p>
         </div>
       </div>
 
