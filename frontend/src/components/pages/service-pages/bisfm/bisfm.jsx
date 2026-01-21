@@ -47,9 +47,9 @@ export default BISFM;
 const BreadcrumbContent = () => {
   return (
     <div className="relative">
-      <div className="absolute top-3 md:top-5 left-0 w-full">
+      <div className="absolute left-0 top-3 w-full md:top-5">
         <Container>
-          <div className="w-full overflow-x-auto scrollbar-hide">
+          <div className="scrollbar-hide w-full overflow-x-auto">
             <Breadcrumb>
               <BreadcrumbList className="flex-nowrap font-geist">
                 <BreadcrumbItem className="flex-shrink-0">
@@ -76,30 +76,30 @@ const BreadcrumbContent = () => {
 
 const HeroSection = () => {
   return (
-    <Container className="relative flex flex-col md:flex-row items-center justify-center gap-10 md:gap-14 py-16 md:py-24">
+    <Container className="relative flex flex-col items-center justify-center gap-10 py-16 md:flex-row md:gap-14 md:py-24">
       {/* Left Side */}
-      <div className="flex flex-col gap-6 md:gap-8 w-full md:max-w-xl">
-        <div className="flex items-center gap-3 md:gap-4 w-fit">
-          <Separator className="h-0.5 w-12 md:w-14 bg-neutral-600" />
-          <div className="text-neutral-600 font-geist text-xs md:text-sm font-medium tracking-wider uppercase">
+      <div className="flex w-full flex-col gap-6 md:max-w-xl md:gap-8">
+        <div className="flex w-fit items-center gap-3 md:gap-4">
+          <Separator className="h-0.5 w-12 bg-neutral-600 md:w-14" />
+          <div className="font-geist text-xs font-medium uppercase tracking-wider text-neutral-600 md:text-sm">
             Certified Expertise
           </div>
         </div>
 
-        <div className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800">
+        <div className="font-playfair text-3xl font-bold text-neutral-800 sm:text-4xl md:text-5xl">
           Indian BIS Certification for Foreign Manufactures
         </div>
 
-        <p className="max-w-lg text-neutral-600 font-geist text-base md:text-lg">
+        <p className="max-w-lg font-geist text-base text-neutral-600 md:text-lg">
           Foreign manufacturers need ISI mark for exports to India. Covers 600+
           mandatory products and 20,000+ voluntary products.
         </p>
 
-        <div className="flex items-center gap-3 cursor-pointer group">
-          <div className="size-10 md:size-12 flex items-center justify-center rounded-full border-2 border-neutral-300 group-hover:border-neutral-600 transition-all duration-300">
-            <div className="size-2.5 md:size-3 border-t-2 border-r-2 border-neutral-600 rotate-45 translate-x-[-1px]"></div>
+        <div className="group flex cursor-pointer items-center gap-3">
+          <div className="flex size-10 items-center justify-center rounded-full border-2 border-neutral-300 transition-all duration-300 group-hover:border-neutral-600 md:size-12">
+            <div className="size-2.5 translate-x-[-1px] rotate-45 border-r-2 border-t-2 border-neutral-600 md:size-3"></div>
           </div>
-          <div className="font-geist text-neutral-600 text-base md:text-lg group-hover:text-neutral-800 group-hover:translate-x-1 transition-all duration-300">
+          <div className="font-geist text-base text-neutral-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-neutral-800 md:text-lg">
             View Services
           </div>
         </div>
@@ -113,64 +113,64 @@ const HeroSection = () => {
 
 const ContactUsForm = () => {
   return (
-    <div className="w-full md:max-w-xl flex flex-col gap-6 md:gap-8">
+    <div className="flex w-full flex-col gap-6 md:max-w-xl md:gap-8">
       <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-3 md:gap-4 w-fit">
-          <div className="text-neutral-600 font-geist text-xs md:text-sm font-medium tracking-wider uppercase">
+        <div className="flex w-fit items-center gap-3 md:gap-4">
+          <div className="font-geist text-xs font-medium uppercase tracking-wider text-neutral-600 md:text-sm">
             Contact Us
           </div>
-          <Separator className="h-0.5 w-12 md:w-14 bg-neutral-600" />
+          <Separator className="h-0.5 w-12 bg-neutral-600 md:w-14" />
         </div>
 
-        <div className="font-geist text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800">
+        <div className="font-geist text-3xl font-bold text-neutral-800 sm:text-4xl md:text-5xl">
           Book an Appointment
         </div>
 
-        <p className="text-neutral-600 font-geist text-base md:text-lg">
+        <p className="font-geist text-base text-neutral-600 md:text-lg">
           Want to contact our team and schedule a call?{" "}
-          <span className="text-neutral-900 font-medium">Try Now</span>
+          <span className="font-medium text-neutral-900">Try Now</span>
         </p>
       </div>
 
       <form className="flex flex-col gap-4 md:gap-5">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-5">
+        <div className="flex flex-col items-center justify-between gap-4 md:flex-row md:gap-5">
           <input
             type="text"
-            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-3.5 md:px-4 py-3 md:py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full rounded-lg border-2 border-neutral-400 bg-neutral-100 px-3.5 py-3 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0 md:px-4 md:py-3.5"
             placeholder="Full Name *"
           />
           <input
             type="text"
-            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-3.5 md:px-4 py-3 md:py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full rounded-lg border-2 border-neutral-400 bg-neutral-100 px-3.5 py-3 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0 md:px-4 md:py-3.5"
             placeholder="Email Address *"
           />
         </div>
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-5">
+        <div className="flex flex-col items-center justify-between gap-4 md:flex-row md:gap-5">
           <input
             type="text"
-            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-3.5 md:px-4 py-3 md:py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full rounded-lg border-2 border-neutral-400 bg-neutral-100 px-3.5 py-3 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0 md:px-4 md:py-3.5"
             placeholder="Contact Number *"
           />
           <input
             type="text"
-            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-3.5 md:px-4 py-3 md:py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full rounded-lg border-2 border-neutral-400 bg-neutral-100 px-3.5 py-3 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0 md:px-4 md:py-3.5"
             placeholder="Company Name *"
           />
         </div>
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-5">
+        <div className="flex flex-col items-center justify-between gap-4 md:flex-row md:gap-5">
           <input
             type="text"
-            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-3.5 md:px-4 py-3 md:py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full rounded-lg border-2 border-neutral-400 bg-neutral-100 px-3.5 py-3 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0 md:px-4 md:py-3.5"
             placeholder="Product Name *"
           />
           <input
             type="text"
-            className="bg-neutral-100 border-2 w-full border-neutral-400 rounded-lg px-3.5 md:px-4 py-3 md:py-3.5 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full rounded-lg border-2 border-neutral-400 bg-neutral-100 px-3.5 py-3 font-geist text-neutral-800 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0 md:px-4 md:py-3.5"
             placeholder="Required Certification*"
           />
         </div>
       </form>
-      <button className="bg-neutral-800 border-2 border-neutral-800 md:mt-1.5 w-fit text-white font-geist font-medium px-6 md:px-8 py-3 md:py-3.5 rounded-lg">
+      <button className="w-fit rounded-lg border-2 border-neutral-800 bg-neutral-800 px-6 py-3 font-geist font-medium text-white md:mt-1.5 md:px-8 md:py-3.5">
         Book Appointment
       </button>
     </div>
@@ -214,25 +214,28 @@ const IndexSection = () => {
   return (
     <div
       ref={stickyRef}
-      className={`z-40 sticky top-[44px] w-full py-7 border-2 border-neutral-200 ${isSticky ? "bg-white/70 backdrop-blur-lg" : "bg-neutral-100"
-        }`}
+      className={`sticky top-[44px] z-40 w-full border-2 border-neutral-200 py-7 ${
+        isSticky ? "bg-white/70 backdrop-blur-lg" : "bg-neutral-100"
+      }`}
     >
       <Container className="flex items-center justify-between gap-2">
         {SECTIONS.map((item) => (
-          <div key={item} className="relative cursor-pointer group w-fit">
+          <div key={item} className="group relative w-fit cursor-pointer">
             <div
-              className={`text-base font-medium tracking-wider font-geist uppercase transition-colors duration-300 ${item === activeSection
-                ? "text-neutral-800"
-                : "text-neutral-700 group-hover:text-neutral-800"
-                }`}
+              className={`font-geist text-base font-medium uppercase tracking-wider transition-colors duration-300 ${
+                item === activeSection
+                  ? "text-neutral-800"
+                  : "text-neutral-700 group-hover:text-neutral-800"
+              }`}
             >
               {item}
             </div>
             <div
-              className={`absolute bottom-0 left-0 w-full h-0.5 bg-neutral-800 transition-transform duration-300 origin-center ${item === activeSection
-                ? "scale-x-100"
-                : "scale-x-0 group-hover:scale-x-100"
-                }`}
+              className={`absolute bottom-0 left-0 h-0.5 w-full origin-center bg-neutral-800 transition-transform duration-300 ${
+                item === activeSection
+                  ? "scale-x-100"
+                  : "scale-x-0 group-hover:scale-x-100"
+              }`}
             ></div>
           </div>
         ))}
@@ -252,14 +255,14 @@ const MainContent = () => {
 
 const MainContentLeft = () => {
   return (
-    <div className="flex-1 flex flex-col font-geist gap-6">
+    <div className="flex flex-1 flex-col gap-6 font-geist">
       <h1 className="text-4xl font-semibold text-neutral-800">
         Complete Information on Indian BIS certification under FMCS Scheme
       </h1>
-      <div className="text-neutral-800 font-semibold font-geist text-xl">
+      <div className="font-geist text-xl font-semibold text-neutral-800">
         What is Indian BIS?
       </div>
-      <p className="text-neutral-600 font-geist text-lg">
+      <p className="font-geist text-lg text-neutral-600">
         The Bureau of Indian Standards (BIS) is India's national standards body
         under the Ministry of Consumer Affairs, Food and Public Distribution.
         Established under the BIS Act 1986, and revised in 2016, BIS plays a
@@ -267,14 +270,14 @@ const MainContentLeft = () => {
         goods. It aims to ensure the quality, safety, and reliability of
         products offered to Indian consumers.
       </p>
-      <p className="text-neutral-600 font-geist text-lg">
+      <p className="font-geist text-lg text-neutral-600">
         BIS operates through various schemes that include product certification,
         hallmarking for jewelry, testing services, and training programs.
         However, one of its most internationally significant frameworks is the
         Foreign Manufacturers Certification Scheme (FMCS).
       </p>
 
-      <Separator className="bg-neutral-300 my-3" />
+      <Separator className="my-3 bg-neutral-300" />
 
       <OverviewSection />
     </div>
@@ -285,8 +288,8 @@ const OverviewSection = () => {
   return (
     <>
       <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-4 w-fit">
-          <div className="text-neutral-600 text-lg font-medium tracking-wider uppercase">
+        <div className="flex w-fit items-center gap-4">
+          <div className="text-lg font-medium uppercase tracking-wider text-neutral-600">
             Overview
           </div>
           <Separator className="h-0.5 w-16 bg-neutral-600" />
@@ -296,7 +299,7 @@ const OverviewSection = () => {
         </div>
       </div>
 
-      <p className="text-neutral-600 font-geist text-lg">
+      <p className="font-geist text-lg text-neutral-600">
         Introduced in the year 2000, FMCS is a mechanism by which foreign
         manufacturers can be granted a BIS license to use the ISI mark on their
         products, indicating conformity with Indian standards. The certification
@@ -304,16 +307,16 @@ const OverviewSection = () => {
         India without establishing a local manufacturing unit.
       </p>
 
-      <p className="text-neutral-600 font-geist text-lg">
+      <p className="font-geist text-lg text-neutral-600">
         As of now, more than 1,650 foreign manufacturers are operating in India
         under the BIS certification system through FMCS.
       </p>
 
-      <div className="text-neutral-800 font-semibold font-geist text-xl">
+      <div className="font-geist text-xl font-semibold text-neutral-800">
         Why BIS Certification is Crucial ?
       </div>
 
-      <p className="text-neutral-600 font-geist text-lg">
+      <p className="font-geist text-lg text-neutral-600">
         Obtaining a BIS certificate is more than a legal requirement—it's a
         gateway to India's vast consumer market. Here are a few key reasons why
         it's essential:
@@ -329,11 +332,11 @@ const OverviewSection = () => {
         ]}
       />
 
-      <div className="text-neutral-800 font-semibold font-geist text-xl">
+      <div className="font-geist text-xl font-semibold text-neutral-800">
         Scope of Products Covered in BIS
       </div>
 
-      <p className="text-neutral-600 font-geist text-lg">
+      <p className="font-geist text-lg text-neutral-600">
         BIS has listed over 600 products under mandatory certification, and over
         20,000 items are eligible for voluntary BIS certificate. These span a
         wide range of industries:
@@ -349,17 +352,17 @@ const OverviewSection = () => {
         ]}
       />
 
-      <p className="text-neutral-600 font-geist text-lg">
+      <p className="font-geist text-lg text-neutral-600">
         The growing list indicates the increasing scope and relevance of BIS
         certificate in global trade.
       </p>
 
-      <div className="text-neutral-800 font-semibold font-geist text-xl">
+      <div className="font-geist text-xl font-semibold text-neutral-800">
         Objectives or benefits of BIS Certification for Foreign Manufacturers
         under FMCS
       </div>
 
-      <p className="text-neutral-600 font-geist text-lg">
+      <p className="font-geist text-lg text-neutral-600">
         The FMCS and BIS certificate regime aim to:
       </p>
 
@@ -373,7 +376,7 @@ const OverviewSection = () => {
         ]}
       />
 
-      <div className="text-neutral-800 font-semibold font-geist text-xl">
+      <div className="font-geist text-xl font-semibold text-neutral-800">
         Key Features of BIS certificate for foreign manufacturers
       </div>
     </>
@@ -383,10 +386,10 @@ const OverviewSection = () => {
 const PointsSection = ({ points }) => {
   return (
     <>
-      <div className="flex flex-col gap-3 list-none">
+      <div className="flex list-none flex-col gap-3">
         {points.map((point, index) => (
           <div key={index} className="flex items-start gap-3">
-            <div className="bg-neutral-100 border-2 border-neutral-200 p-1.5 rounded-full flex-shrink-0 flex items-center justify-center">
+            <div className="flex flex-shrink-0 items-center justify-center rounded-full border-2 border-neutral-200 bg-neutral-100 p-1.5">
               <Check size={12} className="text-neutral-800" />
             </div>
             <p className="text-lg text-neutral-600">{point}</p>
@@ -478,35 +481,35 @@ const FaqSection = () => {
   ];
 
   return (
-    <div className="pt-12 pb-14 border-t border-neutral-200">
+    <div className="border-t border-neutral-200 pb-14 pt-12">
       <Container>
         {/* Heading */}
-        <div className="text-center mb-6">
-          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg mb-2 sm:mb-3">
+        <div className="mb-6 text-center">
+          <h2 className="mb-2 font-playfair text-3xl font-bold text-neutral-800 drop-shadow-lg sm:mb-3 sm:text-4xl md:text-5xl">
             Frequently Asked Questions
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-geist text-neutral-600 max-w-xs sm:max-w-md md:max-w-xl mx-auto px-4 sm:px-2 md:px-0">
+          <p className="mx-auto max-w-xs px-4 font-geist text-sm text-neutral-600 sm:max-w-md sm:px-2 sm:text-base md:max-w-xl md:px-0 md:text-lg lg:text-xl">
             Can&apos;t find the answer you are looking for?{" "}
             <a
               href="/contact"
-              className="text-neutral-800 underline underline-offset-4 font-medium hover:text-neutral-900"
+              className="font-medium text-neutral-800 underline underline-offset-4 hover:text-neutral-900"
             >
               Reach out to us!
             </a>
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="mx-auto max-w-5xl">
           <Accordion type="single" collapsible>
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index + 1}`}>
-                <AccordionTrigger className="font-geist text-base md:text-lg text-neutral-600">
+                <AccordionTrigger className="font-geist text-base text-neutral-600 md:text-lg">
                   <div className="flex-1 text-left">
                     <span className="mr-2">{index + 1}.</span>
                     {faq.question}
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="font-geist text-base md:text-lg text-neutral-600">
+                <AccordionContent className="font-geist text-base text-neutral-600 md:text-lg">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -629,17 +632,17 @@ const LanguageSelector = () => {
   const currentLanguage = languages.find((lang) => lang.path === currentPath);
 
   return (
-    <Container className="flex pt-12 pb-14 border-t border-neutral-200 flex-col items-center gap-6 md:gap-8">
+    <Container className="flex flex-col items-center gap-6 border-t border-neutral-200 pb-14 pt-12 md:gap-8">
       {/* Heading */}
       <div className="flex flex-col items-center">
-        <p className="text-neutral-800 text-center text-base md:text-xl font-geist drop-shadow-lg">
+        <p className="text-center font-geist text-base text-neutral-800 drop-shadow-lg md:text-xl">
           View This Page in Your Language
         </p>
       </div>
 
       {/* Language Flags Grid */}
-      <div className="w-full mx-auto">
-        <div className="flex flex-wrap justify-center items-center gap-3 md:gap-4">
+      <div className="mx-auto w-full">
+        <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
           {languages.map((language) => {
             const isActive = currentPath === language.path;
             return (
@@ -650,19 +653,20 @@ const LanguageSelector = () => {
               >
                 {/* Flag */}
                 <div
-                  className={`w-[42px] h-[28px] md:w-[65px] md:h-[45px] transition-transform duration-300 flex items-center justify-center ${isActive ? "scale-110" : "group-hover:scale-110"
-                    }`}
+                  className={`flex h-[28px] w-[42px] items-center justify-center transition-transform duration-300 md:h-[45px] md:w-[65px] ${
+                    isActive ? "scale-110" : "group-hover:scale-110"
+                  }`}
                 >
                   <img
                     src={language.flag}
                     alt={`${getCountryName(language.flag)} Flag`}
                     title={`${getCountryName(language.flag)} Flag`}
-                    className="w-full h-full object-cover rounded-sm border border-neutral-500"
+                    className="h-full w-full rounded-sm border border-neutral-500 object-cover"
                   />
                 </div>
                 {/* Active Indicator */}
                 {isActive && (
-                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#1A8781] rounded-full border-2 border-white"></div>
+                  <div className="absolute -right-1 -top-1 h-3 w-3 rounded-full border-2 border-white bg-[#1A8781]"></div>
                 )}
               </Link>
             );
@@ -675,15 +679,15 @@ const LanguageSelector = () => {
 
 const ServicesRightSideContentEng = () => {
   return (
-    <div className="max-w-sm w-full sticky top-36 p-6 rounded-lg shadow-input bg-neutral-100">
-      <div className="flex gap-3 items-center">
+    <div className="sticky top-36 w-full max-w-sm rounded-lg bg-neutral-100 p-6 shadow-input">
+      <div className="flex items-center gap-3">
         <PhoneCall className="text-neutral-800" />
-        <div className="text-xl font-geist font-semibold text-neutral-800">
+        <div className="font-geist text-xl font-semibold text-neutral-800">
           Request a Free Callback
         </div>
       </div>
 
-      <p className="text-neutral-600 font-geist text-sm mt-3">
+      <p className="mt-3 font-geist text-sm text-neutral-600">
         Leave your details below and our experts will call you back within 24
         hours to discuss your regulatory compliance needs.
       </p>
@@ -691,63 +695,63 @@ const ServicesRightSideContentEng = () => {
       <form className="mt-5 flex flex-col gap-4">
         {/* Name field */}
         <div className="relative">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
             <User className="h-5 w-5 text-neutral-500" />
           </div>
           <input
             type="text"
             placeholder="Your Name*"
-            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full rounded-lg border-2 border-neutral-300 py-2.5 pl-10 pr-3 font-geist text-neutral-800 placeholder:text-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
           />
         </div>
         {/* Phone Number field */}
         <div className="relative">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
             <Phone className="h-5 w-5 text-neutral-500" />
           </div>
           <input
             type="text"
             placeholder="Phone Number*"
-            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full rounded-lg border-2 border-neutral-300 py-2.5 pl-10 pr-3 font-geist text-neutral-800 placeholder:text-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
           />
         </div>
         {/* Email field */}
         <div className="relative">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
             <Mail className="h-5 w-5 text-neutral-500" />
           </div>
           <input
             type="text"
             placeholder="Email Address*"
-            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full rounded-lg border-2 border-neutral-300 py-2.5 pl-10 pr-3 font-geist text-neutral-800 placeholder:text-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
           />
         </div>
         {/* Message field */}
         <div className="relative">
-          <div className="absolute top-3 left-3 pointer-events-none">
+          <div className="pointer-events-none absolute left-3 top-3">
             <MessageCircle className="h-5 w-5 text-neutral-500" />
           </div>
           <textarea
             type="message"
             placeholder="Required Certification*"
             rows="3"
-            className="w-full py-2.5 pl-10 pr-3 text-neutral-800 placeholder:text-neutral-500 font-geist border-2 border-neutral-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
+            className="w-full rounded-lg border-2 border-neutral-300 py-2.5 pl-10 pr-3 font-geist text-neutral-800 placeholder:text-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-500 focus:ring-offset-0"
           />
         </div>
 
         {/* Submit Button */}
-        <button className="w-full font-geist px-4 py-3 rounded-md bg-neutral-800 hover:bg-neutral-900 text-white flex items-center justify-center gap-3">
-          <span className="font-medium font-geist">Request Callback</span>
-          <SendHorizonal className="w-4 h-4" />
+        <button className="flex w-full items-center justify-center gap-3 rounded-md bg-neutral-800 px-4 py-3 font-geist text-white hover:bg-neutral-900">
+          <span className="font-geist font-medium">Request Callback</span>
+          <SendHorizonal className="h-4 w-4" />
         </button>
       </form>
 
       {/* Privacy Policy */}
-      <p className="mt-3 text-sm text-center text-neutral-600 font-geist">
+      <p className="mt-3 text-center font-geist text-sm text-neutral-600">
         By submitting this form, you agree to our{" "}
         <Link
           to="/privacy-policy"
-          className="text-neutral-900 font-medium hover:underline"
+          className="font-medium text-neutral-900 hover:underline"
         >
           Privacy Policy
         </Link>{" "}

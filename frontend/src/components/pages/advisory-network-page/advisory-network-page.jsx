@@ -32,13 +32,13 @@ import {
 
 const AdvisoryNetworkPage = () => {
   return (
-    <div className="relative">
+    <>
       <MetaTags />
       <BreadcrumbContent />
       <HeroSection />
       <AdvisoryCardsSection />
       <FaqsSection />
-    </div>
+    </>
   );
 };
 
@@ -81,41 +81,43 @@ const MetaTags = () => {
 
 const BreadcrumbContent = () => {
   return (
-    <div className="absolute top-3 md:top-5 left-0 w-full z-30">
-      <Container>
-        <div className="w-full overflow-x-auto scrollbar-hide">
-          <Breadcrumb>
-            <BreadcrumbList className="flex-nowrap font-geist">
-              <BreadcrumbItem className="flex-shrink-0">
-                <BreadcrumbLink asChild>
-                  <Link to="/">Home</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="flex-shrink-0">
-                <SlashIcon />
-              </BreadcrumbSeparator>
-              <BreadcrumbItem className="flex-shrink-0">
-                <BreadcrumbPage className="whitespace-nowrap">
-                  Advisory Network Page
-                </BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
-      </Container>
+    <div className="relative">
+      <div className="absolute left-0 top-3 z-30 w-full md:top-5">
+        <Container>
+          <div className="scrollbar-hide w-full overflow-x-auto">
+            <Breadcrumb>
+              <BreadcrumbList className="flex-nowrap font-geist">
+                <BreadcrumbItem className="flex-shrink-0">
+                  <BreadcrumbLink asChild>
+                    <Link to="/">Home</Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="flex-shrink-0">
+                  <SlashIcon />
+                </BreadcrumbSeparator>
+                <BreadcrumbItem className="flex-shrink-0">
+                  <BreadcrumbPage className="whitespace-nowrap">
+                    Advisory Network Page
+                  </BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </Container>
+      </div>
     </div>
   );
 };
 
 const HeroSection = () => {
   return (
-    <div className="pb-16 border-b border-neutral-200">
+    <div className="border-b border-neutral-200 pb-16">
       <Container>
         <div className="py-14">
-          <h1 className="font-playfair mb-4 md:mb-6 text-center text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg">
+          <h1 className="mb-4 text-center font-playfair text-3xl font-bold text-neutral-800 drop-shadow-lg sm:text-4xl md:mb-6 md:text-5xl">
             Advisory Network Page
           </h1>
-          <p className="font-geist text-sm sm:text-base md:text-lg max-w-xl sm:max-w-2xl md:max-w-4xl text-center mx-auto text-neutral-600">
+          <p className="mx-auto max-w-xl text-center font-geist text-sm text-neutral-600 sm:max-w-2xl sm:text-base md:max-w-4xl md:text-lg">
             We collaborate with a vetted network of independent former BIS
             professionals who provide technical guidance on audits,
             documentation, inspections, and corrective actions. These advisors
@@ -125,60 +127,61 @@ const HeroSection = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-4 border bg-neutral-50 border-neutral-200">
-          <div className="px-6 py-8 border-b border-neutral-200 md:border-b-0 md:border-r">
+        <div className="grid grid-cols-4 border border-neutral-200 bg-neutral-50">
+          <div className="border-b border-neutral-200 px-6 py-8 md:border-b-0 md:border-r">
             <div class="flex items-center justify-center gap-3">
-              <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-neutral-100 border border-neutral-200 p-1">
-                <div class="flex h-full w-full items-center justify-center rounded-lg shadow-input bg-neutral-50">
+              <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-neutral-200 bg-neutral-100 p-1">
+                <div class="flex h-full w-full items-center justify-center rounded-lg bg-neutral-50 shadow-input">
                   <Users className="text-black" size={24} />
                 </div>
               </div>
-              <p class="text-3xl font-geist font-bold text-neutral-800">25+</p>
+              <p class="font-geist text-3xl font-bold text-neutral-800">25+</p>
             </div>
 
-            <p class="font-geist mt-4 text-base text-neutral-600">
+            <p class="mt-4 font-geist text-base text-neutral-600">
               Independent former BIS advisors
             </p>
           </div>
-          <div className="px-6 py-8 border-b border-neutral-200 md:border-b-0 md:border-r">
+          <div className="border-b border-neutral-200 px-6 py-8 md:border-b-0 md:border-r">
             <div class="flex items-center justify-center gap-3">
-              <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-neutral-100 border border-neutral-200 p-1">
-                <div class="flex h-full w-full items-center justify-center rounded-lg shadow-input bg-neutral-50">
+              <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-neutral-200 bg-neutral-100 p-1">
+                <div class="flex h-full w-full items-center justify-center rounded-lg bg-neutral-50 shadow-input">
                   <FileCheck className="text-black" size={24} />
                 </div>
               </div>
-              <p class="text-3xl font-geist font-bold text-neutral-800">300+</p>
+              <p class="font-geist text-3xl font-bold text-neutral-800">300+</p>
             </div>
 
-            <p class="font-geist mt-4 text-base text-neutral-600">
+            <p class="mt-4 font-geist text-base text-neutral-600">
               Audits supported across Industries
             </p>
           </div>
-          <div className="px-6 py-8 border-b border-neutral-200 md:border-b-0 md:border-r">
+          <div className="border-b border-neutral-200 px-6 py-8 md:border-b-0 md:border-r">
             <div class="flex items-center justify-center gap-3">
-              <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-neutral-100 border border-neutral-200 p-1">
-                <div class="flex h-full w-full items-center justify-center rounded-lg shadow-input bg-neutral-50">
+              <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-neutral-200 bg-neutral-100 p-1">
+                <div class="flex h-full w-full items-center justify-center rounded-lg bg-neutral-50 shadow-input">
                   <Package className="text-black" size={24} />
                 </div>
               </div>
-              <p class="text-3xl font-geist font-bold text-neutral-800">100+</p>
+              <p class="font-geist text-3xl font-bold text-neutral-800">100+</p>
             </div>
 
-            <p class="font-geist mt-4 text-base text-neutral-600">
+            <p class="mt-4 font-geist text-base text-neutral-600">
               Product Categories Covered
             </p>
           </div>
-          <div className="px-6 py-8 border-b border-neutral-200 md:border-b-0">
+          
+          <div className="border-b border-neutral-200 px-6 py-8 md:border-b-0">
             <div class="flex items-center justify-center gap-3">
-              <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-neutral-100 border border-neutral-200 p-1">
-                <div class="flex h-full w-full items-center justify-center rounded-lg shadow-input bg-neutral-50">
+              <div class="flex h-14 w-14 items-center justify-center rounded-xl border border-neutral-200 bg-neutral-100 p-1">
+                <div class="flex h-full w-full items-center justify-center rounded-lg bg-neutral-50 shadow-input">
                   <Globe className="text-black" size={24} />
                 </div>
               </div>
-              <p class="text-3xl font-geist font-bold text-neutral-800">20+</p>
+              <p class="font-geist text-3xl font-bold text-neutral-800">20+</p>
             </div>
 
-            <p class="font-geist mt-4 text-base text-neutral-600">
+            <p class="mt-4 font-geist text-base text-neutral-600">
               Countries Served (Global Support)
             </p>
           </div>
@@ -264,24 +267,24 @@ const AdvisoryCardsSection = () => {
   ];
 
   return (
-    <div className="pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16">
+    <div className="pb-12 pt-8 sm:pb-14 sm:pt-10 md:pb-16 md:pt-12">
       <Container>
-        <h1 className="font-playfair mb-4 md:mb-6 text-center text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg">
+        <h1 className="mb-4 text-center font-playfair text-3xl font-bold text-neutral-800 drop-shadow-lg sm:text-4xl md:mb-6 md:text-5xl">
           Our Advisor Micro-Profiles
         </h1>
-        <p className="font-geist text-sm sm:text-base md:text-lg max-w-xl sm:max-w-2xl md:max-w-3xl text-center mx-auto text-neutral-600">
+        <p className="mx-auto max-w-xl text-center font-geist text-sm text-neutral-600 sm:max-w-2xl sm:text-base md:max-w-3xl md:text-lg">
           Below are representative examples of the types of specialists in our
           network. Actual advisors are engaged per assignment and verified prior
           to engagement.
         </p>
 
-        <div className="grid grid-cols-3 gap-5 mt-12">
+        <div className="mt-12 grid grid-cols-3 gap-5">
           {advisorsData.map((advisor) => (
             <div
               key={advisor.id}
               className="rounded-3xl border border-neutral-200 bg-neutral-50 p-2"
             >
-              <div className="rounded-2xl py-8 shadow-input bg-white px-8 h-full">
+              <div className="h-full rounded-2xl bg-white px-8 py-8 shadow-input">
                 <div className="flex items-center gap-2">
                   <Briefcase className="text-neutral-800" size={18} />
                   <h3 className="font-geist text-lg font-semibold text-neutral-800">
@@ -292,7 +295,7 @@ const AdvisoryCardsSection = () => {
                   {advisor.formerRole}
                 </p>
 
-                <Separator className="my-5 border border-neutral-200 " />
+                <Separator className="my-5 border border-neutral-200" />
 
                 <div className="flex items-center gap-2">
                   <Star className="text-neutral-800" size={18} />
@@ -304,7 +307,7 @@ const AdvisoryCardsSection = () => {
                   {advisor.specialties}
                 </p>
 
-                <Separator className="my-5 border border-neutral-200 " />
+                <Separator className="my-5 border border-neutral-200" />
 
                 <div className="flex items-center gap-2">
                   <MapPin className="text-neutral-800" size={18} />
@@ -316,7 +319,7 @@ const AdvisoryCardsSection = () => {
                   {advisor.region}
                 </p>
 
-                <Separator className="my-5 border border-neutral-200 " />
+                <Separator className="my-5 border border-neutral-200" />
 
                 <div className="flex items-center gap-2">
                   <MailPlus className="text-neutral-800" size={18} />
@@ -366,32 +369,32 @@ const FaqsSection = () => {
     },
   ];
   return (
-    <div className="pt-8 pb-12 sm:pt-10 sm:pb-14 md:pt-12 md:pb-16 border-t border-neutral-200">
+    <div className="border-t border-neutral-200 pb-12 pt-8 sm:pb-14 sm:pt-10 md:pb-16 md:pt-12">
       <Container>
-        <h1 className="font-playfair mb-4 md:mb-3 text-center text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-800 drop-shadow-lg">
+        <h1 className="mb-4 text-center font-playfair text-3xl font-bold text-neutral-800 drop-shadow-lg sm:text-4xl md:mb-3 md:text-5xl">
           Frequently Asked Questions
         </h1>
-        <p className="font-geist text-sm sm:text-base md:text-xl max-w-xl sm:max-w-2xl md:max-w-3xl text-center mx-auto text-neutral-600">
+        <p className="mx-auto max-w-xl text-center font-geist text-sm text-neutral-600 sm:max-w-2xl sm:text-base md:max-w-3xl md:text-xl">
           Can&apos;t find the answer you are looking for?{" "}
           <a
             href="/contact"
-            className="text-neutral-800 underline underline-offset-4 font-medium hover:text-neutral-900 transition-colors"
+            className="font-medium text-neutral-800 underline underline-offset-4 transition-colors hover:text-neutral-900"
           >
             Reach out to us!
           </a>
         </p>
 
-        <div className="max-w-5xl mt-6 md:mt-8 mx-auto">
+        <div className="mx-auto mt-6 max-w-5xl md:mt-8">
           <Accordion type="single" collapsible>
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index + 1}`}>
-                <AccordionTrigger className="font-geist text-base md:text-lg text-neutral-600">
+                <AccordionTrigger className="font-geist text-base text-neutral-600 md:text-lg">
                   <div className="flex-1 text-left">
                     <span className="mr-2">{index + 1}.</span>
                     {faq.question}
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="font-geist text-base md:text-lg text-neutral-600">
+                <AccordionContent className="font-geist text-base text-neutral-600 md:text-lg">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
