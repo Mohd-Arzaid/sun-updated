@@ -148,31 +148,30 @@ const Footer = () => {
               <ul className="space-y-3">
                 {[
                   {
-                    name: "TEC",
-                    href: "/information-about-tec-certificate-mtcte",
+                    name: "BIS Certification",
+                    href: "/what-is-bis-certificate-indian-bis",
                   },
                   {
-                    name: "ISI MARK",
+                    name: "ISI Mark (Indian)",
                     href: "/a-guide-to-bis-certification-indian-bis",
                   },
-                  { name: "CE CERTIFICATION", href: "/ce-certification" },
                   {
-                    name: "EPR",
-                    href: "/a-guide-on-how-to-obtain-epr-certificate",
+                    name: "BIS Mark (Foreign)",
+                    href: "/a-guide-to-bis-certification-for-foreign-manufacturers-indian-bis",
                   },
                   {
-                    name: "ROHS",
-                    href: "/restriction-of-hazardous-substance-rohs-certificate",
+                    name: "CRS Registration",
+                    href: "/what-is-crs-bis-or-crs-registration",
                   },
                   {
-                    name: "WPC",
-                    href: "/information-about-wpc-certificate-eta-approval",
+                    name: "Scheme X",
+                    href: "/indian-bis-certification-under-scheme-x",
                   },
                 ].map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="group flex items-center font-geist text-sm uppercase text-neutral-600 transition-colors hover:text-neutral-800"
+                      className="group flex items-center font-geist text-sm text-neutral-600 transition-colors hover:text-neutral-800"
                     >
                       <ChevronRight className="mr-2 h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" />
                       <span className="transition-transform group-hover:translate-x-1">
