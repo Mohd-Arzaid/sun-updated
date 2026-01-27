@@ -134,8 +134,6 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-
-      <div className="py-14"></div>
     </Container>
   );
 };
