@@ -216,13 +216,13 @@ const Footer = () => {
               <ul className="space-y-3">
                 {[
                   {
-                    name: "Blogs",
+                    name: "Latest Blogs",
                     href: "/Blogs",
                   },
-                  { name: "Latest Updates", href: "/latest-updates" },
+                  { name: "BIS QCO UPDATES", href: "/bis-qco-updates" },
                   { name: "Ministry Updates", href: "/ministry-updates" },
-                  { name: "Webinar Updates", href: "/webinar-updates" },
-                  { name: "Gallery", href: "/gallery" },
+                  { name: "Upcoming Webinars", href: "/webinar" },
+                  { name: "Scheme X Products", href: "/SchemeX-products" },
                 ].map((link) => (
                   <li key={link.name}>
                     <a
