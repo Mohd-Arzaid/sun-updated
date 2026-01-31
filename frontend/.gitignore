@@ -26,3 +26,6 @@ dist-ssr
 # Configuration files
 .cursorrules
 .prettierrc.json
+
+# Cursor (skills, rules – local only)
+.cursor
